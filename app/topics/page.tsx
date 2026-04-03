@@ -120,7 +120,7 @@ export default function TopicsPage() {
   // Filtered topics based on search
   const filteredTopics = useMemo(() => {
     if (!searchQuery) return DEMO_DATA.topics;
-    
+
     const query = searchQuery.toLowerCase();
     return DEMO_DATA.topics.filter(
       (topic) =>
@@ -134,12 +134,12 @@ export default function TopicsPage() {
   // Discovery algorithm - suggests topics based on user interests
   const discoverySuggestions = useMemo(() => {
     if (!discoveryMode || !selectedTopic) return [];
-    
+
     // Simple algorithm to find related topics
     return DEMO_DATA.topics
       .filter((topic) => {
         const isRelated = connections.some(
-          (conn) => 
+          (conn) =>
             (conn.from === selectedTopic.name && conn.to === topic.name) ||
             (conn.to === selectedTopic.name && conn.from === topic.name)
         );
@@ -157,7 +157,7 @@ export default function TopicsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50/30">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 via-white to-emerald-50/30">
       {/* Enhanced Header with Breadcrumbs */}
       <div className="container mx-auto px-4 sm:px-6 py-8">
         <div className="mb-6">
@@ -168,15 +168,15 @@ export default function TopicsPage() {
             <ChevronRight className="h-4 w-4" />
             <span className="font-medium text-emerald-700">Topics</span>
           </nav>
-          
+
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl">
+                <div className="p-2 bg-linear-to-br from-emerald-500 to-teal-600 rounded-xl">
                   <Brain className="h-8 w-8 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                  <h1 className="text-3xl sm:text-4xl font-bold bg-linear-to-br from-emerald-600 to-teal-600 bg-clip-text text-transparent">
                     Theological Topics
                   </h1>
                   <p className="text-slate-600 mt-1 flex items-center gap-2">
@@ -186,13 +186,13 @@ export default function TopicsPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-3">
               <Button variant="outline" className="gap-2">
                 <Share2 className="h-4 w-4" />
                 Share
               </Button>
-              <Button className="gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg">
+              <Button className="gap-2 bg-linear-to-br from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg">
                 <Plus className="h-5 w-5" />
                 New Topic
               </Button>
@@ -227,7 +227,7 @@ export default function TopicsPage() {
               <List className="h-4 w-4" />
               List
             </Button>
-            
+
             <div className="hidden sm:flex items-center gap-3 pl-3 border-l border-slate-200">
               <div className="flex items-center gap-2">
                 <Switch
@@ -239,7 +239,7 @@ export default function TopicsPage() {
                   Show Connections
                 </Label>
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <Switch
                   id="discovery"
@@ -255,7 +255,7 @@ export default function TopicsPage() {
               </div>
             </div>
           </div>
-          
+
           <div className="relative w-full sm:w-auto">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" />
             <Input
@@ -270,13 +270,16 @@ export default function TopicsPage() {
 
         {/* Discovery Banner */}
         {discoveryMode && discoverySuggestions.length > 0 && (
-          <div className="mb-8 p-4 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl">
+          <div className="mb-8 p-4 bg-linear-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl">
             <div className="flex items-center gap-3 mb-3">
               <Lightbulb className="h-5 w-5 text-amber-600" />
-              <h3 className="font-bold text-amber-800">Discovery Suggestions</h3>
+              <h3 className="font-bold text-amber-800">
+                Discovery Suggestions
+              </h3>
             </div>
             <p className="text-amber-700 text-sm mb-4">
-              Based on your interest in <strong>{selectedTopic.name}</strong>, you might want to explore:
+              Based on your interest in <strong>{selectedTopic.name}</strong>,
+              you might want to explore:
             </p>
             <div className="flex flex-wrap gap-2">
               {discoverySuggestions.map((topic) => (
@@ -302,7 +305,7 @@ export default function TopicsPage() {
             <div className="lg:col-span-2 space-y-8">
               <Card className="border-none shadow-xl overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="p-6 border-b border-slate-100 bg-gradient-to-r from-slate-50 to-white">
+                  <div className="p-6 border-b border-slate-100 bg-linear-to-br from-slate-50 to-white">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="p-2 bg-emerald-100 rounded-lg">
@@ -311,7 +314,8 @@ export default function TopicsPage() {
                         <div>
                           <h3 className="text-xl font-bold">Topic Network</h3>
                           <p className="text-sm text-slate-600">
-                            Interactive visualization of theological relationships
+                            Interactive visualization of theological
+                            relationships
                           </p>
                         </div>
                       </div>
@@ -358,24 +362,32 @@ export default function TopicsPage() {
                       <TabsList className="grid grid-cols-4 mb-6">
                         <TabsTrigger value="overview">Overview</TabsTrigger>
                         <TabsTrigger value="verses">Verses</TabsTrigger>
-                        <TabsTrigger value="connections">Connections</TabsTrigger>
+                        <TabsTrigger value="connections">
+                          Connections
+                        </TabsTrigger>
                         <TabsTrigger value="insights">Insights</TabsTrigger>
                       </TabsList>
-                      
+
                       <TabsContent value="overview" className="space-y-6">
                         <div className="flex items-start justify-between">
                           <div className="flex items-start gap-4">
-                            <div className="p-3 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-xl">
-                              <span className="text-3xl">{selectedTopic.icon}</span>
+                            <div className="p-3 bg-linear-to-br from-emerald-100 to-teal-100 rounded-xl">
+                              <span className="text-3xl">
+                                {selectedTopic.icon}
+                              </span>
                             </div>
                             <div>
                               <div className="flex items-center gap-3 mb-2">
-                                <h2 className="text-2xl font-bold">{selectedTopic.name}</h2>
-                                <Badge className="bg-gradient-to-r from-emerald-500 to-teal-500">
+                                <h2 className="text-2xl font-bold">
+                                  {selectedTopic.name}
+                                </h2>
+                                <Badge className="bg-linear-to-br from-emerald-500 to-teal-500">
                                   {selectedTopic.category}
                                 </Badge>
                               </div>
-                              <p className="text-slate-700">{selectedTopic.description}</p>
+                              <p className="text-slate-700">
+                                {selectedTopic.description}
+                              </p>
                             </div>
                           </div>
                           <div className="flex items-center gap-3">
@@ -407,30 +419,48 @@ export default function TopicsPage() {
                           <div className="p-4 bg-slate-50 rounded-xl">
                             <div className="flex items-center gap-2 mb-2">
                               <BookOpen className="h-4 w-4 text-emerald-600" />
-                              <span className="text-sm text-slate-600">Verses</span>
+                              <span className="text-sm text-slate-600">
+                                Verses
+                              </span>
                             </div>
-                            <div className="text-2xl font-bold">{selectedTopic.verses.length}</div>
+                            <div className="text-2xl font-bold">
+                              {selectedTopic.verses.length}
+                            </div>
                           </div>
                           <div className="p-4 bg-slate-50 rounded-xl">
                             <div className="flex items-center gap-2 mb-2">
                               <LinkIcon className="h-4 w-4 text-blue-600" />
-                              <span className="text-sm text-slate-600">Connections</span>
+                              <span className="text-sm text-slate-600">
+                                Connections
+                              </span>
                             </div>
                             <div className="text-2xl font-bold">
-                              {connections.filter(c => c.from === selectedTopic.name || c.to === selectedTopic.name).length}
+                              {
+                                connections.filter(
+                                  (c) =>
+                                    c.from === selectedTopic.name ||
+                                    c.to === selectedTopic.name
+                                ).length
+                              }
                             </div>
                           </div>
                           <div className="p-4 bg-slate-50 rounded-xl">
                             <div className="flex items-center gap-2 mb-2">
                               <Users className="h-4 w-4 text-purple-600" />
-                              <span className="text-sm text-slate-600">Sub-topics</span>
+                              <span className="text-sm text-slate-600">
+                                Sub-topics
+                              </span>
                             </div>
-                            <div className="text-2xl font-bold">{selectedTopic.subTopics?.length || 0}</div>
+                            <div className="text-2xl font-bold">
+                              {selectedTopic.subTopics?.length || 0}
+                            </div>
                           </div>
                           <div className="p-4 bg-slate-50 rounded-xl">
                             <div className="flex items-center gap-2 mb-2">
                               <Zap className="h-4 w-4 text-amber-600" />
-                              <span className="text-sm text-slate-600">Coverage</span>
+                              <span className="text-sm text-slate-600">
+                                Coverage
+                              </span>
                             </div>
                             <div className="text-2xl font-bold">
                               {calculateCoverage(selectedTopic.id).toFixed(0)}%
@@ -438,7 +468,7 @@ export default function TopicsPage() {
                           </div>
                         </div>
                       </TabsContent>
-                      
+
                       <TabsContent value="verses">
                         <div className="space-y-3">
                           {selectedTopic.verses.map((verse, idx) => (
@@ -452,10 +482,15 @@ export default function TopicsPage() {
                                     {verse}
                                   </div>
                                   <p className="text-slate-600 text-sm">
-                                    Reference description or commentary would appear here...
+                                    Reference description or commentary would
+                                    appear here...
                                   </p>
                                 </div>
-                                <Button variant="ghost" size="sm" className="opacity-0 group-hover:opacity-100">
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  className="opacity-0 group-hover:opacity-100"
+                                >
                                   <ExternalLink className="h-4 w-4" />
                                 </Button>
                               </div>
@@ -463,67 +498,113 @@ export default function TopicsPage() {
                           ))}
                         </div>
                       </TabsContent>
-                      
+
                       <TabsContent value="connections">
                         <div className="space-y-4">
                           {connections
-                            .filter(c => c.from === selectedTopic.name || c.to === selectedTopic.name)
+                            .filter(
+                              (c) =>
+                                c.from === selectedTopic.name ||
+                                c.to === selectedTopic.name
+                            )
                             .map((conn) => (
-                              <div key={conn.id} className="p-4 rounded-xl border border-slate-200">
+                              <div
+                                key={conn.id}
+                                className="p-4 rounded-xl border border-slate-200"
+                              >
                                 <div className="flex items-center justify-between mb-3">
                                   <div className="flex items-center gap-3">
-                                    <div className={`w-3 h-3 rounded-full ${CONNECTION_TYPES[conn.type].color}`} />
+                                    <div
+                                      className={`w-3 h-3 rounded-full ${
+                                        CONNECTION_TYPES[conn.type].color
+                                      }`}
+                                    />
                                     <span className="text-sm font-medium text-slate-700">
-                                      {conn.from === selectedTopic.name ? conn.to : conn.from}
+                                      {conn.from === selectedTopic.name
+                                        ? conn.to
+                                        : conn.from}
                                     </span>
                                   </div>
                                   <Badge variant="outline">
                                     {CONNECTION_TYPES[conn.type].label}
                                   </Badge>
                                 </div>
-                                <p className="text-slate-600 text-sm mb-3">{conn.description}</p>
+                                <p className="text-slate-600 text-sm mb-3">
+                                  {conn.description}
+                                </p>
                                 <div className="flex items-center gap-2">
                                   <Hash className="h-4 w-4 text-slate-400" />
                                   <span className="text-sm text-slate-500">
-                                    Shared verses: {conn.sharedVerses.join(", ")}
+                                    Shared verses:{" "}
+                                    {conn.sharedVerses.join(", ")}
                                   </span>
                                 </div>
                               </div>
                             ))}
                         </div>
                       </TabsContent>
-                      
+
                       <TabsContent value="insights">
                         <div className="space-y-4">
-                          <div className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl">
+                          <div className="p-4 bg-linear-to-br from-blue-50 to-indigo-50 rounded-xl">
                             <h4 className="font-bold mb-2 flex items-center gap-2">
                               <Star className="h-4 w-4 text-blue-600" />
                               Key Insight
                             </h4>
                             <p className="text-slate-700">
                               This topic is most strongly connected to "
-                              {connections
-                                .filter(c => c.from === selectedTopic.name || c.to === selectedTopic.name)
-                                .sort((a, b) => b.strength - a.strength)[0]?.to
-                              }" with {Math.max(...connections.filter(c => c.from === selectedTopic.name || c.to === selectedTopic.name).map(c => c.strength)) * 100}% strength.
+                              {
+                                connections
+                                  .filter(
+                                    (c) =>
+                                      c.from === selectedTopic.name ||
+                                      c.to === selectedTopic.name
+                                  )
+                                  .sort((a, b) => b.strength - a.strength)[0]
+                                  ?.to
+                              }
+                              " with{" "}
+                              {Math.max(
+                                ...connections
+                                  .filter(
+                                    (c) =>
+                                      c.from === selectedTopic.name ||
+                                      c.to === selectedTopic.name
+                                  )
+                                  .map((c) => c.strength)
+                              ) * 100}
+                              % strength.
                             </p>
                           </div>
-                          <div className="p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl">
+                          <div className="p-4 bg-linear-to-br from-emerald-50 to-teal-50 rounded-xl">
                             <h4 className="font-bold mb-2">Study Progress</h4>
                             <div className="space-y-3">
                               <div>
                                 <div className="flex justify-between text-sm mb-1">
                                   <span>Verse Coverage</span>
-                                  <span>{selectedTopic.verses.length}/20 verses</span>
+                                  <span>
+                                    {selectedTopic.verses.length}/20 verses
+                                  </span>
                                 </div>
-                                <Progress value={(selectedTopic.verses.length / 20) * 100} />
+                                <Progress
+                                  value={
+                                    (selectedTopic.verses.length / 20) * 100
+                                  }
+                                />
                               </div>
                               <div>
                                 <div className="flex justify-between text-sm mb-1">
                                   <span>Connection Depth</span>
-                                  <span>{calculateCoverage(selectedTopic.id).toFixed(0)}%</span>
+                                  <span>
+                                    {calculateCoverage(
+                                      selectedTopic.id
+                                    ).toFixed(0)}
+                                    %
+                                  </span>
                                 </div>
-                                <Progress value={calculateCoverage(selectedTopic.id)} />
+                                <Progress
+                                  value={calculateCoverage(selectedTopic.id)}
+                                />
                               </div>
                             </div>
                           </div>
@@ -551,17 +632,23 @@ export default function TopicsPage() {
                         onClick={() => setSelectedTopic(topic)}
                         className={`w-full p-4 rounded-xl text-left transition-all group hover:shadow-md ${
                           selectedTopic.id === topic.id
-                            ? "ring-2 ring-emerald-500 bg-gradient-to-r from-emerald-50/80 to-teal-50/80"
+                            ? "ring-2 ring-emerald-500 bg-linear-to-br from-emerald-50/80 to-teal-50/80"
                             : "hover:bg-slate-50"
                         }`}
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
-                            <div className={`p-2 rounded-lg ${topic.color.replace('bg-', 'bg-').replace('/20', '/10')}`}>
+                            <div
+                              className={`p-2 rounded-lg ${topic.color
+                                .replace("bg-", "bg-")
+                                .replace("/20", "/10")}`}
+                            >
                               <span className="text-xl">{topic.icon}</span>
                             </div>
                             <div>
-                              <h4 className="font-bold group-hover:text-emerald-700">{topic.name}</h4>
+                              <h4 className="font-bold group-hover:text-emerald-700">
+                                {topic.name}
+                              </h4>
                               <p className="text-xs text-slate-500 flex items-center gap-1">
                                 <Clock className="h-3 w-3" />
                                 Updated 2d ago
@@ -572,20 +659,30 @@ export default function TopicsPage() {
                         </div>
                         <div className="mt-3">
                           <div className="flex items-center justify-between text-sm">
-                            <span className="text-slate-600">{topic.notesCount} notes</span>
-                            <span className="font-medium">{calculateCoverage(topic.id).toFixed(0)}%</span>
+                            <span className="text-slate-600">
+                              {topic.notesCount} notes
+                            </span>
+                            <span className="font-medium">
+                              {calculateCoverage(topic.id).toFixed(0)}%
+                            </span>
                           </div>
-                          <div className={`h-1.5 rounded-full mt-1 ${topic.color}`}>
-                            <div 
-                              className={`h-full rounded-full ${topic.color.replace('bg-', 'bg-').replace('/20', '')}`}
-                              style={{ width: `${calculateCoverage(topic.id)}%` }}
+                          <div
+                            className={`h-1.5 rounded-full mt-1 ${topic.color}`}
+                          >
+                            <div
+                              className={`h-full rounded-full ${topic.color
+                                .replace("bg-", "bg-")
+                                .replace("/20", "")}`}
+                              style={{
+                                width: `${calculateCoverage(topic.id)}%`,
+                              }}
                             />
                           </div>
                         </div>
                       </button>
                     ))}
                   </div>
-                  
+
                   {filteredTopics.length === 0 && (
                     <div className="text-center py-8 text-slate-500">
                       <Search className="h-12 w-12 mx-auto mb-3 text-slate-300" />
@@ -604,13 +701,18 @@ export default function TopicsPage() {
                   </h4>
                   <div className="space-y-3">
                     {Object.entries(CONNECTION_TYPES).map(([key, type]) => (
-                      <div key={key} className="flex items-center justify-between">
+                      <div
+                        key={key}
+                        className="flex items-center justify-between"
+                      >
                         <div className="flex items-center gap-2">
-                          <div className={`w-3 h-3 rounded-full ${type.color}`} />
+                          <div
+                            className={`w-3 h-3 rounded-full ${type.color}`}
+                          />
                           <span className="text-sm">{type.label}</span>
                         </div>
                         <Badge variant="outline" className="text-xs">
-                          {connections.filter(c => c.type === key).length}
+                          {connections.filter((c) => c.type === key).length}
                         </Badge>
                       </div>
                     ))}
@@ -627,7 +729,11 @@ export default function TopicsPage() {
                 topic={topic}
                 isSelected={selectedTopic.id === topic.id}
                 onSelect={setSelectedTopic}
-                connectionCount={connections.filter(c => c.from === topic.name || c.to === topic.name).length}
+                connectionCount={
+                  connections.filter(
+                    (c) => c.from === topic.name || c.to === topic.name
+                  ).length
+                }
               />
             ))}
           </div>
@@ -640,12 +746,14 @@ export default function TopicsPage() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-emerald-100 to-teal-100">
+                    <div className="p-3 rounded-xl bg-linear-to-br from-emerald-100 to-teal-100">
                       <span className="text-2xl">{topic.icon}</span>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">{topic.name}</h3>
-                      <p className="text-slate-600 max-w-2xl">{topic.description}</p>
+                      <p className="text-slate-600 max-w-2xl">
+                        {topic.description}
+                      </p>
                       <div className="flex items-center gap-4 mt-2">
                         <span className="text-sm text-slate-500 flex items-center gap-1">
                           <BookOpen className="h-4 w-4" />
@@ -653,7 +761,13 @@ export default function TopicsPage() {
                         </span>
                         <span className="text-sm text-slate-500 flex items-center gap-1">
                           <LinkIcon className="h-4 w-4" />
-                          {connections.filter(c => c.from === topic.name || c.to === topic.name).length} connections
+                          {
+                            connections.filter(
+                              (c) =>
+                                c.from === topic.name || c.to === topic.name
+                            ).length
+                          }{" "}
+                          connections
                         </span>
                       </div>
                     </div>
@@ -677,13 +791,13 @@ export default function TopicsPage() {
             ))}
           </div>
         )}
-        
+
         {/* Quick Actions Bar */}
         <div className="fixed bottom-6 right-6 flex flex-col gap-3">
           <Button
             size="lg"
-            className="rounded-full shadow-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="rounded-full shadow-lg bg-linear-to-br from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <Plus className="h-5 w-5" />
           </Button>
