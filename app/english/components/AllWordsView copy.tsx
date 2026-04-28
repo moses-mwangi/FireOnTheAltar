@@ -279,7 +279,7 @@ export default function AllWordsView({ words, onDeleteWord, families }: Props) {
                       </p>
                       {word.example && (
                         <p className="text-sm text-gray-500 dark:text-gray-500 italic mt-2">
-                          💬 "{word.example}"
+                          💬 &quote;{word.example}&quot;
                         </p>
                       )}
                     </div>

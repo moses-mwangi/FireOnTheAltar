@@ -6,9 +6,24 @@ import VocabularyGroup from "./components/VocabularyGroup";
 import AddWordModal from "./components/AddWordModal";
 import GrammarSection from "./components/GrammarSection";
 import { VocabularyGroup as VocabularyGroupType, GrammarTopic } from "./types";
+import { initialSynonymFamilies } from "./page";
 
 // Initial mock data
-const initialVocabularyGroups: VocabularyGroupType[] = [
+// const initialVocabularyGroups: VocabularyGroupType[] =
+const initialVocabularyGroups = initialSynonymFamilies.map((family) => ({
+  id: family.id,
+  name: family.name,
+  description: family.theme,
+  words: family.words.map((word) => ({
+    id: word.id,
+    word: word.word,
+    description: word.description,
+    example: word.example,
+    createdAt: word.createdAt,
+  })),
+}));
+
+const initialVocabularyGroupss = [
   {
     id: "1",
     name: "Ways of Seeing",

@@ -7,6 +7,7 @@ export interface WordFamilyMember {
 
 export interface Word {
   id: string;
+  root: string;
   word: string;
   description: string;
   example?: string;

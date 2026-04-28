@@ -5,7 +5,7 @@ import { Plus, Search, Layers, BookOpen } from "lucide-react";
 import SynonymFamilyComponent from "./components/SynonymFamily";
 import AddWordModal from "./components/AddWordModal";
 import GrammarSection from "./components/GrammarSection";
-import { SynonymFamily, GrammarTopic } from "./types";
+import { SynonymFamily, GrammarTopic, Word } from "./types";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -13,7 +13,7 @@ import AllWordsView from "./components/AllWordsView";
 import Header from "./components/Header";
 import NotesSection from "./components/NotesSection";
 
-const initialSynonymFamilies: SynonymFamily[] = [
+export const initialSynonymFamilies: SynonymFamily[] = [
   {
     id: "1",
     name: "Communication Verbs",

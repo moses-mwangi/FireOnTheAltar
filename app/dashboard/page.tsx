@@ -23,7 +23,7 @@ import TopicCloud from "@/components/dashboard/TopicCloud";
 import RecentActivity from "@/components/dashboard/RecentActivity";
 import DailyVerse from "@/components/dashboard/DailyVerse";
 import QuickActions from "@/components/dashboard/QuickActions";
-import { DEMO_DATA } from "@/lib/demo-data/generate";
+import { DEMO_DATA } from "@/lib/data/bible/demo-data/generate";
 // import { DEMO_DATA } from "@/lib/demo-data";
 
 export default function Dashboard() {

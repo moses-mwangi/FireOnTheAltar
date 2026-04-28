@@ -19,7 +19,7 @@ import { Progress } from "@/components/ui/progress";
 import ReviewSession from "@/components/review/ReviewSession";
 import StatsOverview from "@/components/review/StatsOverview";
 import ReviewCalendar from "@/components/review/ReviewCalendar";
-import { DEMO_DATA } from "@/lib/demo-data/generate";
+import { DEMO_DATA } from "@/lib/data/bible/demo-data/generate";
 
 const REVIEW_MODES = [
   {
@@ -67,7 +67,7 @@ export default function ReviewPage() {
   });
 
   const dueNotes = DEMO_DATA.notes.filter(
-    (note) => new Date(note.reviewStats.nextReview) <= new Date()
+    (note) => new Date(note.reviewStats.nextReview) <= new Date(),
   );
 
   const handleReviewComplete = (quality: number) => {

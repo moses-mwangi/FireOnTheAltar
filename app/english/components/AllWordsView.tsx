@@ -429,7 +429,8 @@ import { Search, BookOpen, X } from "lucide-react";
 import { Word } from "../types";
 
 interface Props {
-  words: Word[];
+  words: Partial<Word>[] | Word[];
+  // words: Word[];
   onDeleteWord: (familyId: string, wordId: string) => void;
   families: { id: string; name: string }[];
 }
@@ -459,15 +460,17 @@ export default function AllWordsView({ words, onDeleteWord, families }: Props) {
   const filteredWords = words
     .filter((word) => {
       const matchesSearch =
-        word.word.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        word.description.toLowerCase().includes(searchTerm.toLowerCase());
+        word?.word?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        word?.description?.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesFamily =
-        filterFamily === "all" || getFamilyName(word.id) === filterFamily;
+        filterFamily === "all" ||
+        getFamilyName(String(word?.id)) === filterFamily;
 
       return matchesSearch && matchesFamily;
     })
-    .sort((a, b) => a.word.localeCompare(b.word));
+    // .sort((a, b) => a?.word?.localeCompare(b?.word));
+    .sort((a, b) => String(a?.word).localeCompare(String(b?.word)));
 
   const familyNames = ["all", ...new Set(families.map((f) => f.name))];
 
@@ -509,8 +512,8 @@ export default function AllWordsView({ words, onDeleteWord, families }: Props) {
       ) : (
         <div className="space-y-2 grid grid-cols-1 md:grid-cols-4 gap-3">
           {filteredWords.map((word) => {
-            const familyName = getFamilyName(word.id);
-            const familyId = getFamilyId(word.id);
+            const familyName = getFamilyName(String(word.id));
+            const familyId = getFamilyId(String(word.id));
 
             return (
               <div
@@ -525,9 +528,9 @@ export default function AllWordsView({ words, onDeleteWord, families }: Props) {
                     <span className="text-xs px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded">
                       {familyName}
                     </span>
-                    {word.wordFamily.length > 0 && (
+                    {(word?.wordFamily?.length as number) > 0 && (
                       <span className="text-xs text-gray-400">
-                        +{word.wordFamily.length} forms
+                        +{word?.wordFamily?.length} forms
                       </span>
                     )}
                   </div>
@@ -541,7 +544,7 @@ export default function AllWordsView({ words, onDeleteWord, families }: Props) {
                   )} */}
                 </div>
                 <button
-                  onClick={() => onDeleteWord(familyId, word.id)}
+                  onClick={() => onDeleteWord(familyId, String(word.id))}
                   className="ml-3 p-1 text-gray-400 hover:text-red-500 transition-colors flex-shrink-0"
                 >
                   <X className="h-4 w-4" />

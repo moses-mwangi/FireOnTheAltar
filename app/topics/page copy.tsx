@@ -32,7 +32,7 @@ import {
 import TopicGraph from "@/components/topics/TopicGraph";
 import TopicCard from "@/components/topics/TopicCard";
 import VerseExplorer from "@/components/topics/VerseExplorer";
-import { DEMO_DATA } from "@/lib/demo-data/generate";
+import { DEMO_DATA } from "@/lib/data/bible/demo-data/generate";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -114,7 +114,7 @@ export default function TopicsPage() {
         description: "Salvation is by grace through faith",
       },
     ],
-    []
+    [],
   );
 
   // Filtered topics based on search
@@ -127,7 +127,7 @@ export default function TopicsPage() {
         topic.name.toLowerCase().includes(query) ||
         topic.description.toLowerCase().includes(query) ||
         topic.verses.some((verse) => verse.toLowerCase().includes(query)) ||
-        topic.subTopics?.some((sub) => sub.toLowerCase().includes(query))
+        topic.subTopics?.some((sub) => sub.toLowerCase().includes(query)),
     );
   }, [searchQuery]);
 
@@ -141,7 +141,7 @@ export default function TopicsPage() {
         const isRelated = connections.some(
           (conn) =>
             (conn.from === selectedTopic.name && conn.to === topic.name) ||
-            (conn.to === selectedTopic.name && conn.from === topic.name)
+            (conn.to === selectedTopic.name && conn.from === topic.name),
         );
         return isRelated && topic.id !== selectedTopic.id;
       })
@@ -151,7 +151,7 @@ export default function TopicsPage() {
   // Calculate topic coverage percentage
   const calculateCoverage = (topicId: string) => {
     const topicConnections = connections.filter(
-      (conn) => conn.from === topicId || conn.to === topicId
+      (conn) => conn.from === topicId || conn.to === topicId,
     ).length;
     return Math.min((topicConnections / 5) * 100, 100);
   };
@@ -439,7 +439,7 @@ export default function TopicsPage() {
                                 connections.filter(
                                   (c) =>
                                     c.from === selectedTopic.name ||
-                                    c.to === selectedTopic.name
+                                    c.to === selectedTopic.name,
                                 ).length
                               }
                             </div>
@@ -505,7 +505,7 @@ export default function TopicsPage() {
                             .filter(
                               (c) =>
                                 c.from === selectedTopic.name ||
-                                c.to === selectedTopic.name
+                                c.to === selectedTopic.name,
                             )
                             .map((conn) => (
                               <div
@@ -558,7 +558,7 @@ export default function TopicsPage() {
                                   .filter(
                                     (c) =>
                                       c.from === selectedTopic.name ||
-                                      c.to === selectedTopic.name
+                                      c.to === selectedTopic.name,
                                   )
                                   .sort((a, b) => b.strength - a.strength)[0]
                                   ?.to
@@ -569,9 +569,9 @@ export default function TopicsPage() {
                                   .filter(
                                     (c) =>
                                       c.from === selectedTopic.name ||
-                                      c.to === selectedTopic.name
+                                      c.to === selectedTopic.name,
                                   )
-                                  .map((c) => c.strength)
+                                  .map((c) => c.strength),
                               ) * 100}
                               % strength.
                             </p>
@@ -597,7 +597,7 @@ export default function TopicsPage() {
                                   <span>Connection Depth</span>
                                   <span>
                                     {calculateCoverage(
-                                      selectedTopic.id
+                                      selectedTopic.id,
                                     ).toFixed(0)}
                                     %
                                   </span>
@@ -731,7 +731,7 @@ export default function TopicsPage() {
                 onSelect={setSelectedTopic}
                 connectionCount={
                   connections.filter(
-                    (c) => c.from === topic.name || c.to === topic.name
+                    (c) => c.from === topic.name || c.to === topic.name,
                   ).length
                 }
               />
@@ -764,7 +764,7 @@ export default function TopicsPage() {
                           {
                             connections.filter(
                               (c) =>
-                                c.from === topic.name || c.to === topic.name
+                                c.from === topic.name || c.to === topic.name,
                             ).length
                           }{" "}
                           connections

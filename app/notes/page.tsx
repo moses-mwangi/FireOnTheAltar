@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import NoteCard from "@/components/notes/NoteCard";
 import NoteEditor from "@/components/notes/NoteEditor";
-import { DEMO_DATA } from "@/lib/demo-data/generate";
+import { DEMO_DATA } from "@/lib/data/bible/demo-data/generate";
 
 const FILTER_OPTIONS = [
   { id: "all", label: "All Notes", count: 156 },
@@ -163,9 +163,9 @@ export default function NotesPage() {
                   {selectedFilter === "all"
                     ? "All Notes"
                     : selectedFilter === "review"
-                    ? "Notes Due for Review"
-                    : selectedFilter.charAt(0).toUpperCase() +
-                      selectedFilter.slice(1)}
+                      ? "Notes Due for Review"
+                      : selectedFilter.charAt(0).toUpperCase() +
+                        selectedFilter.slice(1)}
                 </h2>
                 <select
                   value={sortBy}

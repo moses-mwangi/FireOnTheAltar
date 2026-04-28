@@ -1,0 +1,3573 @@
+{
+  "words": [
+    {
+      "root": "seldom",
+      "word": "seldom",
+      "partOfSpeech": "adverb",
+      "definition": "Not often; rarely",
+      "example": "He seldom goes to the movies.",
+      "wordFamily": [
+        {
+          "word": "seldom",
+          "partOfSpeech": "adverb",
+          "example": "She seldom complains."
+        }
+      ],
+      "synonyms": [
+        "rarely",
+        "infrequently",
+        "occasionally",
+        "hardly ever"
+      ],
+      "antonyms": [
+        "often",
+        "frequently",
+        "always",
+        "constantly"
+      ]
+    },
+    {
+      "root": "composite",
+      "word": "composite",
+      "partOfSpeech": "adjective/noun",
+      "definition": "Made up of various parts; a combination of different elements",
+      "example": "The composite image was created from several photos.",
+      "wordFamily": [
+        {
+          "word": "composite",
+          "partOfSpeech": "adjective",
+          "example": "Composite materials are strong."
+        },
+        {
+          "word": "composition",
+          "partOfSpeech": "noun",
+          "example": "The composition of the paint is complex."
+        },
+        {
+          "word": "compose",
+          "partOfSpeech": "verb",
+          "example": "She composed a beautiful song."
+        },
+        {
+          "word": "composer",
+          "partOfSpeech": "noun",
+          "example": "Mozart was a great composer."
+        }
+      ],
+      "synonyms": [
+        "blend",
+        "mixture",
+        "compound",
+        "combination",
+        "amalgam"
+      ],
+      "antonyms": [
+        "pure",
+        "simple",
+        "single",
+        "elemental"
+      ]
+    },
+    {
+      "root": "futile",
+      "word": "futile",
+      "partOfSpeech": "adjective",
+      "definition": "Incapable of producing any useful result; pointless",
+      "example": "It was futile to try to convince him.",
+      "wordFamily": [
+        {
+          "word": "futile",
+          "partOfSpeech": "adjective",
+          "example": "Their efforts were futile."
+        },
+        {
+          "word": "futility",
+          "partOfSpeech": "noun",
+          "example": "He realized the futility of arguing."
+        },
+        {
+          "word": "futilely",
+          "partOfSpeech": "adverb",
+          "example": "She futilely attempted to escape."
+        }
+      ],
+      "synonyms": [
+        "pointless",
+        "useless",
+        "vain",
+        "hopeless",
+        "ineffective"
+      ],
+      "antonyms": [
+        "useful",
+        "effective",
+        "productive",
+        "fruitful"
+      ]
+    },
+    {
+      "root": "comprise",
+      "word": "comprise",
+      "partOfSpeech": "verb",
+      "definition": "Consist of; be made up of",
+      "example": "The team comprises seven players.",
+      "wordFamily": [
+        {
+          "word": "comprise",
+          "partOfSpeech": "verb",
+          "example": "The house comprises three bedrooms."
+        },
+        {
+          "word": "comprised",
+          "partOfSpeech": "adjective",
+          "example": "The group is comprised of experts."
+        }
+      ],
+      "synonyms": [
+        "include",
+        "contain",
+        "consist of",
+        "encompass",
+        "incorporate"
+      ],
+      "antonyms": [
+        "exclude",
+        "omit",
+        "lack"
+      ]
+    },
+    {
+      "root": "evoke",
+      "word": "evoke",
+      "partOfSpeech": "verb",
+      "definition": "Bring or recall to the conscious mind",
+      "example": "The song evoked memories of childhood.",
+      "wordFamily": [
+        {
+          "word": "evoke",
+          "partOfSpeech": "verb",
+          "example": "The photo evoked strong emotions."
+        },
+        {
+          "word": "evocation",
+          "partOfSpeech": "noun",
+          "example": "The evocation of past events was powerful."
+        },
+        {
+          "word": "evocative",
+          "partOfSpeech": "adjective",
+          "example": "The painting is highly evocative."
+        }
+      ],
+      "synonyms": [
+        "summon",
+        "invoke",
+        "elicit",
+        "provoke",
+        "call forth"
+      ],
+      "antonyms": [
+        "suppress",
+        "stifle",
+        "quell"
+      ]
+    },
+    {
+      "root": "fright",
+      "word": "frightened",
+      "partOfSpeech": "adjective",
+      "definition": "Afraid or anxious",
+      "example": "The frightened child hid under the bed.",
+      "wordFamily": [
+        {
+          "word": "fright",
+          "partOfSpeech": "noun",
+          "example": "The loud noise gave me a fright."
+        },
+        {
+          "word": "frighten",
+          "partOfSpeech": "verb",
+          "example": "The horror movie frightened her."
+        },
+        {
+          "word": "frightened",
+          "partOfSpeech": "adjective",
+          "example": "He looked frightened."
+        },
+        {
+          "word": "frightening",
+          "partOfSpeech": "adjective",
+          "example": "It was a frightening experience."
+        },
+        {
+          "word": "frightful",
+          "partOfSpeech": "adjective",
+          "example": "The weather was frightful."
+        }
+      ],
+      "synonyms": [
+        "scared",
+        "terrified",
+        "alarmed",
+        "panicked",
+        "spooked"
+      ],
+      "antonyms": [
+        "brave",
+        "fearless",
+        "calm",
+        "unafraid"
+      ]
+    },
+    {
+      "root": "glimpse",
+      "word": "glimpse",
+      "partOfSpeech": "noun/verb",
+      "definition": "A brief or partial view; to see briefly",
+      "example": "I caught a glimpse of the sunrise.",
+      "wordFamily": [
+        {
+          "word": "glimpse",
+          "partOfSpeech": "noun",
+          "example": "She got a glimpse of the future."
+        },
+        {
+          "word": "glimpse",
+          "partOfSpeech": "verb",
+          "example": "He glimpsed her in the crowd."
+        }
+      ],
+      "synonyms": [
+        "glance",
+        "peek",
+        "look",
+        "sight",
+        "brief view"
+      ],
+      "antonyms": [
+        "stare",
+        "gaze",
+        "scrutiny",
+        "examination"
+      ]
+    },
+    {
+      "root": "twinge",
+      "word": "twinge",
+      "partOfSpeech": "noun",
+      "definition": "A sudden sharp pain or emotional pang",
+      "example": "He felt a twinge of guilt.",
+      "wordFamily": [
+        {
+          "word": "twinge",
+          "partOfSpeech": "noun",
+          "example": "She experienced a twinge in her back."
+        },
+        {
+          "word": "twinge",
+          "partOfSpeech": "verb",
+          "example": "His conscience twinged."
+        }
+      ],
+      "synonyms": [
+        "pang",
+        "sting",
+        "ache",
+        "prick",
+        "spasm"
+      ],
+      "antonyms": [
+        "comfort",
+        "ease",
+        "relief"
+      ]
+    },
+    {
+      "root": "separate",
+      "word": "separable",
+      "partOfSpeech": "adjective",
+      "definition": "Able to be separated or divided",
+      "example": "The two issues are not separable.",
+      "wordFamily": [
+        {
+          "word": "separate",
+          "partOfSpeech": "verb",
+          "example": "Separate the eggs."
+        },
+        {
+          "word": "separate",
+          "partOfSpeech": "adjective",
+          "example": "They sleep in separate rooms."
+        },
+        {
+          "word": "separation",
+          "partOfSpeech": "noun",
+          "example": "Their separation was difficult."
+        },
+        {
+          "word": "separable",
+          "partOfSpeech": "adjective",
+          "example": "The parts are separable."
+        },
+        {
+          "word": "inseparable",
+          "partOfSpeech": "adjective",
+          "example": "They are inseparable friends."
+        }
+      ],
+      "synonyms": [
+        "divisible",
+        "detachable",
+        "distinguishable",
+        "segregable"
+      ],
+      "antonyms": [
+        "inseparable",
+        "attached",
+        "connected",
+        "joined"
+      ]
+    },
+    {
+      "root": "relate",
+      "word": "interrelatable",
+      "partOfSpeech": "adjective",
+      "definition": "Able to be connected or related to each other",
+      "example": "The concepts are interrelatable.",
+      "wordFamily": [
+        {
+          "word": "relate",
+          "partOfSpeech": "verb",
+          "example": "I can relate to that."
+        },
+        {
+          "word": "relation",
+          "partOfSpeech": "noun",
+          "example": "Their relation is complex."
+        },
+        {
+          "word": "relationship",
+          "partOfSpeech": "noun",
+          "example": "A healthy relationship."
+        },
+        {
+          "word": "relative",
+          "partOfSpeech": "adjective/noun",
+          "example": "Relative importance."
+        },
+        {
+          "word": "interrelate",
+          "partOfSpeech": "verb",
+          "example": "These factors interrelate."
+        },
+        {
+          "word": "interrelated",
+          "partOfSpeech": "adjective",
+          "example": "Interrelated issues."
+        }
+      ],
+      "synonyms": [
+        "connectable",
+        "linkable",
+        "correlated",
+        "associated"
+      ],
+      "antonyms": [
+        "unrelated",
+        "disconnected",
+        "independent"
+      ]
+    },
+    {
+      "root": "postulate",
+      "word": "postulate",
+      "partOfSpeech": "verb/noun",
+      "definition": "Suggest or assume the existence of something as a basis for reasoning",
+      "example": "He postulated that the earth revolves around the sun.",
+      "wordFamily": [
+        {
+          "word": "postulate",
+          "partOfSpeech": "verb",
+          "example": "Scientists postulate the theory."
+        },
+        {
+          "word": "postulation",
+          "partOfSpeech": "noun",
+          "example": "His postulation was proven correct."
+        }
+      ],
+      "synonyms": [
+        "propose",
+        "suggest",
+        "assume",
+        "hypothesize",
+        "theorize"
+      ],
+      "antonyms": [
+        "prove",
+        "verify",
+        "confirm",
+        "disprove"
+      ]
+    },
+    {
+      "root": "renounce",
+      "word": "renounce",
+      "partOfSpeech": "verb",
+      "definition": "Formally declare one's abandonment of a claim, right, or possession",
+      "example": "He renounced his citizenship.",
+      "wordFamily": [
+        {
+          "word": "renounce",
+          "partOfSpeech": "verb",
+          "example": "She renounced violence."
+        },
+        {
+          "word": "renunciation",
+          "partOfSpeech": "noun",
+          "example": "His renunciation of wealth was surprising."
+        }
+      ],
+      "synonyms": [
+        "abandon",
+        "reject",
+        "forsake",
+        "disown",
+        "abdicate"
+      ],
+      "antonyms": [
+        "claim",
+        "accept",
+        "embrace",
+        "maintain",
+        "retain"
+      ]
+    },
+    {
+      "root": "precede",
+      "word": "precede",
+      "partOfSpeech": "verb",
+      "definition": "Come before in time, order, or position",
+      "example": "The appetizer preceded the main course.",
+      "wordFamily": [
+        {
+          "word": "precede",
+          "partOfSpeech": "verb",
+          "example": "Spring precedes summer."
+        },
+        {
+          "word": "precedent",
+          "partOfSpeech": "noun",
+          "example": "There is no precedent for this."
+        },
+        {
+          "word": "preceding",
+          "partOfSpeech": "adjective",
+          "example": "The preceding chapter."
+        },
+        {
+          "word": "predecessor",
+          "partOfSpeech": "noun",
+          "example": "My predecessor retired."
+        }
+      ],
+      "synonyms": [
+        "precede",
+        "come before",
+        "lead",
+        "pave the way"
+      ],
+      "antonyms": [
+        "follow",
+        "succeed",
+        "come after"
+      ]
+    },
+    {
+      "root": "permit",
+      "word": "permissive",
+      "partOfSpeech": "adjective",
+      "definition": "Allowing freedom, especially in behavior",
+      "example": "They had permissive parents.",
+      "wordFamily": [
+        {
+          "word": "permit",
+          "partOfSpeech": "verb",
+          "example": "Please permit me to explain."
+        },
+        {
+          "word": "permission",
+          "partOfSpeech": "noun",
+          "example": "You need permission."
+        },
+        {
+          "word": "permissive",
+          "partOfSpeech": "adjective",
+          "example": "A permissive society."
+        },
+        {
+          "word": "permissiveness",
+          "partOfSpeech": "noun",
+          "example": "The permissiveness of the rules."
+        }
+      ],
+      "synonyms": [
+        "lenient",
+        "liberal",
+        "tolerant",
+        "indulgent",
+        "easygoing"
+      ],
+      "antonyms": [
+        "strict",
+        "rigid",
+        "authoritarian",
+        "restrictive"
+      ]
+    },
+    {
+      "root": "stereotype",
+      "word": "stereotype",
+      "partOfSpeech": "noun/verb",
+      "definition": "A widely held but oversimplified image of a group",
+      "example": "The stereotype that all artists are poor is false.",
+      "wordFamily": [
+        {
+          "word": "stereotype",
+          "partOfSpeech": "noun",
+          "example": "Gender stereotypes are harmful."
+        },
+        {
+          "word": "stereotype",
+          "partOfSpeech": "verb",
+          "example": "Don't stereotype people."
+        },
+        {
+          "word": "stereotypical",
+          "partOfSpeech": "adjective",
+          "example": "A stereotypical view."
+        }
+      ],
+      "synonyms": [
+        "cliché",
+        "caricature",
+        "label",
+        "generalization",
+        "typecast"
+      ],
+      "antonyms": [
+        "individuality",
+        "unique",
+        "distinct",
+        "original"
+      ]
+    },
+    {
+      "root": "preface",
+      "word": "preface",
+      "partOfSpeech": "noun/verb",
+      "definition": "An introduction to a book; to begin or introduce",
+      "example": "He prefaced his speech with a joke.",
+      "wordFamily": [
+        {
+          "word": "preface",
+          "partOfSpeech": "noun",
+          "example": "Read the preface first."
+        },
+        {
+          "word": "preface",
+          "partOfSpeech": "verb",
+          "example": "She prefaced her remarks."
+        },
+        {
+          "word": "prefatory",
+          "partOfSpeech": "adjective",
+          "example": "Prefatory comments."
+        }
+      ],
+      "synonyms": [
+        "introduction",
+        "preamble",
+        "prologue",
+        "foreword",
+        "opening"
+      ],
+      "antonyms": [
+        "epilogue",
+        "afterword",
+        "conclusion",
+        "postscript"
+      ]
+    },
+    {
+      "root": "congruent",
+      "word": "congruent",
+      "partOfSpeech": "adjective",
+      "definition": "In agreement or harmony; matching",
+      "example": "His actions were congruent with his words.",
+      "wordFamily": [
+        {
+          "word": "congruent",
+          "partOfSpeech": "adjective",
+          "example": "Congruent shapes in geometry."
+        },
+        {
+          "word": "congruence",
+          "partOfSpeech": "noun",
+          "example": "There is congruence between the reports."
+        },
+        {
+          "word": "congruously",
+          "partOfSpeech": "adverb",
+          "example": "They fit congruously together."
+        }
+      ],
+      "synonyms": [
+        "compatible",
+        "consistent",
+        "harmonious",
+        "coinciding",
+        "agreeing"
+      ],
+      "antonyms": [
+        "incongruent",
+        "incompatible",
+        "contradictory",
+        "discordant"
+      ]
+    },
+    {
+      "root": "conduct",
+      "word": "conduct",
+      "partOfSpeech": "verb/noun",
+      "definition": "Organize and carry out; behavior",
+      "example": "They conducted an experiment.",
+      "wordFamily": [
+        {
+          "word": "conduct",
+          "partOfSpeech": "verb",
+          "example": "He conducted the orchestra."
+        },
+        {
+          "word": "conduct",
+          "partOfSpeech": "noun",
+          "example": "Professional conduct is expected."
+        },
+        {
+          "word": "conductor",
+          "partOfSpeech": "noun",
+          "example": "The train conductor."
+        },
+        {
+          "word": "conduction",
+          "partOfSpeech": "noun",
+          "example": "Heat conduction."
+        }
+      ],
+      "synonyms": [
+        "manage",
+        "direct",
+        "lead",
+        "carry out",
+        "behave"
+      ],
+      "antonyms": [
+        "mismanage",
+        "neglect",
+        "ignore"
+      ]
+    },
+    {
+      "root": "view",
+      "word": "purview",
+      "partOfSpeech": "noun",
+      "definition": "The scope or extent of something's influence or operation",
+      "example": "This matter falls within the purview of the committee.",
+      "wordFamily": [
+        {
+          "word": "view",
+          "partOfSpeech": "noun",
+          "example": "A beautiful view."
+        },
+        {
+          "word": "purview",
+          "partOfSpeech": "noun",
+          "example": "Within his purview."
+        },
+        {
+          "word": "review",
+          "partOfSpeech": "noun/verb",
+          "example": "Book review."
+        },
+        {
+          "word": "interview",
+          "partOfSpeech": "noun/verb",
+          "example": "Job interview."
+        }
+      ],
+      "synonyms": [
+        "scope",
+        "range",
+        "ambit",
+        "jurisdiction",
+        "remit"
+      ],
+      "antonyms": [
+        "limit",
+        "restriction",
+        "boundary"
+      ]
+    },
+    {
+      "root": "anchor",
+      "word": "anchor",
+      "partOfSpeech": "noun/verb",
+      "definition": "A heavy object that holds a ship in place; to secure firmly",
+      "example": "The anchor kept the boat steady.",
+      "wordFamily": [
+        {
+          "word": "anchor",
+          "partOfSpeech": "noun",
+          "example": "The ship dropped anchor."
+        },
+        {
+          "word": "anchor",
+          "partOfSpeech": "verb",
+          "example": "Anchor the shelf to the wall."
+        },
+        {
+          "word": "anchorage",
+          "partOfSpeech": "noun",
+          "example": "Safe anchorage."
+        },
+        {
+          "word": "anchorite",
+          "partOfSpeech": "noun",
+          "example": "A religious hermit."
+        }
+      ],
+      "synonyms": [
+        "mooring",
+        "mainstay",
+        "foundation",
+        "secure",
+        "fasten"
+      ],
+      "antonyms": [
+        "drift",
+        "loosen",
+        "unfasten",
+        "release"
+      ]
+    },
+    {
+      "root": "assert",
+      "word": "assert",
+      "partOfSpeech": "verb",
+      "definition": "State a fact or belief confidently and forcefully",
+      "example": "He asserted his innocence.",
+      "wordFamily": [
+        {
+          "word": "assert",
+          "partOfSpeech": "verb",
+          "example": "She asserted her authority."
+        },
+        {
+          "word": "assertion",
+          "partOfSpeech": "noun",
+          "example": "His assertion was correct."
+        },
+        {
+          "word": "assertive",
+          "partOfSpeech": "adjective",
+          "example": "Be more assertive."
+        },
+        {
+          "word": "assertiveness",
+          "partOfSpeech": "noun",
+          "example": "Assertiveness training."
+        }
+      ],
+      "synonyms": [
+        "declare",
+        "affirm",
+        "maintain",
+        "insist",
+        "proclaim"
+      ],
+      "antonyms": [
+        "deny",
+        "contradict",
+        "refute",
+        "question"
+      ]
+    },
+    {
+      "root": "rid",
+      "word": "rid",
+      "partOfSpeech": "verb",
+      "definition": "Make someone or something free of something unwanted",
+      "example": "He wanted to rid himself of debt.",
+      "wordFamily": [
+        {
+          "word": "rid",
+          "partOfSpeech": "verb",
+          "example": "Get rid of that clutter."
+        },
+        {
+          "word": "riddance",
+          "partOfSpeech": "noun",
+          "example": "Good riddance!"
+        },
+        {
+          "word": "ridden",
+          "partOfSpeech": "adjective",
+          "example": "Guilt-ridden."
+        }
+      ],
+      "synonyms": [
+        "free",
+        "clear",
+        "purge",
+        "relieve",
+        "unburden"
+      ],
+      "antonyms": [
+        "burden",
+        "encumber",
+        "weigh down"
+      ]
+    },
+    {
+      "root": "conserve",
+      "word": "conservative",
+      "partOfSpeech": "adjective/noun",
+      "definition": "Holding traditional values; cautious about change",
+      "example": "He has conservative views on marriage.",
+      "wordFamily": [
+        {
+          "word": "conserve",
+          "partOfSpeech": "verb",
+          "example": "Conserve water."
+        },
+        {
+          "word": "conservation",
+          "partOfSpeech": "noun",
+          "example": "Wildlife conservation."
+        },
+        {
+          "word": "conservative",
+          "partOfSpeech": "adjective",
+          "example": "Conservative estimate."
+        },
+        {
+          "word": "conservatism",
+          "partOfSpeech": "noun",
+          "example": "Political conservatism."
+        }
+      ],
+      "synonyms": [
+        "traditional",
+        "conventional",
+        "cautious",
+        "moderate",
+        "right-wing"
+      ],
+      "antonyms": [
+        "liberal",
+        "progressive",
+        "radical",
+        "innovative"
+      ]
+    },
+    {
+      "root": "abide",
+      "word": "abide",
+      "partOfSpeech": "verb",
+      "definition": "Accept or act in accordance with; tolerate",
+      "example": "He must abide by the rules.",
+      "wordFamily": [
+        {
+          "word": "abide",
+          "partOfSpeech": "verb",
+          "example": "I can't abide liars."
+        },
+        {
+          "word": "abiding",
+          "partOfSpeech": "adjective",
+          "example": "An abiding love."
+        },
+        {
+          "word": "abidance",
+          "partOfSpeech": "noun",
+          "example": "Abidance by the law."
+        }
+      ],
+      "synonyms": [
+        "obey",
+        "follow",
+        "comply",
+        "tolerate",
+        "endure"
+      ],
+      "antonyms": [
+        "disobey",
+        "defy",
+        "resist",
+        "reject"
+      ]
+    },
+    {
+      "root": "frontier",
+      "word": "frontier",
+      "partOfSpeech": "noun",
+      "definition": "The extreme limit of settled land; a boundary",
+      "example": "They explored the American frontier.",
+      "wordFamily": [
+        {
+          "word": "frontier",
+          "partOfSpeech": "noun",
+          "example": "Space is the final frontier."
+        },
+        {
+          "word": "frontiersman",
+          "partOfSpeech": "noun",
+          "example": "A rugged frontiersman."
+        }
+      ],
+      "synonyms": [
+        "boundary",
+        "border",
+        "limit",
+        "edge",
+        "perimeter"
+      ],
+      "antonyms": [
+        "center",
+        "interior",
+        "heartland"
+      ]
+    },
+    {
+      "root": "cunning",
+      "word": "cunning",
+      "partOfSpeech": "adjective/noun",
+      "definition": "Clever at being deceptive; skill in achieving goals through deceit",
+      "example": "The cunning fox escaped the trap.",
+      "wordFamily": [
+        {
+          "word": "cunning",
+          "partOfSpeech": "adjective",
+          "example": "A cunning plan."
+        },
+        {
+          "word": "cunningly",
+          "partOfSpeech": "adverb",
+          "example": "He cunningly avoided capture."
+        }
+      ],
+      "synonyms": [
+        "sly",
+        "crafty",
+        "wily",
+        "devious",
+        "shrewd",
+        "artful"
+      ],
+      "antonyms": [
+        "honest",
+        "naive",
+        "innocent",
+        "straightforward"
+      ]
+    },
+    {
+      "root": "press",
+      "word": "oppress",
+      "partOfSpeech": "verb",
+      "definition": "Keep in subservience; burden with cruel or unjust treatment",
+      "example": "The dictator oppressed the people.",
+      "wordFamily": [
+        {
+          "word": "press",
+          "partOfSpeech": "verb",
+          "example": "Press the button."
+        },
+        {
+          "word": "oppress",
+          "partOfSpeech": "verb",
+          "example": "The regime oppressed minorities."
+        },
+        {
+          "word": "oppression",
+          "partOfSpeech": "noun",
+          "example": "The fight against oppression."
+        },
+        {
+          "word": "oppressive",
+          "partOfSpeech": "adjective",
+          "example": "Oppressive heat."
+        },
+        {
+          "word": "oppressor",
+          "partOfSpeech": "noun",
+          "example": "The oppressor was overthrown."
+        }
+      ],
+      "synonyms": [
+        "subjugate",
+        "tyrannize",
+        "persecute",
+        "crush",
+        "dominate"
+      ],
+      "antonyms": [
+        "liberate",
+        "free",
+        "empower",
+        "emancipate"
+      ]
+    },
+    {
+      "root": "press",
+      "word": "suppress",
+      "partOfSpeech": "verb",
+      "definition": "Forcibly put an end to; prevent from being expressed",
+      "example": "The government suppressed the protest.",
+      "wordFamily": [
+        {
+          "word": "suppress",
+          "partOfSpeech": "verb",
+          "example": "Suppress your anger."
+        },
+        {
+          "word": "suppression",
+          "partOfSpeech": "noun",
+          "example": "Censorship and suppression."
+        },
+        {
+          "word": "suppressive",
+          "partOfSpeech": "adjective",
+          "example": "Suppressive measures."
+        }
+      ],
+      "synonyms": [
+        "quell",
+        "subdue",
+        "stifle",
+        "repress",
+        "squelch"
+      ],
+      "antonyms": [
+        "encourage",
+        "promote",
+        "express",
+        "release"
+      ]
+    },
+    {
+      "root": "shut",
+      "word": "shut",
+      "partOfSpeech": "verb",
+      "definition": "Move something into position to block an opening",
+      "example": "Please shut the door.",
+      "wordFamily": [
+        {
+          "word": "shut",
+          "partOfSpeech": "verb",
+          "example": "Shut your eyes."
+        },
+        {
+          "word": "shutter",
+          "partOfSpeech": "noun",
+          "example": "Close the shutters."
+        },
+        {
+          "word": "shutdown",
+          "partOfSpeech": "noun",
+          "example": "A complete shutdown."
+        }
+      ],
+      "synonyms": [
+        "close",
+        "fasten",
+        "seal",
+        "lock",
+        "bar"
+      ],
+      "antonyms": [
+        "open",
+        "unlock",
+        "unfasten"
+      ]
+    },
+    {
+      "root": "shatter",
+      "word": "shatter",
+      "partOfSpeech": "verb",
+      "definition": "Break into many pieces; destroy completely",
+      "example": "The glass shattered on the floor.",
+      "wordFamily": [
+        {
+          "word": "shatter",
+          "partOfSpeech": "verb",
+          "example": "The news shattered her."
+        },
+        {
+          "word": "shattered",
+          "partOfSpeech": "adjective",
+          "example": "He felt shattered."
+        },
+        {
+          "word": "shattering",
+          "partOfSpeech": "adjective",
+          "example": "A shattering experience."
+        }
+      ],
+      "synonyms": [
+        "smash",
+        "break",
+        "fragment",
+        "demolish",
+        "ruin",
+        "destroy"
+      ],
+      "antonyms": [
+        "repair",
+        "mend",
+        "fix",
+        "reconstruct"
+      ]
+    },
+    {
+      "root": "rivet",
+      "word": "riveting",
+      "partOfSpeech": "adjective",
+      "definition": "Completely engrossing; holding attention firmly",
+      "example": "The movie was absolutely riveting.",
+      "wordFamily": [
+        {
+          "word": "rivet",
+          "partOfSpeech": "noun",
+          "example": "Metal rivets."
+        },
+        {
+          "word": "rivet",
+          "partOfSpeech": "verb",
+          "example": "Her eyes riveted on him."
+        },
+        {
+          "word": "riveting",
+          "partOfSpeech": "adjective",
+          "example": "A riveting story."
+        }
+      ],
+      "synonyms": [
+        "captivating",
+        "fascinating",
+        "engrossing",
+        "gripping",
+        "compelling"
+      ],
+      "antonyms": [
+        "boring",
+        "dull",
+        "tedious",
+        "uninteresting"
+      ]
+    },
+    {
+      "root": "omit",
+      "word": "omission",
+      "partOfSpeech": "noun",
+      "definition": "Something that has been left out or excluded",
+      "example": "The omission of his name was an accident.",
+      "wordFamily": [
+        {
+          "word": "omit",
+          "partOfSpeech": "verb",
+          "example": "Omit the salt."
+        },
+        {
+          "word": "omission",
+          "partOfSpeech": "noun",
+          "example": "A glaring omission."
+        },
+        {
+          "word": "omitted",
+          "partOfSpeech": "adjective",
+          "example": "An omitted detail."
+        }
+      ],
+      "synonyms": [
+        "exclusion",
+        "oversight",
+        "gap",
+        "deletion",
+        "absence"
+      ],
+      "antonyms": [
+        "inclusion",
+        "addition",
+        "insertion"
+      ]
+    },
+    {
+      "root": "spectrum",
+      "word": "spectrum",
+      "partOfSpeech": "noun",
+      "definition": "A range of different things, often on a scale",
+      "example": "Opinions span the entire political spectrum.",
+      "wordFamily": [
+        {
+          "word": "spectrum",
+          "partOfSpeech": "noun",
+          "example": "The color spectrum."
+        },
+        {
+          "word": "spectral",
+          "partOfSpeech": "adjective",
+          "example": "Spectral analysis."
+        }
+      ],
+      "synonyms": [
+        "range",
+        "gamut",
+        "scope",
+        "variety",
+        "continuum"
+      ],
+      "antonyms": [
+        "single",
+        "uniform",
+        "homogeneous"
+      ]
+    },
+    {
+      "root": "grip",
+      "word": "grip",
+      "partOfSpeech": "noun/verb",
+      "definition": "A firm hold; to grasp tightly",
+      "example": "He tightened his grip on the rope.",
+      "wordFamily": [
+        {
+          "word": "grip",
+          "partOfSpeech": "noun",
+          "example": "Get a good grip."
+        },
+        {
+          "word": "grip",
+          "partOfSpeech": "verb",
+          "example": "Grip the handle firmly."
+        },
+        {
+          "word": "gripping",
+          "partOfSpeech": "adjective",
+          "example": "A gripping story."
+        }
+      ],
+      "synonyms": [
+        "grasp",
+        "hold",
+        "clutch",
+        "clasp",
+        "seize"
+      ],
+      "antonyms": [
+        "release",
+        "loosen",
+        "let go"
+      ]
+    },
+    {
+      "root": "grasp",
+      "word": "grasp",
+      "partOfSpeech": "verb/noun",
+      "definition": "Seize and hold firmly; understand",
+      "example": "She grasped the concept quickly.",
+      "wordFamily": [
+        {
+          "word": "grasp",
+          "partOfSpeech": "verb",
+          "example": "Grasp the opportunity."
+        },
+        {
+          "word": "grasp",
+          "partOfSpeech": "noun",
+          "example": "Beyond my grasp."
+        },
+        {
+          "word": "grasping",
+          "partOfSpeech": "adjective",
+          "example": "A grasping person."
+        }
+      ],
+      "synonyms": [
+        "grab",
+        "seize",
+        "clutch",
+        "understand",
+        "comprehend"
+      ],
+      "antonyms": [
+        "miss",
+        "release",
+        "misunderstand"
+      ]
+    },
+    {
+      "root": "rip",
+      "word": "ripping",
+      "partOfSpeech": "adjective",
+      "definition": "Very good, excellent (British informal)",
+      "example": "It was a ripping good yarn.",
+      "wordFamily": [
+        {
+          "word": "rip",
+          "partOfSpeech": "verb",
+          "example": "Rip the paper."
+        },
+        {
+          "word": "rip",
+          "partOfSpeech": "noun",
+          "example": "There's a rip in my shirt."
+        },
+        {
+          "word": "ripping",
+          "partOfSpeech": "adjective",
+          "example": "A ripping adventure."
+        }
+      ],
+      "synonyms": [
+        "splendid",
+        "excellent",
+        "marvelous",
+        "superb"
+      ],
+      "antonyms": [
+        "awful",
+        "terrible",
+        "dreadful"
+      ]
+    },
+    {
+      "root": "stimulate",
+      "word": "stimulation",
+      "partOfSpeech": "noun",
+      "definition": "The action of arousing interest, energy, or activity",
+      "example": "Children need mental stimulation.",
+      "wordFamily": [
+        {
+          "word": "stimulate",
+          "partOfSpeech": "verb",
+          "example": "Caffeine stimulates."
+        },
+        {
+          "word": "stimulation",
+          "partOfSpeech": "noun",
+          "example": "Sensory stimulation."
+        },
+        {
+          "word": "stimulant",
+          "partOfSpeech": "noun",
+          "example": "Coffee is a stimulant."
+        },
+        {
+          "word": "stimulating",
+          "partOfSpeech": "adjective",
+          "example": "A stimulating conversation."
+        }
+      ],
+      "synonyms": [
+        "encouragement",
+        "motivation",
+        "arousal",
+        "invigoration"
+      ],
+      "antonyms": [
+        "dullness",
+        "boredom",
+        "lethargy"
+      ]
+    },
+    {
+      "root": "scold",
+      "word": "scolded",
+      "partOfSpeech": "verb",
+      "definition": "Remonstrate with angrily; reprimand",
+      "example": "The teacher scolded the noisy students.",
+      "wordFamily": [
+        {
+          "word": "scold",
+          "partOfSpeech": "verb",
+          "example": "Don't scold the child."
+        },
+        {
+          "word": "scolding",
+          "partOfSpeech": "noun",
+          "example": "He got a scolding."
+        }
+      ],
+      "synonyms": [
+        "reprimand",
+        "rebuke",
+        "chastise",
+        "criticize",
+        "berate"
+      ],
+      "antonyms": [
+        "praise",
+        "compliment",
+        "applaud",
+        "commend"
+      ]
+    },
+    {
+      "root": "intimidate",
+      "word": "intimidation",
+      "partOfSpeech": "noun",
+      "definition": "The action of frightening or overawing someone",
+      "example": "They used intimidation to get what they wanted.",
+      "wordFamily": [
+        {
+          "word": "intimidate",
+          "partOfSpeech": "verb",
+          "example": "Don't intimidate me."
+        },
+        {
+          "word": "intimidation",
+          "partOfSpeech": "noun",
+          "example": "Tactics of intimidation."
+        },
+        {
+          "word": "intimidating",
+          "partOfSpeech": "adjective",
+          "example": "An intimidating presence."
+        }
+      ],
+      "synonyms": [
+        "frightening",
+        "menace",
+        "threatening",
+        "bullying",
+        "coercion"
+      ],
+      "antonyms": [
+        "encouragement",
+        "reassurance",
+        "comfort"
+      ]
+    },
+    {
+      "root": "subvert",
+      "word": "subversive",
+      "partOfSpeech": "adjective",
+      "definition": "Trying to destroy or undermine established authority",
+      "example": "The book was considered subversive.",
+      "wordFamily": [
+        {
+          "word": "subvert",
+          "partOfSpeech": "verb",
+          "example": "They tried to subvert the government."
+        },
+        {
+          "word": "subversion",
+          "partOfSpeech": "noun",
+          "example": "Acts of subversion."
+        },
+        {
+          "word": "subversive",
+          "partOfSpeech": "adjective",
+          "example": "Subversive ideas."
+        }
+      ],
+      "synonyms": [
+        "revolutionary",
+        "insurgent",
+        "rebellious",
+        "dissident",
+        "seditious"
+      ],
+      "antonyms": [
+        "loyal",
+        "patriotic",
+        "conformist",
+        "conservative"
+      ]
+    },
+    {
+      "root": "sprawl",
+      "word": "sprawled",
+      "partOfSpeech": "verb/adjective",
+      "definition": "Sit, lie, or fall with limbs spread out",
+      "example": "He sprawled on the couch.",
+      "wordFamily": [
+        {
+          "word": "sprawl",
+          "partOfSpeech": "verb",
+          "example": "The city sprawls."
+        },
+        {
+          "word": "sprawled",
+          "partOfSpeech": "adjective",
+          "example": "Sprawled on the floor."
+        },
+        {
+          "word": "sprawling",
+          "partOfSpeech": "adjective",
+          "example": "A sprawling metropolis."
+        }
+      ],
+      "synonyms": [
+        "lounge",
+        "loll",
+        "spread",
+        "stretch",
+        "recline"
+      ],
+      "antonyms": [
+        "sit upright",
+        "stand",
+        "cramp"
+      ]
+    },
+    {
+      "root": "prospect",
+      "word": "prospect",
+      "partOfSpeech": "noun",
+      "definition": "The possibility of a future event; a potential customer",
+      "example": "The prospect of failure scared him.",
+      "wordFamily": [
+        {
+          "word": "prospect",
+          "partOfSpeech": "noun",
+          "example": "Exciting prospects."
+        },
+        {
+          "word": "prospective",
+          "partOfSpeech": "adjective",
+          "example": "Prospective buyers."
+        },
+        {
+          "word": "prospector",
+          "partOfSpeech": "noun",
+          "example": "A gold prospector."
+        }
+      ],
+      "synonyms": [
+        "possibility",
+        "chance",
+        "likelihood",
+        "outlook",
+        "expectation"
+      ],
+      "antonyms": [
+        "certainty",
+        "impossibility",
+        "hopelessness"
+      ]
+    },
+    {
+      "root": "deprive",
+      "word": "deprive",
+      "partOfSpeech": "verb",
+      "definition": "Prevent from having, using, or enjoying something",
+      "example": "The prisoners were deprived of food.",
+      "wordFamily": [
+        {
+          "word": "deprive",
+          "partOfSpeech": "verb",
+          "example": "Don't deprive yourself."
+        },
+        {
+          "word": "deprivation",
+          "partOfSpeech": "noun",
+          "example": "Sleep deprivation."
+        },
+        {
+          "word": "deprived",
+          "partOfSpeech": "adjective",
+          "example": "Deprived children."
+        }
+      ],
+      "synonyms": [
+        "deny",
+        "dispossess",
+        "strip",
+        "divest",
+        "rob"
+      ],
+      "antonyms": [
+        "provide",
+        "supply",
+        "give",
+        "endow"
+      ]
+    },
+    {
+      "root": "foster",
+      "word": "foster",
+      "partOfSpeech": "verb",
+      "definition": "Encourage the development of; bring up a child",
+      "example": "The program fosters creativity.",
+      "wordFamily": [
+        {
+          "word": "foster",
+          "partOfSpeech": "verb",
+          "example": "Foster good habits."
+        },
+        {
+          "word": "foster",
+          "partOfSpeech": "adjective",
+          "example": "Foster parents."
+        },
+        {
+          "word": "fostering",
+          "partOfSpeech": "noun",
+          "example": "The fostering of talent."
+        }
+      ],
+      "synonyms": [
+        "nurture",
+        "encourage",
+        "promote",
+        "cultivate",
+        "support"
+      ],
+      "antonyms": [
+        "neglect",
+        "discourage",
+        "stifle",
+        "suppress"
+      ]
+    },
+    {
+      "root": "compromise",
+      "word": "compromise",
+      "partOfSpeech": "noun/verb",
+      "definition": "An agreement reached by mutual concession",
+      "example": "They reached a compromise.",
+      "wordFamily": [
+        {
+          "word": "compromise",
+          "partOfSpeech": "noun",
+          "example": "A fair compromise."
+        },
+        {
+          "word": "compromise",
+          "partOfSpeech": "verb",
+          "example": "We must compromise."
+        },
+        {
+          "word": "compromising",
+          "partOfSpeech": "adjective",
+          "example": "A compromising position."
+        }
+      ],
+      "synonyms": [
+        "agreement",
+        "settlement",
+        "concession",
+        "trade-off",
+        "middle ground"
+      ],
+      "antonyms": [
+        "disagreement",
+        "conflict",
+        "deadlock",
+        "standoff"
+      ]
+    },
+    {
+      "root": "embody",
+      "word": "embody",
+      "partOfSpeech": "verb",
+      "definition": "Give a tangible form to an idea; represent",
+      "example": "She embodies the spirit of the company.",
+      "wordFamily": [
+        {
+          "word": "embody",
+          "partOfSpeech": "verb",
+          "example": "The statue embodies courage."
+        },
+        {
+          "word": "embodiment",
+          "partOfSpeech": "noun",
+          "example": "He is the embodiment of kindness."
+        }
+      ],
+      "synonyms": [
+        "represent",
+        "exemplify",
+        "personify",
+        "incarnate",
+        "manifest"
+      ],
+      "antonyms": [
+        "hide",
+        "conceal",
+        "mask"
+      ]
+    },
+    {
+      "root": "excruciate",
+      "word": "excruciate",
+      "partOfSpeech": "verb",
+      "definition": "Torment or torture physically or mentally",
+      "example": "The pain excruciated him.",
+      "wordFamily": [
+        {
+          "word": "excruciate",
+          "partOfSpeech": "verb",
+          "example": "The memory excruciates her."
+        },
+        {
+          "word": "excruciating",
+          "partOfSpeech": "adjective",
+          "example": "Excruciating pain."
+        },
+        {
+          "word": "excruciatingly",
+          "partOfSpeech": "adverb",
+          "example": "Excruciatingly slow."
+        }
+      ],
+      "synonyms": [
+        "torture",
+        "torment",
+        "agonize",
+        "rack",
+        "anguish"
+      ],
+      "antonyms": [
+        "soothe",
+        "relieve",
+        "comfort",
+        "ease"
+      ]
+    },
+    {
+      "root": "deteriorate",
+      "word": "deteriorate",
+      "partOfSpeech": "verb",
+      "definition": "Become progressively worse",
+      "example": "His health deteriorated rapidly.",
+      "wordFamily": [
+        {
+          "word": "deteriorate",
+          "partOfSpeech": "verb",
+          "example": "Relations deteriorated."
+        },
+        {
+          "word": "deterioration",
+          "partOfSpeech": "noun",
+          "example": "The deterioration of the building."
+        }
+      ],
+      "synonyms": [
+        "decline",
+        "worsen",
+        "degrade",
+        "degenerate",
+        "decay",
+        "sink"
+      ],
+      "antonyms": [
+        "improve",
+        "better",
+        "recover",
+        "strengthen"
+      ]
+    },
+    {
+      "root": "relinquish",
+      "word": "relinquish",
+      "partOfSpeech": "verb",
+      "definition": "Voluntarily cease to keep or claim; give up",
+      "example": "He relinquished control of the company.",
+      "wordFamily": [
+        {
+          "word": "relinquish",
+          "partOfSpeech": "verb",
+          "example": "Relinquish your seat."
+        },
+        {
+          "word": "relinquishment",
+          "partOfSpeech": "noun",
+          "example": "The relinquishment of power."
+        }
+      ],
+      "synonyms": [
+        "surrender",
+        "cede",
+        "renounce",
+        "abdicate",
+        "resign",
+        "forgo"
+      ],
+      "antonyms": [
+        "keep",
+        "retain",
+        "hold",
+        "claim",
+        "maintain"
+      ]
+    },
+    {
+      "root": "slam",
+      "word": "slamming",
+      "partOfSpeech": "verb",
+      "definition": "Shut forcefully and loudly; criticize harshly",
+      "example": "He was slamming the door.",
+      "wordFamily": [
+        {
+          "word": "slam",
+          "partOfSpeech": "verb",
+          "example": "Slam the brakes."
+        },
+        {
+          "word": "slam",
+          "partOfSpeech": "noun",
+          "example": "The door closed with a slam."
+        },
+        {
+          "word": "slamming",
+          "partOfSpeech": "noun",
+          "example": "The slamming of doors."
+        }
+      ],
+      "synonyms": [
+        "bang",
+        "crash",
+        "smash",
+        "criticize",
+        "attack"
+      ],
+      "antonyms": [
+        "open gently",
+        "praise",
+        "compliment"
+      ]
+    },
+    {
+      "root": "supplement",
+      "word": "supplement",
+      "partOfSpeech": "noun/verb",
+      "definition": "Something added to complete or enhance",
+      "example": "She takes vitamin supplements.",
+      "wordFamily": [
+        {
+          "word": "supplement",
+          "partOfSpeech": "noun",
+          "example": "A newspaper supplement."
+        },
+        {
+          "word": "supplement",
+          "partOfSpeech": "verb",
+          "example": "Supplement your income."
+        },
+        {
+          "word": "supplementary",
+          "partOfSpeech": "adjective",
+          "example": "Supplementary materials."
+        }
+      ],
+      "synonyms": [
+        "addition",
+        "extra",
+        "complement",
+        "adjunct",
+        "add-on"
+      ],
+      "antonyms": [
+        "lack",
+        "deficiency",
+        "shortage"
+      ]
+    },
+    {
+      "root": "aside",
+      "word": "aside",
+      "partOfSpeech": "adverb/noun",
+      "definition": "To one side; a remark not intended to be heard by all",
+      "example": "She whispered an aside to her friend.",
+      "wordFamily": [
+        {
+          "word": "aside",
+          "partOfSpeech": "adverb",
+          "example": "Step aside."
+        },
+        {
+          "word": "aside",
+          "partOfSpeech": "noun",
+          "example": "A humorous aside."
+        }
+      ],
+      "synonyms": [
+        "away",
+        "apart",
+        "separately",
+        "digression",
+        "tangent"
+      ],
+      "antonyms": [
+        "center",
+        "main point"
+      ]
+    },
+    {
+      "root": "gaze",
+      "word": "gaze",
+      "partOfSpeech": "verb/noun",
+      "definition": "Look steadily and intently",
+      "example": "She gazed at the stars.",
+      "wordFamily": [
+        {
+          "word": "gaze",
+          "partOfSpeech": "verb",
+          "example": "Gaze into the distance."
+        },
+        {
+          "word": "gaze",
+          "partOfSpeech": "noun",
+          "example": "Her steady gaze."
+        }
+      ],
+      "synonyms": [
+        "stare",
+        "look",
+        "peer",
+        "contemplate",
+        "behold"
+      ],
+      "antonyms": [
+        "ignore",
+        "glance away",
+        "overlook"
+      ]
+    },
+    {
+      "root": "elude",
+      "word": "elude",
+      "partOfSpeech": "verb",
+      "definition": "Escape from someone or something; avoid",
+      "example": "The criminal eluded capture.",
+      "wordFamily": [
+        {
+          "word": "elude",
+          "partOfSpeech": "verb",
+          "example": "The answer eludes me."
+        },
+        {
+          "word": "elusive",
+          "partOfSpeech": "adjective",
+          "example": "An elusive concept."
+        },
+        {
+          "word": "elusively",
+          "partOfSpeech": "adverb",
+          "example": "Elusively quiet."
+        }
+      ],
+      "synonyms": [
+        "evade",
+        "avoid",
+        "escape",
+        "dodge",
+        "outrun"
+      ],
+      "antonyms": [
+        "catch",
+        "capture",
+        "confront",
+        "face"
+      ]
+    },
+    {
+      "root": "profound",
+      "word": "profound",
+      "partOfSpeech": "adjective",
+      "definition": "Very great or intense; showing deep insight",
+      "example": "The lecture had a profound effect on me.",
+      "wordFamily": [
+        {
+          "word": "profound",
+          "partOfSpeech": "adjective",
+          "example": "Profound silence."
+        },
+        {
+          "word": "profoundly",
+          "partOfSpeech": "adverb",
+          "example": "Profoundly grateful."
+        },
+        {
+          "word": "profundity",
+          "partOfSpeech": "noun",
+          "example": "The profundity of his wisdom."
+        }
+      ],
+      "synonyms": [
+        "deep",
+        "intense",
+        "thoughtful",
+        "insightful",
+        "penetrating"
+      ],
+      "antonyms": [
+        "shallow",
+        "superficial",
+        "trivial",
+        "meaningless"
+      ]
+    },
+    {
+      "root": "satiate",
+      "word": "insatiable",
+      "partOfSpeech": "adjective",
+      "definition": "Impossible to satisfy",
+      "example": "He has an insatiable appetite for knowledge.",
+      "wordFamily": [
+        {
+          "word": "satiate",
+          "partOfSpeech": "verb",
+          "example": "Food satiated him."
+        },
+        {
+          "word": "insatiable",
+          "partOfSpeech": "adjective",
+          "example": "Insatiable curiosity."
+        },
+        {
+          "word": "insatiably",
+          "partOfSpeech": "adverb",
+          "example": "Insatiably hungry."
+        }
+      ],
+      "synonyms": [
+        "unquenchable",
+        "unappeasable",
+        "voracious",
+        "ravenous",
+        "greedy"
+      ],
+      "antonyms": [
+        "satisfied",
+        "quenched",
+        "appeased",
+        "content"
+      ]
+    },
+    {
+      "root": "yearn",
+      "word": "yearning",
+      "partOfSpeech": "noun",
+      "definition": "A strong, persistent desire",
+      "example": "A yearning for adventure.",
+      "wordFamily": [
+        {
+          "word": "yearn",
+          "partOfSpeech": "verb",
+          "example": "He yearns for home."
+        },
+        {
+          "word": "yearning",
+          "partOfSpeech": "noun",
+          "example": "Deep yearning in her heart."
+        }
+      ],
+      "synonyms": [
+        "longing",
+        "desire",
+        "craving",
+        "hunger",
+        "ache",
+        "pining"
+      ],
+      "antonyms": [
+        "indifference",
+        "apathy",
+        "dislike"
+      ]
+    },
+    {
+      "root": "linger",
+      "word": "linger",
+      "partOfSpeech": "verb",
+      "definition": "Stay in a place longer than necessary",
+      "example": "The smell lingered for hours.",
+      "wordFamily": [
+        {
+          "word": "linger",
+          "partOfSpeech": "verb",
+          "example": "Linger over coffee."
+        },
+        {
+          "word": "lingering",
+          "partOfSpeech": "adjective",
+          "example": "A lingering doubt."
+        }
+      ],
+      "synonyms": [
+        "loiter",
+        "wait",
+        "remain",
+        "persist",
+        "hang around"
+      ],
+      "antonyms": [
+        "leave",
+        "depart",
+        "rush",
+        "hurry"
+      ]
+    },
+    {
+      "root": "plunder",
+      "word": "plunder",
+      "partOfSpeech": "verb/noun",
+      "definition": "Steal goods violently, especially in war",
+      "example": "The invaders plundered the village.",
+      "wordFamily": [
+        {
+          "word": "plunder",
+          "partOfSpeech": "verb",
+          "example": "They plundered the treasure."
+        },
+        {
+          "word": "plunder",
+          "partOfSpeech": "noun",
+          "example": "The plunder was immense."
+        },
+        {
+          "word": "plunderer",
+          "partOfSpeech": "noun",
+          "example": "A ruthless plunderer."
+        }
+      ],
+      "synonyms": [
+        "loot",
+        "pillage",
+        "rob",
+        "ransack",
+        "sack",
+        "ravage"
+      ],
+      "antonyms": [
+        "protect",
+        "guard",
+        "preserve",
+        "return"
+      ]
+    },
+    {
+      "root": "ponder",
+      "word": "ponder",
+      "partOfSpeech": "verb",
+      "definition": "Think about carefully, especially before deciding",
+      "example": "She pondered the question.",
+      "wordFamily": [
+        {
+          "word": "ponder",
+          "partOfSpeech": "verb",
+          "example": "Ponder your options."
+        },
+        {
+          "word": "ponderous",
+          "partOfSpeech": "adjective",
+          "example": "Ponderous movement."
+        }
+      ],
+      "synonyms": [
+        "consider",
+        "contemplate",
+        "reflect",
+        "meditate",
+        "ruminate"
+      ],
+      "antonyms": [
+        "ignore",
+        "neglect",
+        "disregard",
+        "act impulsively"
+      ]
+    },
+    {
+      "root": "slander",
+      "word": "slander",
+      "partOfSpeech": "noun/verb",
+      "definition": "The action of making false spoken statements damaging to reputation",
+      "example": "He was sued for slander.",
+      "wordFamily": [
+        {
+          "word": "slander",
+          "partOfSpeech": "noun",
+          "example": "Malicious slander."
+        },
+        {
+          "word": "slander",
+          "partOfSpeech": "verb",
+          "example": "She slandered her rival."
+        },
+        {
+          "word": "slanderous",
+          "partOfSpeech": "adjective",
+          "example": "Slanderous accusations."
+        }
+      ],
+      "synonyms": [
+        "defamation",
+        "libel",
+        "calumny",
+        "aspersion",
+        "vilification"
+      ],
+      "antonyms": [
+        "praise",
+        "accolade",
+        "compliment",
+        "tribute"
+      ]
+    },
+    {
+      "root": "stipulate",
+      "word": "stipulate",
+      "partOfSpeech": "verb",
+      "definition": "Demand or specify a requirement, typically in an agreement",
+      "example": "The contract stipulates payment by Friday.",
+      "wordFamily": [
+        {
+          "word": "stipulate",
+          "partOfSpeech": "verb",
+          "example": "The rules stipulate."
+        },
+        {
+          "word": "stipulation",
+          "partOfSpeech": "noun",
+          "example": "A key stipulation."
+        }
+      ],
+      "synonyms": [
+        "specify",
+        "require",
+        "demand",
+        "prescribe",
+        "lay down"
+      ],
+      "antonyms": [
+        "leave open",
+        "vague",
+        "unspecified"
+      ]
+    },
+    {
+      "root": "object",
+      "word": "objection",
+      "partOfSpeech": "noun",
+      "definition": "An expression of disapproval or opposition",
+      "example": "He raised an objection to the plan.",
+      "wordFamily": [
+        {
+          "word": "object",
+          "partOfSpeech": "verb",
+          "example": "I object!"
+        },
+        {
+          "word": "objection",
+          "partOfSpeech": "noun",
+          "example": "Overruled objection."
+        },
+        {
+          "word": "objectionable",
+          "partOfSpeech": "adjective",
+          "example": "Objectionable behavior."
+        }
+      ],
+      "synonyms": [
+        "protest",
+        "complaint",
+        "opposition",
+        "dissent",
+        "disapproval"
+      ],
+      "antonyms": [
+        "agreement",
+        "approval",
+        "acceptance",
+        "support"
+      ]
+    },
+    {
+      "root": "margin",
+      "word": "marginalize",
+      "partOfSpeech": "verb",
+      "definition": "Treat as insignificant or peripheral",
+      "example": "The group has been marginalized.",
+      "wordFamily": [
+        {
+          "word": "margin",
+          "partOfSpeech": "noun",
+          "example": "Write in the margin."
+        },
+        {
+          "word": "marginal",
+          "partOfSpeech": "adjective",
+          "example": "Marginal improvement."
+        },
+        {
+          "word": "marginalize",
+          "partOfSpeech": "verb",
+          "example": "Marginalized communities."
+        }
+      ],
+      "synonyms": [
+        "exclude",
+        "sideline",
+        "alienate",
+        "ostracize",
+        "disempower"
+      ],
+      "antonyms": [
+        "include",
+        "empower",
+        "center",
+        "embrace"
+      ]
+    },
+    {
+      "root": "harbor",
+      "word": "harbor",
+      "partOfSpeech": "verb/noun",
+      "definition": "Keep a thought or feeling in mind; a safe haven",
+      "example": "She harbored a grudge.",
+      "wordFamily": [
+        {
+          "word": "harbor",
+          "partOfSpeech": "noun",
+          "example": "A safe harbor."
+        },
+        {
+          "word": "harbor",
+          "partOfSpeech": "verb",
+          "example": "Harbor suspicions."
+        }
+      ],
+      "synonyms": [
+        "hold",
+        "cherish",
+        "nurse",
+        "shelter",
+        "conceal"
+      ],
+      "antonyms": [
+        "release",
+        "discard",
+        "abandon",
+        "express openly"
+      ]
+    },
+    {
+      "root": "delude",
+      "word": "delude",
+      "partOfSpeech": "verb",
+      "definition": "Impose a misleading belief upon someone",
+      "example": "Don't delude yourself into thinking it's easy.",
+      "wordFamily": [
+        {
+          "word": "delude",
+          "partOfSpeech": "verb",
+          "example": "He deluded everyone."
+        },
+        {
+          "word": "delusion",
+          "partOfSpeech": "noun",
+          "example": "Under a delusion."
+        },
+        {
+          "word": "delusional",
+          "partOfSpeech": "adjective",
+          "example": "Delusional thinking."
+        }
+      ],
+      "synonyms": [
+        "mislead",
+        "deceive",
+        "fool",
+        "trick",
+        "dupe",
+        "beguile"
+      ],
+      "antonyms": [
+        "enlighten",
+        "inform",
+        "correct",
+        "undeceive"
+      ]
+    },
+    {
+      "root": "travail",
+      "word": "travail",
+      "partOfSpeech": "noun",
+      "definition": "Painful or laborious effort",
+      "example": "The travail of writing a book.",
+      "wordFamily": [
+        {
+          "word": "travail",
+          "partOfSpeech": "noun",
+          "example": "Years of travail."
+        },
+        {
+          "word": "travail",
+          "partOfSpeech": "verb",
+          "example": "He travailed for years."
+        }
+      ],
+      "synonyms": [
+        "labor",
+        "toil",
+        "struggle",
+        "effort",
+        "exertion",
+        "hardship"
+      ],
+      "antonyms": [
+        "ease",
+        "leisure",
+        "relaxation",
+        "rest"
+      ]
+    },
+    {
+      "root": "clamor",
+      "word": "clamor",
+      "partOfSpeech": "noun/verb",
+      "definition": "A loud and confused noise; to shout loudly",
+      "example": "The clamor of the crowd.",
+      "wordFamily": [
+        {
+          "word": "clamor",
+          "partOfSpeech": "noun",
+          "example": "Public clamor."
+        },
+        {
+          "word": "clamor",
+          "partOfSpeech": "verb",
+          "example": "They clamored for attention."
+        },
+        {
+          "word": "clamorous",
+          "partOfSpeech": "adjective",
+          "example": "A clamorous demand."
+        }
+      ],
+      "synonyms": [
+        "uproar",
+        "din",
+        "noise",
+        "racket",
+        "outcry",
+        "commotion"
+      ],
+      "antonyms": [
+        "silence",
+        "quiet",
+        "calm",
+        "peace"
+      ]
+    },
+    {
+      "root": "scribe",
+      "word": "inscribe",
+      "partOfSpeech": "verb",
+      "definition": "Write or carve words onto something",
+      "example": "She inscribed her name in the book.",
+      "wordFamily": [
+        {
+          "word": "scribe",
+          "partOfSpeech": "noun",
+          "example": "An ancient scribe."
+        },
+        {
+          "word": "inscribe",
+          "partOfSpeech": "verb",
+          "example": "Inscribe the stone."
+        },
+        {
+          "word": "inscription",
+          "partOfSpeech": "noun",
+          "example": "An old inscription."
+        }
+      ],
+      "synonyms": [
+        "engrave",
+        "carve",
+        "etch",
+        "write",
+        "imprint"
+      ],
+      "antonyms": [
+        "erase",
+        "remove",
+        "delete"
+      ]
+    },
+    {
+      "root": "bridle",
+      "word": "unbridle",
+      "partOfSpeech": "verb",
+      "definition": "Remove restraints; release from control",
+      "example": "His unbridled enthusiasm.",
+      "wordFamily": [
+        {
+          "word": "bridle",
+          "partOfSpeech": "noun",
+          "example": "A horse's bridle."
+        },
+        {
+          "word": "bridle",
+          "partOfSpeech": "verb",
+          "example": "Bridle your anger."
+        },
+        {
+          "word": "unbridled",
+          "partOfSpeech": "adjective",
+          "example": "Unbridled passion."
+        }
+      ],
+      "synonyms": [
+        "unleash",
+        "release",
+        "unleashed",
+        "uncontrolled",
+        "unrestrained"
+      ],
+      "antonyms": [
+        "bridle",
+        "restrain",
+        "control",
+        "curb",
+        "check"
+      ]
+    },
+    {
+      "root": "ambivalent",
+      "word": "ambivalent",
+      "partOfSpeech": "adjective",
+      "definition": "Having mixed feelings about someone or something",
+      "example": "She felt ambivalent about moving.",
+      "wordFamily": [
+        {
+          "word": "ambivalent",
+          "partOfSpeech": "adjective",
+          "example": "Ambivalent feelings."
+        },
+        {
+          "word": "ambivalence",
+          "partOfSpeech": "noun",
+          "example": "Moral ambivalence."
+        }
+      ],
+      "synonyms": [
+        "uncertain",
+        "undecided",
+        "conflicted",
+        "torn",
+        "hesitant"
+      ],
+      "antonyms": [
+        "certain",
+        "decisive",
+        "resolute",
+        "committed"
+      ]
+    },
+    {
+      "root": "mutual",
+      "word": "mutual",
+      "partOfSpeech": "adjective",
+      "definition": "Experienced or done by each of two or more parties",
+      "example": "Mutual respect is important.",
+      "wordFamily": [
+        {
+          "word": "mutual",
+          "partOfSpeech": "adjective",
+          "example": "Mutual friend."
+        },
+        {
+          "word": "mutually",
+          "partOfSpeech": "adverb",
+          "example": "Mutually exclusive."
+        },
+        {
+          "word": "mutuality",
+          "partOfSpeech": "noun",
+          "example": "Mutuality of interest."
+        }
+      ],
+      "synonyms": [
+        "reciprocal",
+        "shared",
+        "common",
+        "joint",
+        "bilateral"
+      ],
+      "antonyms": [
+        "one-sided",
+        "individual",
+        "unilateral"
+      ]
+    },
+    {
+      "root": "luxury",
+      "word": "luxuriate",
+      "partOfSpeech": "verb",
+      "definition": "Enjoy oneself in a luxurious way; take self-indulgent pleasure",
+      "example": "He luxuriated in a hot bath.",
+      "wordFamily": [
+        {
+          "word": "luxury",
+          "partOfSpeech": "noun",
+          "example": "A life of luxury."
+        },
+        {
+          "word": "luxuriate",
+          "partOfSpeech": "verb",
+          "example": "Luxuriate in the moment."
+        },
+        {
+          "word": "luxurious",
+          "partOfSpeech": "adjective",
+          "example": "Luxurious surroundings."
+        }
+      ],
+      "synonyms": [
+        "revel",
+        "savor",
+        "enjoy",
+        "delight",
+        "indulge",
+        "wallow"
+      ],
+      "antonyms": [
+        "suffer",
+        "endure",
+        "deprive",
+        "abstain"
+      ]
+    },
+    {
+      "root": "explode",
+      "word": "explode",
+      "partOfSpeech": "verb",
+      "definition": "Burst or shatter violently",
+      "example": "The bomb exploded.",
+      "wordFamily": [
+        {
+          "word": "explode",
+          "partOfSpeech": "verb",
+          "example": "The population exploded."
+        },
+        {
+          "word": "explosion",
+          "partOfSpeech": "noun",
+          "example": "A loud explosion."
+        },
+        {
+          "word": "explosive",
+          "partOfSpeech": "adjective",
+          "example": "Explosive temper."
+        }
+      ],
+      "synonyms": [
+        "blast",
+        "burst",
+        "detonate",
+        "erupt",
+        "blow up"
+      ],
+      "antonyms": [
+        "implode",
+        "contain",
+        "suppress"
+      ]
+    },
+    {
+      "root": "slave",
+      "word": "slavish",
+      "partOfSpeech": "adjective",
+      "definition": "Showing no originality; blindly obedient",
+      "example": "Slavish devotion to rules.",
+      "wordFamily": [
+        {
+          "word": "slave",
+          "partOfSpeech": "noun",
+          "example": "A slave to fashion."
+        },
+        {
+          "word": "slavish",
+          "partOfSpeech": "adjective",
+          "example": "Slavish imitation."
+        },
+        {
+          "word": "slavery",
+          "partOfSpeech": "noun",
+          "example": "Modern slavery."
+        }
+      ],
+      "synonyms": [
+        "servile",
+        "subservient",
+        "obsequious",
+        "submissive",
+        "unoriginal"
+      ],
+      "antonyms": [
+        "original",
+        "independent",
+        "creative",
+        "rebellious"
+      ]
+    },
+    {
+      "root": "compliment",
+      "word": "compliment",
+      "partOfSpeech": "noun/verb",
+      "definition": "A polite expression of praise or admiration",
+      "example": "She received many compliments.",
+      "wordFamily": [
+        {
+          "word": "compliment",
+          "partOfSpeech": "noun",
+          "example": "A nice compliment."
+        },
+        {
+          "word": "compliment",
+          "partOfSpeech": "verb",
+          "example": "He complimented her."
+        },
+        {
+          "word": "complimentary",
+          "partOfSpeech": "adjective",
+          "example": "Complimentary remarks."
+        }
+      ],
+      "synonyms": [
+        "praise",
+        "admiration",
+        "commendation",
+        "accolade",
+        "flattery"
+      ],
+      "antonyms": [
+        "insult",
+        "criticism",
+        "disparagement",
+        "reproach"
+      ]
+    },
+    {
+      "root": "enliven",
+      "word": "enlivening",
+      "partOfSpeech": "adjective",
+      "definition": "Making something more entertaining or interesting",
+      "example": "An enlivening conversation.",
+      "wordFamily": [
+        {
+          "word": "live",
+          "partOfSpeech": "adjective",
+          "example": "Live music."
+        },
+        {
+          "word": "enliven",
+          "partOfSpeech": "verb",
+          "example": "Music enlivens the party."
+        },
+        {
+          "word": "enlivening",
+          "partOfSpeech": "adjective",
+          "example": "Enlivening discussion."
+        }
+      ],
+      "synonyms": [
+        "invigorating",
+        "refreshing",
+        "stimulating",
+        "energizing",
+        "vitalizing"
+      ],
+      "antonyms": [
+        "boring",
+        "dull",
+        "tedious",
+        "deadening"
+      ]
+    },
+    {
+      "root": "suffuse",
+      "word": "suffused",
+      "partOfSpeech": "verb/adjective",
+      "definition": "Gradually spread through or over",
+      "example": "Her cheeks were suffused with color.",
+      "wordFamily": [
+        {
+          "word": "suffuse",
+          "partOfSpeech": "verb",
+          "example": "Light suffused the room."
+        },
+        {
+          "word": "suffused",
+          "partOfSpeech": "adjective",
+          "example": "Suffused with warmth."
+        }
+      ],
+      "synonyms": [
+        "permeate",
+        "pervade",
+        "imbue",
+        "infuse",
+        "fill",
+        "cover"
+      ],
+      "antonyms": [
+        "drain",
+        "empty",
+        "clear"
+      ]
+    },
+    {
+      "root": "agony",
+      "word": "agony",
+      "partOfSpeech": "noun",
+      "definition": "Extreme physical or mental suffering",
+      "example": "He was in agony.",
+      "wordFamily": [
+        {
+          "word": "agony",
+          "partOfSpeech": "noun",
+          "example": "Agony and ecstasy."
+        },
+        {
+          "word": "agonize",
+          "partOfSpeech": "verb",
+          "example": "She agonized over the decision."
+        },
+        {
+          "word": "agonizing",
+          "partOfSpeech": "adjective",
+          "example": "Agonizing pain."
+        }
+      ],
+      "synonyms": [
+        "torment",
+        "torture",
+        "suffering",
+        "anguish",
+        "misery",
+        "distress"
+      ],
+      "antonyms": [
+        "pleasure",
+        "joy",
+        "ecstasy",
+        "bliss",
+        "comfort"
+      ]
+    },
+    {
+      "root": "reproach",
+      "word": "reproach",
+      "partOfSpeech": "noun/verb",
+      "definition": "Express disapproval or disappointment",
+      "example": "She looked at him with reproach.",
+      "wordFamily": [
+        {
+          "word": "reproach",
+          "partOfSpeech": "noun",
+          "example": "A look of reproach."
+        },
+        {
+          "word": "reproach",
+          "partOfSpeech": "verb",
+          "example": "He reproached his son."
+        },
+        {
+          "word": "reproachful",
+          "partOfSpeech": "adjective",
+          "example": "A reproachful glance."
+        }
+      ],
+      "synonyms": [
+        "criticize",
+        "blame",
+        "censure",
+        "condemn",
+        "reprimand"
+      ],
+      "antonyms": [
+        "praise",
+        "commend",
+        "applaud",
+        "approve"
+      ]
+    },
+    {
+      "root": "reduce",
+      "word": "reduction",
+      "partOfSpeech": "noun",
+      "definition": "The action of making something smaller or less",
+      "example": "A reduction in price.",
+      "wordFamily": [
+        {
+          "word": "reduce",
+          "partOfSpeech": "verb",
+          "example": "Reduce your speed."
+        },
+        {
+          "word": "reduction",
+          "partOfSpeech": "noun",
+          "example": "Cost reduction."
+        },
+        {
+          "word": "reductive",
+          "partOfSpeech": "adjective",
+          "example": "A reductive argument."
+        }
+      ],
+      "synonyms": [
+        "decrease",
+        "cut",
+        "lowering",
+        "diminution",
+        "curtailment"
+      ],
+      "antonyms": [
+        "increase",
+        "expansion",
+        "growth",
+        "enlargement"
+      ]
+    },
+    {
+      "root": "summon",
+      "word": "summon",
+      "partOfSpeech": "verb",
+      "definition": "Call upon someone to be present; gather courage",
+      "example": "He summoned all his strength.",
+      "wordFamily": [
+        {
+          "word": "summon",
+          "partOfSpeech": "verb",
+          "example": "Summon help."
+        },
+        {
+          "word": "summons",
+          "partOfSpeech": "noun",
+          "example": "A court summons."
+        }
+      ],
+      "synonyms": [
+        "call",
+        "convene",
+        "assemble",
+        "muster",
+        "invoke"
+      ],
+      "antonyms": [
+        "dismiss",
+        "disband",
+        "ignore"
+      ]
+    },
+    {
+      "root": "leverage",
+      "word": "leverage",
+      "partOfSpeech": "noun/verb",
+      "definition": "Use something to maximum advantage; power or influence",
+      "example": "She used her experience as leverage.",
+      "wordFamily": [
+        {
+          "word": "leverage",
+          "partOfSpeech": "noun",
+          "example": "Financial leverage."
+        },
+        {
+          "word": "leverage",
+          "partOfSpeech": "verb",
+          "example": "Leverage your skills."
+        }
+      ],
+      "synonyms": [
+        "influence",
+        "advantage",
+        "power",
+        "weight",
+        "clout"
+      ],
+      "antonyms": [
+        "weakness",
+        "disadvantage",
+        "liability"
+      ]
+    },
+    {
+      "root": "moderate",
+      "word": "moderate",
+      "partOfSpeech": "adjective/verb",
+      "definition": "Average in amount or intensity; to make less extreme",
+      "example": "Exercise at a moderate pace.",
+      "wordFamily": [
+        {
+          "word": "moderate",
+          "partOfSpeech": "adjective",
+          "example": "Moderate views."
+        },
+        {
+          "word": "moderate",
+          "partOfSpeech": "verb",
+          "example": "Moderate your tone."
+        },
+        {
+          "word": "moderation",
+          "partOfSpeech": "noun",
+          "example": "Everything in moderation."
+        }
+      ],
+      "synonyms": [
+        "reasonable",
+        "temperate",
+        "mild",
+        "balanced",
+        "cautious"
+      ],
+      "antonyms": [
+        "extreme",
+        "excessive",
+        "intense",
+        "radical"
+      ]
+    },
+    {
+      "root": "purpose",
+      "word": "purport",
+      "partOfSpeech": "verb/noun",
+      "definition": "Appear or claim to be or do something",
+      "example": "The document purports to be official.",
+      "wordFamily": [
+        {
+          "word": "purpose",
+          "partOfSpeech": "noun",
+          "example": "Sense of purpose."
+        },
+        {
+          "word": "purport",
+          "partOfSpeech": "verb",
+          "example": "It purports to explain."
+        },
+        {
+          "word": "purported",
+          "partOfSpeech": "adjective",
+          "example": "The purported author."
+        }
+      ],
+      "synonyms": [
+        "claim",
+        "profess",
+        "pretend",
+        "allege",
+        "purport"
+      ],
+      "antonyms": [
+        "prove",
+        "verify",
+        "confirm"
+      ]
+    },
+    {
+      "root": "remedy",
+      "word": "remedy",
+      "partOfSpeech": "noun/verb",
+      "definition": "A medicine or treatment; to correct a problem",
+      "example": "A remedy for the cold.",
+      "wordFamily": [
+        {
+          "word": "remedy",
+          "partOfSpeech": "noun",
+          "example": "Natural remedy."
+        },
+        {
+          "word": "remedy",
+          "partOfSpeech": "verb",
+          "example": "Remedy the situation."
+        },
+        {
+          "word": "remedial",
+          "partOfSpeech": "adjective",
+          "example": "Remedial classes."
+        }
+      ],
+      "synonyms": [
+        "cure",
+        "treatment",
+        "solution",
+        "antidote",
+        "fix"
+      ],
+      "antonyms": [
+        "cause",
+        "aggravate",
+        "worsen"
+      ]
+    },
+    {
+      "root": "verge",
+      "word": "verge",
+      "partOfSpeech": "noun/verb",
+      "definition": "An edge or border; be on the point of something",
+      "example": "She was on the verge of tears.",
+      "wordFamily": [
+        {
+          "word": "verge",
+          "partOfSpeech": "noun",
+          "example": "The verge of the road."
+        },
+        {
+          "word": "verge",
+          "partOfSpeech": "verb",
+          "example": "Verge on collapse."
+        }
+      ],
+      "synonyms": [
+        "edge",
+        "brink",
+        "threshold",
+        "boundary",
+        "margin"
+      ],
+      "antonyms": [
+        "center",
+        "middle",
+        "interior"
+      ]
+    },
+    {
+      "root": "traverse",
+      "word": "traverse",
+      "partOfSpeech": "verb",
+      "definition": "Travel across or through",
+      "example": "He traversed the desert.",
+      "wordFamily": [
+        {
+          "word": "traverse",
+          "partOfSpeech": "verb",
+          "example": "Traverse the mountains."
+        },
+        {
+          "word": "traversal",
+          "partOfSpeech": "noun",
+          "example": "Graph traversal."
+        }
+      ],
+      "synonyms": [
+        "cross",
+        "travel",
+        "navigate",
+        "journey",
+        "cover"
+      ],
+      "antonyms": [
+        "stay",
+        "remain",
+        "avoid"
+      ]
+    },
+    {
+      "root": "close",
+      "word": "disclose",
+      "partOfSpeech": "verb",
+      "definition": "Make secret information known",
+      "example": "He refused to disclose the details.",
+      "wordFamily": [
+        {
+          "word": "close",
+          "partOfSpeech": "verb",
+          "example": "Close the door."
+        },
+        {
+          "word": "disclose",
+          "partOfSpeech": "verb",
+          "example": "Disclose the truth."
+        },
+        {
+          "word": "disclosure",
+          "partOfSpeech": "noun",
+          "example": "Full disclosure."
+        }
+      ],
+      "synonyms": [
+        "reveal",
+        "unveil",
+        "expose",
+        "divulge",
+        "uncover"
+      ],
+      "antonyms": [
+        "conceal",
+        "hide",
+        "suppress",
+        "cover up"
+      ]
+    },
+    {
+      "root": "tandem",
+      "word": "tandem",
+      "partOfSpeech": "noun/adverb",
+      "definition": "One behind another; working together",
+      "example": "They worked in tandem.",
+      "wordFamily": [
+        {
+          "word": "tandem",
+          "partOfSpeech": "noun",
+          "example": "A bicycle tandem."
+        },
+        {
+          "word": "tandem",
+          "partOfSpeech": "adverb",
+          "example": "In tandem with."
+        }
+      ],
+      "synonyms": [
+        "together",
+        "jointly",
+        "simultaneously",
+        "cooperatively"
+      ],
+      "antonyms": [
+        "separately",
+        "independently",
+        "alone"
+      ]
+    },
+    {
+      "root": "preen",
+      "word": "preen",
+      "partOfSpeech": "verb",
+      "definition": "Devote effort to making oneself look attractive; feel self-satisfaction",
+      "example": "The bird preened its feathers.",
+      "wordFamily": [
+        {
+          "word": "preen",
+          "partOfSpeech": "verb",
+          "example": "Preen yourself."
+        },
+        {
+          "word": "preening",
+          "partOfSpeech": "noun",
+          "example": "Constant preening."
+        }
+      ],
+      "synonyms": [
+        "groom",
+        "primp",
+        "smartened",
+        "admire",
+        "congratulate"
+      ],
+      "antonyms": [
+        "neglect",
+        "ignore",
+        "dishevel"
+      ]
+    },
+    {
+      "root": "pedant",
+      "word": "pedant",
+      "partOfSpeech": "noun",
+      "definition": "A person overly concerned with minor details or rules",
+      "example": "He's such a pedant about grammar.",
+      "wordFamily": [
+        {
+          "word": "pedant",
+          "partOfSpeech": "noun",
+          "example": "A tedious pedant."
+        },
+        {
+          "word": "pedantic",
+          "partOfSpeech": "adjective",
+          "example": "Pedantic criticism."
+        },
+        {
+          "word": "pedantry",
+          "partOfSpeech": "noun",
+          "example": "Unnecessary pedantry."
+        }
+      ],
+      "synonyms": [
+        "perfectionist",
+        "formalist",
+        "purist",
+        "stickler",
+        "nitpicker"
+      ],
+      "antonyms": [
+        "easygoing",
+        "careless",
+        "slack",
+        "lenient"
+      ]
+    },
+    {
+      "root": "redundant",
+      "word": "redundancy",
+      "partOfSpeech": "noun",
+      "definition": "The state of being no longer needed or useful",
+      "example": "The redundancy of certain words.",
+      "wordFamily": [
+        {
+          "word": "redundant",
+          "partOfSpeech": "adjective",
+          "example": "Redundant information."
+        },
+        {
+          "word": "redundancy",
+          "partOfSpeech": "noun",
+          "example": "Job redundancy."
+        }
+      ],
+      "synonyms": [
+        "unnecessary",
+        "excess",
+        "superfluous",
+        "surplus",
+        "extra"
+      ],
+      "antonyms": [
+        "necessary",
+        "essential",
+        "vital",
+        "needed"
+      ]
+    },
+    {
+      "root": "volunteer",
+      "word": "voluntary",
+      "partOfSpeech": "adjective",
+      "definition": "Done, given, or acting of one's own free will",
+      "example": "Voluntary work.",
+      "wordFamily": [
+        {
+          "word": "volunteer",
+          "partOfSpeech": "noun",
+          "example": "A volunteer."
+        },
+        {
+          "word": "voluntary",
+          "partOfSpeech": "adjective",
+          "example": "Voluntary action."
+        },
+        {
+          "word": "voluntarily",
+          "partOfSpeech": "adverb",
+          "example": "He left voluntarily."
+        }
+      ],
+      "synonyms": [
+        "optional",
+        "unpaid",
+        "willing",
+        "uncompelled",
+        "elective"
+      ],
+      "antonyms": [
+        "compulsory",
+        "mandatory",
+        "forced",
+        "involuntary"
+      ]
+    },
+    {
+      "root": "nature",
+      "word": "denature",
+      "partOfSpeech": "verb",
+      "definition": "Change the natural qualities of something",
+      "example": "The alcohol was denatured.",
+      "wordFamily": [
+        {
+          "word": "nature",
+          "partOfSpeech": "noun",
+          "example": "Human nature."
+        },
+        {
+          "word": "denature",
+          "partOfSpeech": "verb",
+          "example": "Proteins denature."
+        },
+        {
+          "word": "denatured",
+          "partOfSpeech": "adjective",
+          "example": "Denatured alcohol."
+        }
+      ],
+      "synonyms": [
+        "alter",
+        "change",
+        "modify",
+        "transform",
+        "adulterate"
+      ],
+      "antonyms": [
+        "preserve",
+        "maintain",
+        "purify",
+        "restore"
+      ]
+    },
+    {
+      "root": "reason",
+      "word": "rational",
+      "partOfSpeech": "adjective",
+      "definition": "Based on or in accordance with reason or logic",
+      "example": "A rational decision.",
+      "wordFamily": [
+        {
+          "word": "reason",
+          "partOfSpeech": "noun",
+          "example": "The reason why."
+        },
+        {
+          "word": "rational",
+          "partOfSpeech": "adjective",
+          "example": "Rational thinking."
+        },
+        {
+          "word": "rationalize",
+          "partOfSpeech": "verb",
+          "example": "Rationalize behavior."
+        },
+        {
+          "word": "rationality",
+          "partOfSpeech": "noun",
+          "example": "Economic rationality."
+        }
+      ],
+      "synonyms": [
+        "logical",
+        "reasonable",
+        "sensible",
+        "sound",
+        "cogent"
+      ],
+      "antonyms": [
+        "irrational",
+        "illogical",
+        "unreasonable",
+        "absurd"
+      ]
+    },
+    {
+      "root": "guttle",
+      "word": "guttle",
+      "partOfSpeech": "verb",
+      "definition": "Eat greedily or ravenously",
+      "example": "He guttled down his food.",
+      "wordFamily": [
+        {
+          "word": "guttle",
+          "partOfSpeech": "verb",
+          "example": "Don't guttle your meal."
+        },
+        {
+          "word": "gut",
+          "partOfSpeech": "noun",
+          "example": "Belly."
+        }
+      ],
+      "synonyms": [
+        "devour",
+        "gobble",
+        "wolf",
+        "scarf",
+        "gorge"
+      ],
+      "antonyms": [
+        "nibble",
+        "savor",
+        "eat slowly"
+      ]
+    },
+    {
+      "root": "comply",
+      "word": "comply",
+      "partOfSpeech": "verb",
+      "definition": "Act in accordance with a wish or command",
+      "example": "You must comply with the rules.",
+      "wordFamily": [
+        {
+          "word": "comply",
+          "partOfSpeech": "verb",
+          "example": "Refused to comply."
+        },
+        {
+          "word": "compliance",
+          "partOfSpeech": "noun",
+          "example": "In compliance with."
+        },
+        {
+          "word": "compliant",
+          "partOfSpeech": "adjective",
+          "example": "A compliant child."
+        }
+      ],
+      "synonyms": [
+        "obey",
+        "follow",
+        "conform",
+        "abide",
+        "submit",
+        "agree"
+      ],
+      "antonyms": [
+        "disobey",
+        "defy",
+        "resist",
+        "rebel",
+        "violate"
+      ]
+    },
+    {
+      "root": "method",
+      "word": "methodically",
+      "partOfSpeech": "adverb",
+      "definition": "In an orderly, systematic way",
+      "example": "She methodically organized the files.",
+      "wordFamily": [
+        {
+          "word": "method",
+          "partOfSpeech": "noun",
+          "example": "A teaching method."
+        },
+        {
+          "word": "methodical",
+          "partOfSpeech": "adjective",
+          "example": "Methodical approach."
+        },
+        {
+          "word": "methodically",
+          "partOfSpeech": "adverb",
+          "example": "Work methodically."
+        }
+      ],
+      "synonyms": [
+        "systematically",
+        "orderly",
+        "efficiently",
+        "logically",
+        "precisely"
+      ],
+      "antonyms": [
+        "haphazardly",
+        "randomly",
+        "carelessly",
+        "disorganized"
+      ]
+    }
+  ]
+}

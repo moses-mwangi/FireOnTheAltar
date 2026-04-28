@@ -213,7 +213,7 @@ export default function BibleReader() {
                     {DEMO_VERSES.map((verse) => (
                       <VerseCard
                         key={verse.id}
-                        verse={verse}
+                        verse={verse as any}
                         isSelected={selectedVerse?.id === verse.id}
                         onSelect={setSelectedVerse}
                         showOriginal={showOriginal}
@@ -246,7 +246,7 @@ export default function BibleReader() {
                         >
                           + {tag}
                         </button>
-                      )
+                      ),
                     )}
                   </div>
                 </div>
