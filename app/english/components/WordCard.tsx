@@ -17,7 +17,7 @@ export default function WordCard({ word, onDelete }: Props) {
         {/* <div className="bg-linear-to-r from-purple-600 to-blue-600 p-4 text-white"> */}
         <div className="flex justify-between items-start">
           <div>
-            <h3 className="text-2xl font-bold mb-1">{word.word}</h3>
+            <h3 className="text-2xl font-bold mb-1">{word.word}MMM</h3>
             <p className="text-purple-100 text-sm">{word.description}</p>
           </div>
           <button
