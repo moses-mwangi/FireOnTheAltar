@@ -1,458 +1,7 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import {
-  Feather,
-  BookOpen,
-  FileText,
-  Sparkles,
-  Save,
-  Trash2,
-  Clock,
-  Plus,
-  Menu,
-  X,
-  ChevronRight,
-  ChevronDown,
-  Brain,
-} from "lucide-react";
-
-type WritingMode =
-  | "bible-notes"
-  | "essay"
-  | "poem"
-  | "book"
-  | "journal"
-  | "vocabulary";
-
-type WritingEntry = {
-  id: string;
-  title: string;
-  content: string;
-  mode: WritingMode;
-  date: string;
-  wordCount: number;
-};
-
-const modes: { id: WritingMode; label: string; icon: any; color: string }[] = [
-  {
-    id: "bible-notes",
-    label: "Bible Notes",
-    icon: FileText,
-    color: "from-blue-500 to-cyan-500",
-    // color: "text-blue-500",
-  },
-  {
-    id: "essay",
-    label: "Essay",
-    icon: FileText,
-    color: "from-blue-500 to-cyan-500",
-    // color: "text-blue-500",
-  },
-  {
-    id: "poem",
-    label: "Poem",
-    icon: Sparkles,
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    id: "book",
-    label: "Book Chapter",
-    icon: BookOpen,
-    color: "from-orange-500 to-red-500",
-  },
-  {
-    id: "journal",
-    label: "Journal",
-    icon: Feather,
-    color: "from-green-500 to-emerald-500",
-  },
-  {
-    id: "vocabulary",
-    label: "Vocabulary",
-    icon: Brain,
-    color: "from-indigo-500 to-purple-500",
-  },
-];
-
-export default function WritingPage() {
-  const [mode, setMode] = useState<WritingMode>("essay");
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [writings, setWritings] = useState<WritingEntry[]>([]);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [selectedEntry, setSelectedEntry] = useState<WritingEntry | null>(null);
-  const [wordCount, setWordCount] = useState(0);
-
-  // Track which mode sections are expanded in sidebar
-  const [expandedModes, setExpandedModes] = useState<
-    Record<WritingMode, boolean>
-  >({
-    // essay: true,
-    // poem: true,
-    // book: true,
-    // journal: true,
-    // vocabulary: true,
-    "bible-notes": false,
-    essay: false,
-    poem: false,
-    book: false,
-    journal: false,
-    vocabulary: false,
-  });
-
-  // Load writings from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem("writings");
-    if (saved) {
-      setWritings(JSON.parse(saved));
-    }
-  }, []);
-
-  // Calculate word count
-  useEffect(() => {
-    const words = content
-      .trim()
-      .split(/\s+/)
-      .filter((w) => w.length > 0);
-    setWordCount(words.length);
-  }, [content]);
-
-  const saveWriting = () => {
-    if (!title.trim() || !content.trim()) return;
-
-    const newEntry: WritingEntry = {
-      id: selectedEntry?.id || Date.now().toString(),
-      title: title.trim(),
-      content: content.trim(),
-      mode,
-      date: new Date().toISOString(),
-      wordCount,
-    };
-
-    let updatedWritings;
-    if (selectedEntry) {
-      updatedWritings = writings.map((w) =>
-        w.id === selectedEntry.id ? newEntry : w,
-      );
-    } else {
-      updatedWritings = [newEntry, ...writings];
-    }
-
-    setWritings(updatedWritings);
-    localStorage.setItem("writings", JSON.stringify(updatedWritings));
-    setSelectedEntry(newEntry);
-    setTitle("");
-    setContent("");
-  };
-
-  const loadEntry = (entry: WritingEntry) => {
-    setSelectedEntry(entry);
-    setTitle(entry.title);
-    setContent(entry.content);
-    setMode(entry.mode);
-  };
-
-  const newWriting = () => {
-    setSelectedEntry(null);
-    setTitle("");
-    setContent("");
-  };
-
-  const deleteEntry = (id: string) => {
-    const updated = writings.filter((w) => w.id !== id);
-    setWritings(updated);
-    localStorage.setItem("writings", JSON.stringify(updated));
-    if (selectedEntry?.id === id) {
-      newWriting();
-    }
-  };
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  };
-
-  const toggleMode = (modeId: WritingMode) => {
-    setExpandedModes((prev) => ({
-      ...prev,
-      [modeId]: !prev[modeId],
-    }));
-  };
-
-  // Group writings by mode
-  const writingsByMode = modes.reduce(
-    (acc, modeItem) => {
-      acc[modeItem.id] = writings.filter((w) => w.mode === modeItem.id);
-      return acc;
-    },
-    {} as Record<WritingMode, WritingEntry[]>,
-  );
-
-  const currentMode = modes.find((m) => m.id === mode);
-  const ModeIcon = currentMode?.icon || Feather;
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
-      {/* Header */}
-      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-10">
-        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4"> */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setSidebarOpen(!sidebarOpen)}
-                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-              >
-                {sidebarOpen ? (
-                  <X className="h-5 w-5" />
-                ) : (
-                  <Menu className="h-5 w-5" />
-                )}
-              </button>
-              <div className="flex items-center gap-2">
-                <div
-                  className={`p-2 rounded-lg bg-gradient-to-r ${currentMode?.color}`}
-                >
-                  <ModeIcon className="h-5 w-5 text-white" />
-                </div>
-                <h1 className="text-xl font-bold text-gray-800 dark:text-white">
-                  Writing Practice
-                </h1>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                <BookOpen className="h-4 w-4" />
-                <span>{wordCount} words</span>
-              </div>
-              <button
-                onClick={newWriting}
-                className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
-              >
-                <Plus className="h-4 w-4" />
-                New {currentMode?.label.slice(0, -1)}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex">
-        {/* Sidebar with Grouped Mode Sections */}
-        {sidebarOpen && (
-          <div className="w-80 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 min-h-[calc(100vh-73px)] overflow-y-auto">
-            <div className="p-4">
-              <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3">
-                YOUR LIBRARY
-              </h2>
-
-              {writings.length === 0 ? (
-                <p className="text-sm text-gray-400 dark:text-gray-500 text-center py-8">
-                  No writings yet. Start writing!
-                </p>
-              ) : (
-                <div className="space-y-4">
-                  {modes.map((modeItem) => {
-                    const Icon = modeItem.icon;
-                    const modeWritings = writingsByMode[modeItem.id];
-
-                    if (modeWritings.length === 0) return null;
-
-                    return (
-                      <div
-                        key={modeItem.id}
-                        className="space-y-1 cursor-pointer"
-                      >
-                        {/* Mode Header - Click to expand/collapse */}
-                        <button
-                          onClick={() => toggleMode(modeItem.id)}
-                          className="w-full flex items-center justify-between p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group cursor-pointer"
-                        >
-                          <div className="flex items-center gap-2">
-                            <div
-                              className={`p-1.5 rounded bg-gradient-to-r ${modeItem.color}`}
-                            >
-                              <Icon className="h-3.5 w-3.5 text-white" />
-                            </div>
-                            <span className="font-semibold text-gray-700 dark:text-gray-300 text-sm">
-                              {modeItem.label}
-                            </span>
-                            <span className="text-xs text-gray-400">
-                              ({modeWritings.length})
-                            </span>
-                          </div>
-                          {expandedModes[modeItem.id] ? (
-                            <ChevronDown className="h-4 w-4 text-gray-400" />
-                          ) : (
-                            <ChevronRight className="h-4 w-4 text-gray-400" />
-                          )}
-                        </button>
-                        {/* Mode Writings - Show when expanded */}
-                        {expandedModes[modeItem.id] && (
-                          <div className="ml-4 space-y-1 pl-2 border-l-2 border-gray-200 dark:border-gray-700">
-                            {modeWritings.map((entry) => {
-                              const EntryIcon = modeItem.icon;
-                              return (
-                                <div
-                                  key={entry.id}
-                                  className={`p-2 rounded-lg cursor-pointer transition-all ${
-                                    selectedEntry?.id === entry.id
-                                      ? "bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500"
-                                      : "hover:bg-gray-50 dark:hover:bg-gray-700/50"
-                                  }`}
-                                  onClick={() => loadEntry(entry)}
-                                >
-                                  <div className="flex items-start justify-between">
-                                    <div className="flex-1 min-w-0">
-                                      <div className="flex items-center gap-2">
-                                        <EntryIcon className="h-3 w-3 text-gray-400 flex-shrink-0" />
-                                        <h3 className="font-medium text-sm text-gray-800 dark:text-white truncate">
-                                          {entry.title}
-                                        </h3>
-                                      </div>
-                                      <div className="flex items-center gap-2 text-xs text-gray-400 mt-1">
-                                        <Clock className="h-3 w-3" />
-                                        <span>{formatDate(entry.date)}</span>
-                                        <span>•</span>
-                                        <span>{entry.wordCount} words</span>
-                                      </div>
-                                    </div>
-                                    <button
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        deleteEntry(entry.id);
-                                      }}
-                                      className="p-1 hover:bg-red-100 dark:hover:bg-red-900/30 rounded transition-colors opacity-0 group-hover:opacity-100"
-                                    >
-                                      <Trash2 className="h-3 w-3 text-red-500" />
-                                    </button>
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Main Content - Same as before */}
-        <div className="flex-1 p-6">
-          <div className="max-w-4xl mx-auto">
-            {/* Mode Selector */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              {modes.map((m) => {
-                const Icon = m.icon;
-                const count = writingsByMode[m.id].length;
-                return (
-                  <button
-                    key={m.id}
-                    onClick={() => {
-                      setMode(m.id);
-                      newWriting();
-                    }}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all cursor-pointer ${
-                      mode === m.id
-                        ? `bg-gradient-to-r ${m.color} text-white shadow-lg`
-                        : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
-                    }`}
-                  >
-                    <Icon className="h-4 w-4" />
-                    <span className="font-medium text-[15px]">{m.label}</span>
-                    {count > 0 && (
-                      <span
-                        className={`text-xs px-1.5 py-0.5 rounded-full ${
-                          mode === m.id
-                            ? "bg-white/20"
-                            : "bg-gray-200 dark:bg-gray-700"
-                        }`}
-                      >
-                        {count}
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Writing Area */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
-              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-                <input
-                  type="text"
-                  placeholder={`Enter your ${currentMode?.label.slice(0).toLowerCase()} title...`}
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  className="w-full text-2xl font-bold text-gray-800 dark:text-white placeholder-gray-400 bg-transparent border-none focus:outline-none focus:ring-0"
-                />
-              </div>
-
-              <div className="p-6">
-                <textarea
-                  placeholder={`Start writing your ${currentMode?.label.slice(0, -1).toLowerCase()}...`}
-                  value={content}
-                  onChange={(e) => setContent(e.target.value)}
-                  className="w-full min-h-[500px] text-gray-800 dark:text-white placeholder-gray-400 bg-transparent border-none focus:outline-none focus:ring-0 resize-none leading-relaxed"
-                />
-              </div>
-
-              <div className="px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
-                <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
-                  <span>{wordCount} words</span>
-                  <span>•</span>
-                  <span>{content.length} characters</span>
-                </div>
-                <button
-                  onClick={saveWriting}
-                  disabled={!title.trim() || !content.trim()}
-                  className="flex items-center gap-2 px-6 py-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
-                >
-                  <Save className="h-4 w-4" />
-                  Save {currentMode?.label.slice(0, -1)}
-                </button>
-              </div>
-            </div>
-
-            {/* Tips Section */}
-            <div className="mt-8 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-6">
-              <h3 className="font-semibold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
-                <Sparkles className="h-5 w-5 text-purple-600" />
-                Writing Tips
-              </h3>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                <li>
-                  • Write every day to build consistency and improve your
-                  vocabulary
-                </li>
-                <li>• Try using new words you've learned in your writing</li>
-                <li>• Read your writing aloud to check flow and clarity</li>
-                <li>
-                  • Don't worry about perfection - focus on expression first
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 // "use client";
 
 // import { useState, useEffect } from "react";
 // import {
-//   Feather,
 //   BookOpen,
 //   FileText,
 //   Sparkles,
@@ -464,362 +13,641 @@ export default function WritingPage() {
 //   X,
 //   ChevronRight,
 //   ChevronDown,
-//   // Bible,
 //   Heart,
 //   Brain,
 //   Lightbulb,
+//   Folder,
+//   FolderOpen,
+//   MoreVertical,
 //   ScrollText,
-//   Microscope,
-//   Moon,
+//   Feather,
+//   NotebookPen,
+//   Languages,
 //   Sun,
+//   Users,
 //   Quote,
 //   Target,
 //   Award,
-//   Star,
 //   BookMarked,
-//   NotebookPen,
-//   Languages,
-//   Users,
-//   History,
 //   Globe,
-//   BadgeRussianRuble,
+//   Microscope,
+//   Star,
+//   Moon,
 // } from "lucide-react";
+// import { Label } from "@/components/ui/label";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectGroup,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select";
+// import { Button } from "@/components/ui/button";
 
-// // Expanded categories with subcategories
+// const Bible = () => (
+//   <svg
+//     xmlns="http://www.w3.org/2000/svg"
+//     viewBox="0 0 24 24"
+//     fill="currentColor"
+//     className="h-4 w-4"
+//   >
+//     <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM11.9999 5C12.5521 5 13.0999 5.44772 13.0999 6V10H17.9999C18.5521 10 19.0999 10.4477 19.0999 11C19.0999 11.5523 18.5521 12 17.9999 12H13.0999V16C13.0999 16.5523 12.5521 17 11.9999 17C11.4477 17 10.8999 16.5523 10.8999 16V12H6.99988C6.44766 12 5.89988 11.5523 5.89988 11C5.89988 10.4477 6.44766 10 6.99988 10H10.8999V6C10.8999 5.44772 11.4477 5 11.9999 5Z" />
+//   </svg>
+// );
+
+// // Folder structure
+// type Folder = {
+//   id: string;
+//   name: string;
+//   icon?: any;
+//   parentId: string | null;
+//   category: MainCategory;
+//   createdAt: string;
+// };
+
+// type WritingEntry = {
+//   id: string;
+//   title: string;
+//   content: string;
+//   folderId: string; // Which folder this belongs to
+//   category: MainCategory;
+//   date: string;
+//   wordCount: number;
+//   tags?: string[];
+// };
+
 // type MainCategory =
 //   | "bible"
 //   | "philosophy"
 //   | "psychology"
 //   | "wisdom"
 //   | "science"
-//   | "spirituality";
+//   | "spirituality"
+//   | "english";
 
-// type SubCategory = {
-//   id: string;
-//   label: string;
-//   icon: any;
-//   description: string;
-// };
-
-// type WritingMode = MainCategory;
-// type WritingEntry = {
-//   id: string;
-//   title: string;
-//   content: string;
-//   mode: MainCategory;
-//   subCategory: string;
-//   date: string;
-//   wordCount: number;
-//   tags?: string[];
-//   references?: string[];
-// };
-
-// // Main categories configuration
 // const categories: {
 //   id: MainCategory;
 //   label: string;
 //   icon: any;
 //   color: string;
-//   subCategories: SubCategory[];
+//   description?: string;
 // }[] = [
+//   {
+//     id: "english",
+//     label: "English & Writing",
+//     icon: FileText,
+//     color: "from-cyan-500 to-blue-500",
+//   },
 //   {
 //     id: "bible",
 //     label: "Holy Bible",
-//     icon: BadgeRussianRuble,
+//     icon: Bible,
 //     color: "from-blue-600 to-indigo-600",
-//     subCategories: [
-//       {
-//         id: "scriptures",
-//         label: "Scriptures",
-//         icon: ScrollText,
-//         description: "Bible verses & passages",
-//       },
-//       {
-//         id: "prayers",
-//         label: "Prayers",
-//         icon: Heart,
-//         description: "Personal prayers & intercessions",
-//       },
-//       {
-//         id: "bible-notes",
-//         label: "Study Notes",
-//         icon: NotebookPen,
-//         description: "Bible study insights",
-//       },
-//       {
-//         id: "terminology",
-//         label: "Terminology",
-//         icon: Languages,
-//         description: "Biblical terms & meanings",
-//       },
-//       {
-//         id: "devotionals",
-//         label: "Devotionals",
-//         icon: Sun,
-//         description: "Daily devotions & reflections",
-//       },
-//       {
-//         id: "sermons",
-//         label: "Sermon Notes",
-//         icon: Users,
-//         description: "Church messages & teachings",
-//       },
-//     ],
 //   },
 //   {
 //     id: "philosophy",
 //     label: "Philosophy",
 //     icon: Brain,
 //     color: "from-amber-600 to-orange-600",
-//     subCategories: [
-//       {
-//         id: "stoicism",
-//         label: "Stoicism",
-//         icon: Quote,
-//         description: "Stoic wisdom & practices",
-//       },
-//       {
-//         id: "existentialism",
-//         label: "Existentialism",
-//         icon: Lightbulb,
-//         description: "Existentialist thoughts",
-//       },
-//       {
-//         id: "eastern-phil",
-//         label: "Eastern Philosophy",
-//         icon: Sun,
-//         description: "Buddhism, Taoism, etc",
-//       },
-//       {
-//         id: "ethics",
-//         label: "Ethics & Morality",
-//         icon: Target,
-//         description: "Moral philosophy",
-//       },
-//       {
-//         id: "logic",
-//         label: "Logic & Reasoning",
-//         icon: Brain,
-//         description: "Critical thinking",
-//       },
-//       {
-//         id: "political-phil",
-//         label: "Political Philosophy",
-//         icon: Users,
-//         description: "Governance & society",
-//       },
-//     ],
 //   },
 //   {
 //     id: "psychology",
 //     label: "Psychology",
 //     icon: Brain,
 //     color: "from-teal-600 to-cyan-600",
-//     subCategories: [
-//       {
-//         id: "cognitive",
-//         label: "Cognitive Psychology",
-//         icon: Brain,
-//         description: "Mental processes",
-//       },
-//       {
-//         id: "behavioral",
-//         label: "Behavioral Psychology",
-//         icon: Target,
-//         description: "Behavior patterns",
-//       },
-//       {
-//         id: "emotional",
-//         label: "Emotional Intelligence",
-//         icon: Heart,
-//         description: "EQ development",
-//       },
-//       {
-//         id: "personality",
-//         label: "Personality Types",
-//         icon: Users,
-//         description: "MBTI, Enneagram, etc",
-//       },
-//       {
-//         id: "therapy",
-//         label: "Therapy Techniques",
-//         icon: Heart,
-//         description: "CBT, DBT, etc",
-//       },
-//       {
-//         id: "neuroscience",
-//         label: "Neuroscience",
-//         icon: Microscope,
-//         description: "Brain science",
-//       },
-//     ],
 //   },
 //   {
 //     id: "wisdom",
 //     label: "Wisdom Literature",
-//     icon: Star,
+//     icon: Lightbulb,
 //     color: "from-yellow-600 to-amber-600",
-//     subCategories: [
-//       {
-//         id: "proverbs",
-//         label: "Proverbs & Sayings",
-//         icon: Quote,
-//         description: "Ancient wisdom",
-//       },
-//       {
-//         id: "biographies",
-//         label: "Biographies",
-//         icon: Users,
-//         description: "Great minds' lives",
-//       },
-//       {
-//         id: "leadership",
-//         label: "Leadership",
-//         icon: Award,
-//         description: "Leading principles",
-//       },
-//       {
-//         id: "success",
-//         label: "Success Principles",
-//         icon: Target,
-//         description: "Achievement wisdom",
-//       },
-//       {
-//         id: "habits",
-//         label: "Habits & Discipline",
-//         icon: BookMarked,
-//         description: "Daily practices",
-//       },
-//       {
-//         id: "meditation",
-//         label: "Meditations",
-//         icon: Moon,
-//         description: "Reflective thoughts",
-//       },
-//     ],
 //   },
 //   {
 //     id: "science",
-//     label: "Science & Knowledge",
-//     icon: Microscope,
+//     label: "Science",
+//     icon: BookOpen,
 //     color: "from-green-600 to-emerald-600",
-//     subCategories: [
-//       {
-//         id: "physics",
-//         label: "Physics",
-//         icon: Globe,
-//         description: "Physical laws",
-//       },
-//       {
-//         id: "biology",
-//         label: "Biology",
-//         icon: Microscope,
-//         description: "Life sciences",
-//       },
-//       {
-//         id: "astronomy",
-//         label: "Astronomy",
-//         icon: Star,
-//         description: "Cosmos studies",
-//       },
-//       {
-//         id: "history",
-//         label: "History",
-//         icon: History,
-//         description: "Historical events",
-//       },
-//       {
-//         id: "technology",
-//         label: "Technology",
-//         icon: Lightbulb,
-//         description: "Innovations",
-//       },
-//       {
-//         id: "mathematics",
-//         label: "Mathematics",
-//         icon: Brain,
-//         description: "Mathematical wisdom",
-//       },
-//     ],
 //   },
 //   {
 //     id: "spirituality",
 //     label: "Spirituality",
-//     icon: Sun,
+//     icon: Heart,
 //     color: "from-purple-600 to-pink-600",
-//     subCategories: [
-//       {
-//         id: "christianity",
-//         label: "Christianity",
-//         icon: BookOpen,
-//         description: "Christian faith",
-//       },
-//       {
-//         id: "mindfulness",
-//         label: "Mindfulness",
-//         icon: Moon,
-//         description: "Present awareness",
-//       },
-//       {
-//         id: "gratitude",
-//         label: "Gratitude",
-//         icon: Heart,
-//         description: "Thankfulness practice",
-//       },
-//       {
-//         id: "purpose",
-//         label: "Life Purpose",
-//         icon: Target,
-//         description: "Finding meaning",
-//       },
-//       {
-//         id: "faith",
-//         label: "Faith & Belief",
-//         icon: Star,
-//         description: "Spiritual beliefs",
-//       },
-//       {
-//         id: "mysticism",
-//         label: "Mysticism",
-//         icon: Sparkles,
-//         description: "Mystical experiences",
-//       },
-//     ],
 //   },
 // ];
+
+// // Default folders for Bible category
+// // const getDefaultFolders = (
+// //   categoryId: MainCategory,
+// // ): Omit<Folder, "id" | "createdAt">[] => {
+// //   console.log("Getting default folders for category:", categoryId);
+// //   if (categoryId === "bible") {
+// //     return [
+// //       {
+// //         name: "Scriptures",
+// //         icon: ScrollText,
+// //         parentId: null,
+// //         category: "bible",
+// //       },
+// //       { name: "Prayers", icon: Heart, parentId: null, category: "bible" },
+// //       {
+// //         name: "Study Notes",
+// //         icon: BookOpen,
+// //         parentId: null,
+// //         category: "bible",
+// //       },
+// //       {
+// //         name: "Terminology",
+// //         icon: FileText,
+// //         parentId: null,
+// //         category: "bible",
+// //       },
+// //       {
+// //         name: "DevotionalsMMMM",
+// //         icon: Sparkles,
+// //         parentId: null,
+// //         category: "bible",
+// //       },
+// //       { name: "Sermons", icon: Feather, parentId: null, category: "bible" },
+// //     ];
+// //   }
+
+// //   if (categoryId === "english") {
+// //     return [
+// //       { name: "Essays", icon: FileText, parentId: null, category: "english" },
+// //       { name: "Poems", icon: Sparkles, parentId: null, category: "english" },
+// //       {
+// //         name: "Book Chapters",
+// //         icon: BookOpen,
+// //         parentId: null,
+// //         category: "english",
+// //       },
+// //       {
+// //         name: "Journal Entries",
+// //         icon: Feather,
+// //         parentId: null,
+// //         category: "english",
+// //       },
+// //       { name: "Vocabulary", icon: Brain, parentId: null, category: "english" },
+// //       {
+// //         name: "Grammar Notes",
+// //         icon: BookOpen,
+// //         parentId: null,
+// //         category: "english",
+// //       },
+// //       {
+// //         name: "Creative Writing",
+// //         icon: Sparkles,
+// //         parentId: null,
+// //         category: "english",
+// //       },
+// //     ];
+// //   }
+
+// //   return [];
+// // };
+
+// const getDefaultFolders = (
+//   categoryId: MainCategory,
+// ): Omit<Folder, "id" | "createdAt">[] => {
+//   switch (categoryId) {
+//     case "bible":
+//       return [
+//         {
+//           name: "📖 Scriptures",
+//           icon: ScrollText,
+//           parentId: null,
+//           category: "bible",
+//           description: "Bible verses and passages",
+//         },
+//         {
+//           name: "🙏 Prayers",
+//           icon: Heart,
+//           parentId: null,
+//           category: "bible",
+//           description: "Personal prayers and intercessions",
+//         },
+//         {
+//           name: "📝 Study Notes",
+//           icon: NotebookPen,
+//           parentId: null,
+//           category: "bible",
+//           description: "Bible study insights",
+//         },
+//         {
+//           name: "📚 Terminology",
+//           icon: Languages,
+//           parentId: null,
+//           category: "bible",
+//           description: "Biblical terms and meanings",
+//         },
+//         {
+//           name: "☀️ Devotionals",
+//           icon: Sun,
+//           parentId: null,
+//           category: "bible",
+//           description: "Daily devotions",
+//         },
+//         {
+//           name: "🎯 Sermons",
+//           icon: Users,
+//           parentId: null,
+//           category: "bible",
+//           description: "Church messages",
+//         },
+//       ];
+
+//     case "philosophy":
+//       return [
+//         {
+//           name: "🏛️ Stoicism",
+//           icon: Quote,
+//           parentId: null,
+//           category: "philosophy",
+//           description: "Stoic wisdom",
+//         },
+//         {
+//           name: "🌍 Existentialism",
+//           icon: Brain,
+//           parentId: null,
+//           category: "philosophy",
+//           description: "Existentialist thought",
+//         },
+//         {
+//           name: "🧘 Eastern Philosophy",
+//           icon: Sun,
+//           parentId: null,
+//           category: "philosophy",
+//           description: "Buddhism, Taoism",
+//         },
+//         {
+//           name: "⚖️ Ethics",
+//           icon: Target,
+//           parentId: null,
+//           category: "philosophy",
+//           description: "Moral philosophy",
+//         },
+//         {
+//           name: "🔍 Logic",
+//           icon: Brain,
+//           parentId: null,
+//           category: "philosophy",
+//           description: "Critical thinking",
+//         },
+//       ];
+
+//     case "psychology":
+//       return [
+//         {
+//           name: "🧠 Cognitive",
+//           icon: Brain,
+//           parentId: null,
+//           category: "psychology",
+//           description: "Mental processes",
+//         },
+//         {
+//           name: "🎯 Behavioral",
+//           icon: Target,
+//           parentId: null,
+//           category: "psychology",
+//           description: "Behavior patterns",
+//         },
+//         {
+//           name: "💖 Emotional Intelligence",
+//           icon: Heart,
+//           parentId: null,
+//           category: "psychology",
+//           description: "EQ development",
+//         },
+//         {
+//           name: "👤 Personality",
+//           icon: Users,
+//           parentId: null,
+//           category: "psychology",
+//           description: "MBTI, Enneagram",
+//         },
+//         {
+//           name: "🛋️ Therapy",
+//           icon: Heart,
+//           parentId: null,
+//           category: "psychology",
+//           description: "CBT, DBT",
+//         },
+//       ];
+
+//     case "wisdom":
+//       return [
+//         {
+//           name: "📜 Proverbs",
+//           icon: Quote,
+//           parentId: null,
+//           category: "wisdom",
+//           description: "Ancient wisdom",
+//         },
+//         {
+//           name: "👥 Biographies",
+//           icon: Users,
+//           parentId: null,
+//           category: "wisdom",
+//           description: "Great lives",
+//         },
+//         {
+//           name: "🏆 Leadership",
+//           icon: Award,
+//           parentId: null,
+//           category: "wisdom",
+//           description: "Leading principles",
+//         },
+//         {
+//           name: "🎯 Success",
+//           icon: Target,
+//           parentId: null,
+//           category: "wisdom",
+//           description: "Achievement wisdom",
+//         },
+//         {
+//           name: "🔄 Habits",
+//           icon: BookMarked,
+//           parentId: null,
+//           category: "wisdom",
+//           description: "Daily practices",
+//         },
+//       ];
+
+//     case "science":
+//       return [
+//         {
+//           name: "⚛️ Physics",
+//           icon: Globe,
+//           parentId: null,
+//           category: "science",
+//           description: "Physical laws",
+//         },
+//         {
+//           name: "🧬 Biology",
+//           icon: Microscope,
+//           parentId: null,
+//           category: "science",
+//           description: "Life sciences",
+//         },
+//         {
+//           name: "🌌 Astronomy",
+//           icon: Star,
+//           parentId: null,
+//           category: "science",
+//           description: "Cosmos",
+//         },
+//         {
+//           name: "📜 History",
+//           icon: History,
+//           parentId: null,
+//           category: "science",
+//           description: "Historical events",
+//         },
+//         {
+//           name: "💡 Technology",
+//           icon: Lightbulb,
+//           parentId: null,
+//           category: "science",
+//           description: "Innovations",
+//         },
+//       ];
+
+//     case "spirituality":
+//       return [
+//         {
+//           name: "✝️ Christianity",
+//           icon: Bible,
+//           parentId: null,
+//           category: "spirituality",
+//           description: "Christian faith",
+//         },
+//         {
+//           name: "🧘 Mindfulness",
+//           icon: Moon,
+//           parentId: null,
+//           category: "spirituality",
+//           description: "Present awareness",
+//         },
+//         {
+//           name: "💝 Gratitude",
+//           icon: Heart,
+//           parentId: null,
+//           category: "spirituality",
+//           description: "Thankfulness",
+//         },
+//         {
+//           name: "🎯 Purpose",
+//           icon: Target,
+//           parentId: null,
+//           category: "spirituality",
+//           description: "Finding meaning",
+//         },
+//         {
+//           name: "✨ Mysticism",
+//           icon: Sparkles,
+//           parentId: null,
+//           category: "spirituality",
+//           description: "Mystical experiences",
+//         },
+//       ];
+
+//     case "english":
+//       return [
+//         {
+//           name: "✍️ EssaysGFFF",
+//           icon: FileText,
+//           parentId: null,
+//           category: "english",
+//           description: "Argumentative, descriptive, narrative",
+//         },
+//         {
+//           name: "🪄 Poems",
+//           icon: Sparkles,
+//           parentId: null,
+//           category: "english",
+//           description: "Sonnets, haiku, free verse",
+//         },
+//         {
+//           name: "📖 Book Chapters",
+//           icon: BookOpen,
+//           parentId: null,
+//           category: "english",
+//           description: "Novel and book writing",
+//         },
+//         {
+//           name: "📓 Journal",
+//           icon: Feather,
+//           parentId: null,
+//           category: "english",
+//           description: "Daily reflections",
+//         },
+//         {
+//           name: "📚 Vocabulary",
+//           icon: Brain,
+//           parentId: null,
+//           category: "english",
+//           description: "Word collection",
+//         },
+//         {
+//           name: "📝 Grammar",
+//           icon: BookOpen,
+//           parentId: null,
+//           category: "english",
+//           description: "Grammar rules",
+//         },
+//         {
+//           name: "🎨 Creative Writing",
+//           icon: Sparkles,
+//           parentId: null,
+//           category: "english",
+//           description: "Short stories",
+//         },
+//         {
+//           name: "💡 Writing Prompts",
+//           icon: Lightbulb,
+//           parentId: null,
+//           category: "english",
+//           description: "Inspiration",
+//         },
+//       ];
+
+//     default:
+//       return [];
+//   }
+// };
 
 // export default function WritingPage() {
 //   const [selectedCategory, setSelectedCategory] =
 //     useState<MainCategory>("bible");
-//   const [selectedSubCategory, setSelectedSubCategory] = useState<string>("");
+//   const [folders, setFolders] = useState<Folder[]>([]);
+//   const [entries, setEntries] = useState<WritingEntry[]>([]);
+//   const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
+//   const [selectedEntry, setSelectedEntry] = useState<WritingEntry | null>(null);
+
+//   // Drag and drop state
+//   const [draggedEntry, setDraggedEntry] = useState<WritingEntry | null>(null);
+//   const [dragOverFolderId, setDragOverFolderId] = useState<string | null>(null);
+
+//   // Form state
 //   const [title, setTitle] = useState("");
 //   const [content, setContent] = useState("");
-//   const [writings, setWritings] = useState<WritingEntry[]>([]);
-//   const [sidebarOpen, setSidebarOpen] = useState(true);
-//   const [selectedEntry, setSelectedEntry] = useState<WritingEntry | null>(null);
 //   const [wordCount, setWordCount] = useState(0);
-//   const [tags, setTags] = useState<string>("");
-//   const [searchTerm, setSearchTerm] = useState("");
+//   const [tags, setTags] = useState("");
 
-//   // Track expanded sections in sidebar
-//   const [expandedCategories, setExpandedCategories] = useState<
-//     Record<MainCategory, boolean>
-//   >({
-//     bible: true,
-//     philosophy: true,
-//     psychology: true,
-//     wisdom: true,
-//     science: true,
-//     spirituality: true,
-//   });
+//   // UI state
+//   const [sidebarOpen, setSidebarOpen] = useState(true);
+//   const [expandedFolders, setExpandedFolders] = useState<Set<string>>(
+//     new Set(),
+//   );
+//   const [showNewFolderModal, setShowNewFolderModal] = useState(false);
+//   const [newFolderName, setNewFolderName] = useState("");
+//   const [showContextMenu, setShowContextMenu] = useState<{
+//     x: number;
+//     y: number;
+//     folderId: string;
+//   } | null>(null);
 
-//   // Load writings from localStorage
+//   // Load data
 //   useEffect(() => {
-//     const saved = localStorage.getItem("wisdom-writings");
-//     if (saved) {
-//       setWritings(JSON.parse(saved));
-//     }
+//     const savedFolders = localStorage.getItem("wisdom-folders");
+//     const savedEntries = localStorage.getItem("wisdom-entries");
+
+//     // if (savedFolders) {
+//     //   setFolders(JSON.parse(savedFolders));
+//     // } else {
+//     // Initialize with default folders for Bible
+//     const defaultFolders = getDefaultFolders("bible").map((f, idx) => ({
+//       ...f,
+//       id: `folder-${Date.now()}-${idx}`,
+//       createdAt: new Date().toISOString(),
+//     }));
+
+//     const defaultFoldersWriting = getDefaultFolders("english").map(
+//       (f, idx) => ({
+//         ...f,
+//         id: `folder-${Date.now()}-${idx}`,
+//         createdAt: new Date().toISOString(),
+//       }),
+//     );
+
+//     const defaultFoldersPhilosophy = getDefaultFolders("philosophy").map(
+//       (f, idx) => ({
+//         ...f,
+//         id: `folder-${Date.now()}-${idx}`,
+//         createdAt: new Date().toISOString(),
+//       }),
+//     );
+
+//     const defaultFoldersPsychology = getDefaultFolders("psychology").map(
+//       (f, idx) => ({
+//         ...f,
+//         id: `folder-${Date.now()}-${idx}`,
+//         createdAt: new Date().toISOString(),
+//       }),
+//     );
+
+//     const defaultFoldersSpirituality = getDefaultFolders("spirituality").map(
+//       (f, idx) => ({
+//         ...f,
+//         id: `folder-${Date.now()}-${idx}`,
+//         createdAt: new Date().toISOString(),
+//       }),
+//     );
+
+//     const defaultFoldersWisdom = getDefaultFolders("wisdom").map((f, idx) => ({
+//       ...f,
+//       id: `folder-${Date.now()}-${idx}`,
+//       createdAt: new Date().toISOString(),
+//     }));
+
+//     const defaultFoldersScience = getDefaultFolders("science").map(
+//       (f, idx) => ({
+//         ...f,
+//         id: `folder-${Date.now()}-${idx}`,
+//         createdAt: new Date().toISOString(),
+//       }),
+//     );
+
+//     setFolders([
+//       ...defaultFolders,
+//       ...defaultFoldersWriting,
+//       ...defaultFoldersPhilosophy,
+//       ...defaultFoldersPsychology,
+//       ...defaultFoldersSpirituality,
+//       ...defaultFoldersWisdom,
+//       ...defaultFoldersScience,
+//     ]);
+//     localStorage.setItem(
+//       "wisdom-folders",
+//       JSON.stringify([
+//         ...defaultFolders,
+//         ...defaultFoldersWriting,
+//         ...defaultFoldersPhilosophy,
+//         ...defaultFoldersPsychology,
+//         ...defaultFoldersSpirituality,
+//         ...defaultFoldersWisdom,
+//         ...defaultFoldersScience,
+//       ]),
+//     );
+//     // }
+
+//     // if (savedEntries) {
+//     //   setEntries(JSON.parse(savedEntries));
+//     // }
 //   }, []);
+
+//   // Save to localStorage whenever data changes
+//   useEffect(() => {
+//     if (folders.length > 0) {
+//       localStorage.setItem("wisdom-folders", JSON.stringify(folders));
+//     }
+//   }, [folders]);
+
+//   useEffect(() => {
+//     localStorage.setItem("wisdom-entries", JSON.stringify(entries));
+//   }, [entries]);
 
 //   // Calculate word count
 //   useEffect(() => {
@@ -830,16 +658,55 @@ export default function WritingPage() {
 //     setWordCount(words.length);
 //   }, [content]);
 
-//   // Auto-select first subcategory when category changes
-//   useEffect(() => {
-//     const category = categories.find((c) => c.id === selectedCategory);
-//     if (category && category.subCategories.length > 0 && !selectedSubCategory) {
-//       setSelectedSubCategory(category.subCategories[0].id);
-//     }
-//   }, [selectedCategory]);
+//   // Get current category folders
+//   const currentCategoryFolders = folders.filter(
+//     (f) => f.category === selectedCategory,
+//   );
 
-//   const saveWriting = () => {
-//     if (!title.trim() || !content.trim() || !selectedSubCategory) return;
+//   // Get entries for a specific folder
+//   const getFolderEntries = (folderId: string) => {
+//     return entries.filter((e) => e.folderId === folderId);
+//   };
+
+//   // Create new folder
+//   const createFolder = () => {
+//     if (!newFolderName.trim()) return;
+
+//     const newFolder: Folder = {
+//       id: `folder-${Date.now()}`,
+//       name: newFolderName.trim(),
+//       icon: Folder,
+//       parentId: null,
+//       category: selectedCategory,
+//       createdAt: new Date().toISOString(),
+//     };
+
+//     setFolders([...folders, newFolder]);
+//     setExpandedFolders(new Set([...expandedFolders, newFolder.id]));
+//     setNewFolderName("");
+//     setShowNewFolderModal(false);
+//   };
+
+//   // Delete folder and all its entries
+//   const deleteFolder = (folderId: string) => {
+//     if (
+//       confirm(
+//         "Delete this folder and all entries inside? This cannot be undone.",
+//       )
+//     ) {
+//       setFolders(folders.filter((f) => f.id !== folderId));
+//       setEntries(entries.filter((e) => e.folderId !== folderId));
+//       if (selectedFolderId === folderId) {
+//         setSelectedFolderId(null);
+//         setSelectedEntry(null);
+//       }
+//     }
+//     setShowContextMenu(null);
+//   };
+
+//   // Save writing entry
+//   const saveEntry = () => {
+//     if (!title.trim() || !content.trim() || !selectedFolderId) return;
 
 //     const tagList = tags
 //       .split(",")
@@ -847,59 +714,59 @@ export default function WritingPage() {
 //       .filter((t) => t);
 
 //     const newEntry: WritingEntry = {
-//       id: selectedEntry?.id || Date.now().toString(),
+//       id: selectedEntry?.id || `entry-${Date.now()}`,
 //       title: title.trim(),
 //       content: content.trim(),
-//       mode: selectedCategory,
-//       subCategory: selectedSubCategory,
+//       folderId: selectedFolderId,
+//       category: selectedCategory,
 //       date: new Date().toISOString(),
 //       wordCount,
 //       tags: tagList,
-//       references: [],
 //     };
 
-//     let updatedWritings;
 //     if (selectedEntry) {
-//       updatedWritings = writings.map((w) =>
-//         w.id === selectedEntry.id ? newEntry : w,
+//       setEntries(
+//         entries.map((e) => (e.id === selectedEntry.id ? newEntry : e)),
 //       );
 //     } else {
-//       updatedWritings = [newEntry, ...writings];
+//       setEntries([newEntry, ...entries]);
 //     }
 
-//     setWritings(updatedWritings);
-//     localStorage.setItem("wisdom-writings", JSON.stringify(updatedWritings));
-//     setSelectedEntry(newEntry);
-//     resetForm();
-//   };
-
-//   const resetForm = () => {
+//     // Reset form
 //     setTitle("");
 //     setContent("");
 //     setTags("");
+//     setSelectedEntry(null);
 //   };
 
+//   // Load entry for editing
 //   const loadEntry = (entry: WritingEntry) => {
 //     setSelectedEntry(entry);
 //     setTitle(entry.title);
 //     setContent(entry.content);
-//     setSelectedCategory(entry.mode);
-//     setSelectedSubCategory(entry.subCategory);
+//     setSelectedFolderId(entry.folderId);
 //     setTags(entry.tags?.join(", ") || "");
 //   };
 
-//   const newWriting = () => {
-//     setSelectedEntry(null);
-//     resetForm();
+//   // Delete entry
+//   const deleteEntry = (entryId: string) => {
+//     if (confirm("Delete this entry?")) {
+//       setEntries(entries.filter((e) => e.id !== entryId));
+//       if (selectedEntry?.id === entryId) {
+//         setSelectedEntry(null);
+//         setTitle("");
+//         setContent("");
+//         setTags("");
+//       }
+//     }
 //   };
 
-//   const deleteEntry = (id: string) => {
-//     const updated = writings.filter((w) => w.id !== id);
-//     setWritings(updated);
-//     localStorage.setItem("wisdom-writings", JSON.stringify(updated));
-//     if (selectedEntry?.id === id) {
-//       newWriting();
-//     }
+//   // New writing
+//   const newWriting = () => {
+//     setSelectedEntry(null);
+//     setTitle("");
+//     setContent("");
+//     setTags("");
 //   };
 
 //   const formatDate = (dateString: string) => {
@@ -911,49 +778,23 @@ export default function WritingPage() {
 //     });
 //   };
 
-//   const toggleCategory = (categoryId: MainCategory) => {
-//     setExpandedCategories((prev) => ({
-//       ...prev,
-//       [categoryId]: !prev[categoryId],
-//     }));
+//   const toggleFolder = (folderId: string) => {
+//     const newExpanded = new Set(expandedFolders);
+//     if (newExpanded.has(folderId)) {
+//       newExpanded.delete(folderId);
+//     } else {
+//       newExpanded.add(folderId);
+//     }
+//     setExpandedFolders(newExpanded);
 //   };
 
-//   // Get current category and subcategory info
-//   const currentCategory = categories.find((c) => c.id === selectedCategory);
-//   const currentSubCategory = currentCategory?.subCategories.find(
-//     (s) => s.id === selectedSubCategory,
-//   );
-//   const CategoryIcon = currentCategory?.icon || BookOpen;
-
-//   // Filter writings by search term
-//   const filteredWritings = writings.filter(
-//     (w) =>
-//       searchTerm === "" ||
-//       w.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-//       w.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
-//       w.tags?.some((tag) =>
-//         tag.toLowerCase().includes(searchTerm.toLowerCase()),
-//       ),
-//   );
-
-//   // Group writings by category and subcategory for sidebar
-//   const writingsByCategory = categories.reduce(
-//     (acc, category) => {
-//       acc[category.id] = category.subCategories.map((subCat) => ({
-//         ...subCat,
-//         entries: filteredWritings.filter(
-//           (w) => w.mode === category.id && w.subCategory === subCat.id,
-//         ),
-//       }));
-//       return acc;
-//     },
-//     {} as Record<MainCategory, (SubCategory & { entries: WritingEntry[] })[]>,
-//   );
+//   const currentCategoryData = categories.find((c) => c.id === selectedCategory);
+//   const CategoryIcon = currentCategoryData?.icon || BookOpen;
 
 //   return (
 //     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
 //       {/* Header */}
-//       <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-10 shadow-sm">
+//       <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-20 shadow-sm">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 //           <div className="flex items-center justify-between">
 //             <div className="flex items-center gap-3">
@@ -969,7 +810,7 @@ export default function WritingPage() {
 //               </button>
 //               <div className="flex items-center gap-2">
 //                 <div
-//                   className={`p-2 rounded-lg bg-gradient-to-r ${currentCategory?.color}`}
+//                   className={`p-2 rounded-lg bg-gradient-to-r ${currentCategoryData?.color}`}
 //                 >
 //                   <CategoryIcon className="h-5 w-5 text-white" />
 //                 </div>
@@ -979,221 +820,255 @@ export default function WritingPage() {
 //               </div>
 //             </div>
 //             <div className="flex items-center gap-3">
-//               <div className="relative">
-//                 <input
-//                   type="text"
-//                   placeholder="Search writings..."
-//                   value={searchTerm}
-//                   onChange={(e) => setSearchTerm(e.target.value)}
-//                   className="pl-9 pr-4 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white"
-//                 />
-//                 <svg
-//                   className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"
-//                   fill="none"
-//                   stroke="currentColor"
-//                   viewBox="0 0 24 24"
-//                 >
-//                   <path
-//                     strokeLinecap="round"
-//                     strokeLinejoin="round"
-//                     strokeWidth={2}
-//                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-//                   />
-//                 </svg>
-//               </div>
-//               <button
+//               <Button
+//                 onClick={() => setShowNewFolderModal(true)}
+//                 className="flex cursor-pointer items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+//               >
+//                 <Folder className="h-4 w-4" />
+//                 New Folder
+//               </Button>
+//               <Button
 //                 onClick={newWriting}
-//                 className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
+//                 disabled={!selectedFolderId}
+//                 className="flex cursor-pointer items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
 //               >
 //                 <Plus className="h-4 w-4" />
 //                 New Entry
-//               </button>
+//               </Button>
 //             </div>
 //           </div>
 //         </div>
 //       </div>
 
 //       <div className="flex">
-//         {/* Sidebar with Nested Categories */}
+//         {/* Sidebar with Folder Tree */}
 //         {sidebarOpen && (
 //           <div className="w-80 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 min-h-[calc(100vh-73px)] overflow-y-auto">
 //             <div className="p-4">
-//               <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3">
-//                 KNOWLEDGE BASE
-//               </h2>
-
-//               {categories.map((category) => {
-//                 const Icon = category.icon;
-//                 const subCategoriesWithEntries =
-//                   writingsByCategory[category.id];
-//                 const totalEntries = subCategoriesWithEntries.reduce(
-//                   (sum, sub) => sum + sub.entries.length,
-//                   0,
-//                 );
-
-//                 if (totalEntries === 0 && !expandedCategories[category.id])
-//                   return null;
-
-//                 return (
-//                   <div key={category.id} className="mb-3">
-//                     {/* Category Header */}
-//                     <button
-//                       onClick={() => toggleCategory(category.id)}
-//                       className="w-full flex items-center justify-between p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group"
-//                     >
-//                       <div className="flex items-center gap-2">
-//                         <div
-//                           className={`p-1.5 rounded bg-gradient-to-r ${category.color}`}
+//               {/* Category Selector */}
+//               <div className="mb-6">
+//                 <Label className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase mb-2 block">
+//                   Select Category
+//                 </Label>
+//                 <Select
+//                   value={selectedCategory}
+//                   onValueChange={(value) => {
+//                     setSelectedCategory(value as MainCategory);
+//                     setSelectedFolderId(null);
+//                     setSelectedEntry(null);
+//                     newWriting();
+//                   }}
+//                 >
+//                   <SelectTrigger className="w-full cursor-pointer p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white">
+//                     {/* <SelectTrigger className="w-full "> */}
+//                     <SelectValue placeholder="Holy Bible" />
+//                   </SelectTrigger>
+//                   <SelectContent
+//                     position="popper"
+//                     className="w-full"
+//                     sideOffset={4}
+//                   >
+//                     <SelectGroup>
+//                       {categories.map((cat) => (
+//                         <SelectItem
+//                           className="cursor-pointer data-[state=checked]:bg-blue-500
+//           data-[state=checked]:text-white"
+//                           key={cat.id}
+//                           value={cat.id}
 //                         >
-//                           <Icon className="h-3.5 w-3.5 text-white" />
-//                         </div>
-//                         <span className="font-semibold text-gray-700 dark:text-gray-300 text-sm">
-//                           {category.label}
-//                         </span>
-//                         <span className="text-xs text-gray-400">
-//                           ({totalEntries})
-//                         </span>
-//                       </div>
-//                       {expandedCategories[category.id] ? (
-//                         <ChevronDown className="h-4 w-4 text-gray-400" />
-//                       ) : (
-//                         <ChevronRight className="h-4 w-4 text-gray-400" />
-//                       )}
-//                     </button>
+//                           {cat.label}
+//                         </SelectItem>
+//                       ))}
+//                     </SelectGroup>
+//                   </SelectContent>
+//                 </Select>
+//               </div>
 
-//                     {/* Subcategories */}
-//                     {expandedCategories[category.id] && (
-//                       <div className="ml-4 pl-2 border-l-2 border-gray-200 dark:border-gray-700 space-y-1 mt-1">
-//                         {category.subCategories.map((subCat) => {
-//                           const SubIcon = subCat.icon;
-//                           const entries =
-//                             writingsByCategory[category.id].find(
-//                               (s) => s.id === subCat.id,
-//                             )?.entries || [];
+//               {/* Folders Tree */}
+//               <div>
+//                 <div className="flex items-center justify-between mb-2">
+//                   <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+//                     FOLDERS
+//                   </h2>
+//                   <span className="text-xs text-gray-400">
+//                     {currentCategoryFolders.length}
+//                   </span>
+//                 </div>
 
-//                           if (entries.length === 0) return null;
+//                 {currentCategoryFolders.length === 0 ? (
+//                   <p className="text-sm text-gray-400 text-center py-8">
+//                     No folders yet. Create one!
+//                   </p>
+//                 ) : (
+//                   <div className="space-y-1">
+//                     {currentCategoryFolders.map((folder) => {
+//                       const folderEntries = getFolderEntries(folder.id);
+//                       const isExpanded = expandedFolders.has(folder.id);
+//                       const FolderIcon = folder.icon || Folder;
 
-//                           return (
-//                             <div key={subCat.id} className="space-y-0.5">
-//                               <div className="flex items-center gap-2 px-2 py-1.5 rounded">
-//                                 <SubIcon className="h-3 w-3 text-gray-400" />
-//                                 <span className="text-xs font-medium text-gray-600 dark:text-gray-400">
-//                                   {subCat.label}
-//                                 </span>
-//                                 <span className="text-xs text-gray-400">
-//                                   ({entries.length})
-//                                 </span>
-//                               </div>
-//                               <div className="ml-4 space-y-0.5">
-//                                 {entries.map((entry) => (
-//                                   <div
-//                                     key={entry.id}
-//                                     className={`p-2 rounded-lg cursor-pointer transition-all ${
-//                                       selectedEntry?.id === entry.id
-//                                         ? "bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500"
-//                                         : "hover:bg-gray-50 dark:hover:bg-gray-700/50"
-//                                     }`}
-//                                     onClick={() => loadEntry(entry)}
-//                                   >
-//                                     <div className="flex items-start justify-between">
-//                                       <div className="flex-1 min-w-0">
+//                       return (
+//                         <div key={folder.id}>
+//                           <div
+//                             className={`flex items-center justify-between p-2 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 group ${
+//                               selectedFolderId === folder.id
+//                                 ? "bg-purple-50 dark:bg-purple-900/20"
+//                                 : ""
+//                             }`}
+//                           >
+//                             <div
+//                               className="flex items-center gap-2 flex-1"
+//                               onClick={() => {
+//                                 setSelectedFolderId(folder.id);
+//                                 newWriting();
+//                               }}
+//                             >
+//                               <button
+//                                 onClick={(e) => {
+//                                   e.stopPropagation();
+//                                   toggleFolder(folder.id);
+//                                 }}
+//                                 className="p-0.5"
+//                               >
+//                                 {isExpanded ? (
+//                                   <ChevronDown className="h-4 w-4 text-gray-400" />
+//                                 ) : (
+//                                   <ChevronRight className="h-4 w-4 text-gray-400" />
+//                                 )}
+//                               </button>
+//                               {isExpanded ? (
+//                                 <>
+//                                   <FolderOpen className="h-4 w-4 text-yellow-500" />
+//                                 </>
+//                               ) : (
+//                                 <>
+//                                   {/* // <FolderIcon className="h-4 w-4 text-yellow-500" /> */}
+//                                   <Folder className="h-4 w-4 text-yellow-500" />{" "}
+//                                 </>
+//                               )}
+//                               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+//                                 {folder.name}
+//                               </span>
+//                               <span className="text-xs text-gray-400">
+//                                 ({folderEntries.length})
+//                               </span>
+//                             </div>
+//                             <button
+//                               onClick={(e) => {
+//                                 e.stopPropagation();
+//                                 setShowContextMenu({
+//                                   x: e.clientX,
+//                                   y: e.clientY,
+//                                   folderId: folder.id,
+//                                 });
+//                               }}
+//                               className="p-1 opacity-0 group-hover:opacity-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded"
+//                             >
+//                               <MoreVertical className="h-3 w-3 text-gray-500" />
+//                             </button>
+//                           </div>
+
+//                           {/* Entries inside folder */}
+//                           {isExpanded && folderEntries.length > 0 && (
+//                             <div className="ml-6 pl-2 border-l-2 border-gray-200 dark:border-gray-700 space-y-1 mt-1">
+//                               {folderEntries.map((entry) => (
+//                                 <div
+//                                   key={entry.id}
+//                                   className={`p-2 rounded-lg cursor-pointer transition-all ${
+//                                     selectedEntry?.id === entry.id
+//                                       ? "bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500"
+//                                       : "hover:bg-gray-50 dark:hover:bg-gray-700/50"
+//                                   }`}
+//                                   onClick={() => loadEntry(entry)}
+//                                 >
+//                                   <div className="flex items-start justify-between">
+//                                     <div className="flex-1 min-w-0">
+//                                       <div className="flex items-center gap-2">
+//                                         <FileText className="h-3 w-3 text-gray-400 flex-shrink-0" />
 //                                         <h4 className="font-medium text-sm text-gray-800 dark:text-white truncate">
 //                                           {entry.title}
 //                                         </h4>
-//                                         <div className="flex items-center gap-2 text-xs text-gray-400 mt-1">
-//                                           <Clock className="h-3 w-3" />
-//                                           <span>{formatDate(entry.date)}</span>
-//                                           <span>•</span>
-//                                           <span>{entry.wordCount} words</span>
-//                                         </div>
-//                                         {entry.tags &&
-//                                           entry.tags.length > 0 && (
-//                                             <div className="flex gap-1 mt-1">
-//                                               {entry.tags
-//                                                 .slice(0, 2)
-//                                                 .map((tag) => (
-//                                                   <span
-//                                                     key={tag}
-//                                                     className="text-xs px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded"
-//                                                   >
-//                                                     {tag}
-//                                                   </span>
-//                                                 ))}
-//                                             </div>
-//                                           )}
 //                                       </div>
-//                                       <button
-//                                         onClick={(e) => {
-//                                           e.stopPropagation();
-//                                           deleteEntry(entry.id);
-//                                         }}
-//                                         className="p-1 hover:bg-red-100 dark:hover:bg-red-900/30 rounded transition-colors opacity-0 group-hover:opacity-100"
-//                                       >
-//                                         <Trash2 className="h-3 w-3 text-red-500" />
-//                                       </button>
+//                                       <div className="flex items-center gap-2 text-xs text-gray-400 mt-1">
+//                                         <Clock className="h-3 w-3" />
+//                                         <span>{formatDate(entry.date)}</span>
+//                                         <span>•</span>
+//                                         <span>{entry.wordCount} words</span>
+//                                       </div>
+//                                       {entry.tags && entry.tags.length > 0 && (
+//                                         <div className="flex gap-1 mt-1">
+//                                           {entry.tags.slice(0, 2).map((tag) => (
+//                                             <span
+//                                               key={tag}
+//                                               className="text-xs px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded"
+//                                             >
+//                                               {tag}
+//                                             </span>
+//                                           ))}
+//                                         </div>
+//                                       )}
 //                                     </div>
+//                                     <button
+//                                       onClick={(e) => {
+//                                         e.stopPropagation();
+//                                         deleteEntry(entry.id);
+//                                       }}
+//                                       className="p-1 hover:bg-red-100 dark:hover:bg-red-900/30 rounded transition-colors"
+//                                     >
+//                                       <Trash2 className="h-3 w-3 text-red-500" />
+//                                     </button>
 //                                   </div>
-//                                 ))}
-//                               </div>
+//                                 </div>
+//                               ))}
 //                             </div>
-//                           );
-//                         })}
-//                       </div>
-//                     )}
+//                           )}
+//                         </div>
+//                       );
+//                     })}
 //                   </div>
-//                 );
-//               })}
+//                 )}
+//               </div>
 //             </div>
 //           </div>
 //         )}
 
-//         {/* Main Content */}
+//         {/* Context Menu */}
+//         {showContextMenu && (
+//           <div
+//             className="fixed bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50"
+//             style={{ top: showContextMenu.y, left: showContextMenu.x }}
+//             onClick={(e) => e.stopPropagation()}
+//           >
+//             <button
+//               onClick={() => {
+//                 deleteFolder(showContextMenu.folderId);
+//               }}
+//               className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2"
+//             >
+//               <Trash2 className="h-4 w-4" />
+//               Delete Folder
+//             </button>
+//           </div>
+//         )}
+
+//         {/* Click outside to close context menu */}
+//         {showContextMenu && (
+//           <div
+//             className="fixed inset-0 z-40"
+//             onClick={() => setShowContextMenu(null)}
+//           />
+//         )}
+
+//         {/* Main Content - Writing Area */}
 //         <div className="flex-1 p-6">
 //           <div className="max-w-4xl mx-auto">
-//             {/* Category Selector */}
-//             <div className="flex flex-wrap gap-2 mb-4">
-//               {categories.map((cat) => {
-//                 const Icon = cat.icon;
-//                 return (
-//                   <button
-//                     key={cat.id}
-//                     onClick={() => {
-//                       setSelectedCategory(cat.id);
-//                       newWriting();
-//                     }}
-//                     className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
-//                       selectedCategory === cat.id
-//                         ? `bg-gradient-to-r ${cat.color} text-white shadow-lg`
-//                         : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
-//                     }`}
-//                   >
-//                     <Icon className="h-4 w-4" />
-//                     <span className="font-medium">{cat.label}</span>
-//                   </button>
-//                 );
-//               })}
-//             </div>
-
-//             {/* Subcategory Selector */}
-//             {currentCategory && (
-//               <div className="flex flex-wrap gap-2 mb-6">
-//                 {currentCategory.subCategories.map((subCat) => {
-//                   const Icon = subCat.icon;
-//                   return (
-//                     <button
-//                       key={subCat.id}
-//                       onClick={() => setSelectedSubCategory(subCat.id)}
-//                       className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition-all ${
-//                         selectedSubCategory === subCat.id
-//                           ? `bg-gradient-to-r ${currentCategory.color} text-white`
-//                           : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600"
-//                       }`}
-//                     >
-//                       <Icon className="h-3.5 w-3.5" />
-//                       <span>{subCat.label}</span>
-//                     </button>
-//                   );
-//                 })}
+//             {/* Current Location Indicator */}
+//             {selectedFolderId && (
+//               <div className="mb-4 flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+//                 <Folder className="h-4 w-4 text-yellow-500" />
+//                 <span>Writing in:</span>
+//                 <span className="font-semibold text-purple-600 dark:text-purple-400">
+//                   {folders.find((f) => f.id === selectedFolderId)?.name}
+//                 </span>
 //               </div>
 //             )}
 
@@ -1202,7 +1077,7 @@ export default function WritingPage() {
 //               <div className="p-6 border-b border-gray-200 dark:border-gray-700">
 //                 <input
 //                   type="text"
-//                   placeholder={`Enter ${currentSubCategory?.label.toLowerCase()} title...`}
+//                   placeholder="Enter title..."
 //                   value={title}
 //                   onChange={(e) => setTitle(e.target.value)}
 //                   className="w-full text-2xl font-bold text-gray-800 dark:text-white placeholder-gray-400 bg-transparent border-none focus:outline-none focus:ring-0"
@@ -1211,7 +1086,7 @@ export default function WritingPage() {
 
 //               <div className="p-6">
 //                 <textarea
-//                   placeholder={`Write your ${currentSubCategory?.label.toLowerCase()} here...`}
+//                   placeholder="Write your content here..."
 //                   value={content}
 //                   onChange={(e) => setContent(e.target.value)}
 //                   className="w-full min-h-[500px] text-gray-800 dark:text-white placeholder-gray-400 bg-transparent border-none focus:outline-none focus:ring-0 resize-none leading-relaxed"
@@ -1222,7 +1097,7 @@ export default function WritingPage() {
 //               <div className="px-6 py-3 border-t border-gray-200 dark:border-gray-700">
 //                 <input
 //                   type="text"
-//                   placeholder="Add tags (comma separated) e.g., wisdom, inspiration, bible-study"
+//                   placeholder="Add tags (comma separated) e.g., wisdom, inspiration"
 //                   value={tags}
 //                   onChange={(e) => setTags(e.target.value)}
 //                   className="w-full text-sm text-gray-600 dark:text-gray-400 placeholder-gray-400 bg-transparent border-none focus:outline-none focus:ring-0"
@@ -1234,58 +1109,1378 @@ export default function WritingPage() {
 //                   <span>{wordCount} words</span>
 //                   <span>•</span>
 //                   <span>{content.length} characters</span>
-//                   {currentSubCategory && (
-//                     <>
-//                       <span>•</span>
-//                       <span className="flex items-center gap-1">
-//                         <BookMarked className="h-3 w-3" />
-//                         {currentSubCategory.label}
-//                       </span>
-//                     </>
-//                   )}
 //                 </div>
-//                 <button
-//                   onClick={saveWriting}
+//                 <Button
+//                   onClick={saveEntry}
 //                   disabled={
-//                     !title.trim() || !content.trim() || !selectedSubCategory
+//                     !title.trim() || !content.trim() || !selectedFolderId
 //                   }
-//                   className="flex items-center gap-2 px-6 py-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
+//                   className="flex cursor-pointer items-center gap-2 px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
 //                 >
 //                   <Save className="h-4 w-4" />
-//                   Save to Library
-//                 </button>
-//               </div>
-//             </div>
-
-//             {/* Wisdom Tips Section */}
-//             <div className="mt-8 bg-gradient-to-r from-purple-50 via-indigo-50 to-blue-50 dark:from-purple-900/20 dark:via-indigo-900/20 dark:to-blue-900/20 rounded-2xl p-6">
-//               <h3 className="font-semibold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
-//                 <Lightbulb className="h-5 w-5 text-purple-600" />
-//                 Today's Wisdom
-//               </h3>
-//               <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-//                 <p>
-//                   📖 <strong>Proverbs 4:7</strong> - "Wisdom is the principal
-//                   thing; therefore get wisdom: and with all thy getting get
-//                   understanding."
-//                 </p>
-//                 <p>
-//                   💭 <strong>Socrates</strong> - "The only true wisdom is in
-//                   knowing you know nothing."
-//                 </p>
-//                 <p>
-//                   🧠 <strong>Carl Jung</strong> - "Who looks outside, dreams;
-//                   who looks inside, awakes."
-//                 </p>
-//                 <p>
-//                   ✨ <strong>Daily Practice</strong> - Write one thing you're
-//                   grateful for, one lesson learned, and one goal for tomorrow.
-//                 </p>
+//                   {selectedEntry ? "Update" : "Save"}
+//                 </Button>
 //               </div>
 //             </div>
 //           </div>
 //         </div>
 //       </div>
+
+//       {/* New Folder Modal */}
+//       {showNewFolderModal && (
+//         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+//           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 w-96">
+//             <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
+//               Create New Folder
+//             </h2>
+//             <input
+//               type="text"
+//               placeholder="Folder name (e.g., Scriptures, Prayers)"
+//               value={newFolderName}
+//               onChange={(e) => setNewFolderName(e.target.value)}
+//               className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg mb-4 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white"
+//               autoFocus
+//               onKeyPress={(e) => e.key === "Enter" && createFolder()}
+//             />
+//             <div className="flex gap-3">
+//               <button
+//                 onClick={createFolder}
+//                 className="flex-1 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg"
+//               >
+//                 Create
+//               </button>
+//               <button
+//                 onClick={() => setShowNewFolderModal(false)}
+//                 className="flex-1 py-2 bg-gray-300 hover:bg-gray-400 text-gray-800 rounded-lg"
+//               >
+//                 Cancel
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       )}
 //     </div>
 //   );
 // }
+
+"use client";
+
+import { useState, useEffect } from "react";
+import {
+  BookOpen,
+  FileText,
+  Sparkles,
+  Save,
+  Trash2,
+  Clock,
+  Plus,
+  Menu,
+  X,
+  ChevronRight,
+  ChevronDown,
+  Heart,
+  Brain,
+  Lightbulb,
+  Folder,
+  FolderOpen,
+  MoreVertical,
+  ScrollText,
+  Feather,
+  NotebookPen,
+  Languages,
+  Sun,
+  Users,
+  Quote,
+  Target,
+  Award,
+  BookMarked,
+  Globe,
+  Microscope,
+  Star,
+  Moon,
+  History,
+  Move,
+} from "lucide-react";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
+import EnglishPage from "../english/Words";
+import Essay from "./english-Writing/Essay";
+
+const Bible = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="h-4 w-4"
+  >
+    <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM11.9999 5C12.5521 5 13.0999 5.44772 13.0999 6V10H17.9999C18.5521 10 19.0999 10.4477 19.0999 11C19.0999 11.5523 18.5521 12 17.9999 12H13.0999V16C13.0999 16.5523 12.5521 17 11.9999 17C11.4477 17 10.8999 16.5523 10.8999 16V12H6.99988C6.44766 12 5.89988 11.5523 5.89988 11C5.89988 10.4477 6.44766 10 6.99988 10H10.8999V6C10.8999 5.44772 11.4477 5 11.9999 5Z" />
+  </svg>
+);
+
+// Types
+type Folder = {
+  id: string;
+  name: string;
+  icon?: any;
+  parentId: string | null;
+  category: MainCategory;
+  createdAt: string;
+  description?: string;
+  subCategory?: {
+    name: string;
+    icon: any;
+    color?: string;
+  };
+};
+
+type WritingEntry = {
+  id: string;
+  title: string;
+  content: string;
+  folderId: string;
+  category: MainCategory;
+  date: string;
+  wordCount: number;
+  tags?: string[];
+  isFavorite?: boolean;
+  version?: number;
+};
+
+type MainCategory =
+  | "bible"
+  | "philosophy"
+  | "psychology"
+  | "wisdom"
+  | "science"
+  | "spirituality"
+  | "english";
+
+const categories: {
+  id: MainCategory;
+  label: string;
+  icon: any;
+  color: string;
+  description?: string;
+}[] = [
+  {
+    id: "english",
+    label: "English & Writing",
+    icon: FileText,
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    id: "bible",
+    label: "Holy Bible",
+    icon: Bible,
+    color: "from-blue-600 to-indigo-600",
+  },
+  {
+    id: "philosophy",
+    label: "Philosophy",
+    icon: Brain,
+    color: "from-amber-600 to-orange-600",
+  },
+  {
+    id: "psychology",
+    label: "Psychology",
+    icon: Brain,
+    color: "from-teal-600 to-cyan-600",
+  },
+  {
+    id: "wisdom",
+    label: "Wisdom Literature",
+    icon: Lightbulb,
+    color: "from-yellow-600 to-amber-600",
+  },
+  {
+    id: "science",
+    label: "Science",
+    icon: BookOpen,
+    color: "from-green-600 to-emerald-600",
+  },
+  {
+    id: "spirituality",
+    label: "Spirituality",
+    icon: Heart,
+    color: "from-purple-600 to-pink-600",
+  },
+];
+
+const getDefaultFolders = (
+  categoryId: MainCategory,
+): Omit<Folder, "id" | "createdAt">[] => {
+  switch (categoryId) {
+    case "bible":
+      return [
+        {
+          name: "📖 Scriptures",
+          icon: ScrollText,
+          parentId: null,
+          category: "bible",
+          description: "Bible verses and passages",
+        },
+        {
+          name: "🙏 Prayers",
+          icon: Heart,
+          parentId: null,
+          category: "bible",
+          description: "Personal prayers and intercessions",
+        },
+        {
+          name: "📝 Study Notes",
+          icon: NotebookPen,
+          parentId: null,
+          category: "bible",
+          description: "Bible study insights",
+        },
+        {
+          name: "📚 Terminology",
+          icon: Languages,
+          parentId: null,
+          category: "bible",
+          description: "Biblical terms and meanings",
+        },
+        {
+          name: "☀️ Devotionals",
+          icon: Sun,
+          parentId: null,
+          category: "bible",
+          description: "Daily devotions",
+        },
+        {
+          name: "🎯 Sermons",
+          icon: Users,
+          parentId: null,
+          category: "bible",
+          description: "Church messages",
+        },
+      ];
+    case "philosophy":
+      return [
+        {
+          name: "🏛️ Stoicism",
+          icon: Quote,
+          parentId: null,
+          category: "philosophy",
+          description: "Stoic wisdom",
+        },
+        {
+          name: "🌍 Existentialism",
+          icon: Brain,
+          parentId: null,
+          category: "philosophy",
+          description: "Existentialist thought",
+        },
+        {
+          name: "🧘 Eastern Philosophy",
+          icon: Sun,
+          parentId: null,
+          category: "philosophy",
+          description: "Buddhism, Taoism",
+        },
+        {
+          name: "⚖️ Ethics",
+          icon: Target,
+          parentId: null,
+          category: "philosophy",
+          description: "Moral philosophy",
+        },
+        {
+          name: "🔍 Logic",
+          icon: Brain,
+          parentId: null,
+          category: "philosophy",
+          description: "Critical thinking",
+        },
+      ];
+    case "psychology":
+      return [
+        {
+          name: "🧠 Cognitive",
+          icon: Brain,
+          parentId: null,
+          category: "psychology",
+          description: "Mental processes",
+        },
+        {
+          name: "🎯 Behavioral",
+          icon: Target,
+          parentId: null,
+          category: "psychology",
+          description: "Behavior patterns",
+        },
+        {
+          name: "💖 Emotional Intelligence",
+          icon: Heart,
+          parentId: null,
+          category: "psychology",
+          description: "EQ development",
+        },
+        {
+          name: "👤 Personality",
+          icon: Users,
+          parentId: null,
+          category: "psychology",
+          description: "MBTI, Enneagram",
+        },
+        {
+          name: "🛋️ Therapy",
+          icon: Heart,
+          parentId: null,
+          category: "psychology",
+          description: "CBT, DBT",
+        },
+      ];
+    case "wisdom":
+      return [
+        {
+          name: "📜 Proverbs",
+          icon: Quote,
+          parentId: null,
+          category: "wisdom",
+          description: "Ancient wisdom",
+        },
+        {
+          name: "👥 Biographies",
+          icon: Users,
+          parentId: null,
+          category: "wisdom",
+          description: "Great lives",
+        },
+        {
+          name: "🏆 Leadership",
+          icon: Award,
+          parentId: null,
+          category: "wisdom",
+          description: "Leading principles",
+        },
+        {
+          name: "🎯 Success",
+          icon: Target,
+          parentId: null,
+          category: "wisdom",
+          description: "Achievement wisdom",
+        },
+        {
+          name: "🔄 Habits",
+          icon: BookMarked,
+          parentId: null,
+          category: "wisdom",
+          description: "Daily practices",
+        },
+      ];
+    case "science":
+      return [
+        {
+          name: "⚛️ Physics",
+          icon: Globe,
+          parentId: null,
+          category: "science",
+          description: "Physical laws",
+        },
+        {
+          name: "🧬 Biology",
+          icon: Microscope,
+          parentId: null,
+          category: "science",
+          description: "Life sciences",
+        },
+        {
+          name: "🌌 Astronomy",
+          icon: Star,
+          parentId: null,
+          category: "science",
+          description: "Cosmos",
+        },
+        {
+          name: "📜 History",
+          icon: History,
+          parentId: null,
+          category: "science",
+          description: "Historical events",
+        },
+        {
+          name: "💡 Technology",
+          icon: Lightbulb,
+          parentId: null,
+          category: "science",
+          description: "Innovations",
+        },
+      ];
+    case "spirituality":
+      return [
+        {
+          name: "✝️ Christianity",
+          icon: Bible,
+          parentId: null,
+          category: "spirituality",
+          description: "Christian faith",
+        },
+        {
+          name: "🧘 Mindfulness",
+          icon: Moon,
+          parentId: null,
+          category: "spirituality",
+          description: "Present awareness",
+        },
+        {
+          name: "💝 Gratitude",
+          icon: Heart,
+          parentId: null,
+          category: "spirituality",
+          description: "Thankfulness",
+        },
+        {
+          name: "🎯 Purpose",
+          icon: Target,
+          parentId: null,
+          category: "spirituality",
+          description: "Finding meaning",
+        },
+        {
+          name: "✨ Mysticism",
+          icon: Sparkles,
+          parentId: null,
+          category: "spirituality",
+          description: "Mystical experiences",
+        },
+      ];
+    case "english":
+      return [
+        {
+          name: "✍️ Essays",
+          icon: FileText,
+          parentId: null,
+          category: "english",
+          description: "Argumentative, descriptive, narrative",
+        },
+        {
+          name: "🪄 Poems",
+          icon: Sparkles,
+          parentId: null,
+          category: "english",
+          description: "Sonnets, haiku, free verse",
+        },
+        {
+          name: "📖 Book Chapters",
+          icon: BookOpen,
+          parentId: null,
+          category: "english",
+          description: "Novel and book writing",
+        },
+        {
+          name: "📓 Journal",
+          icon: Feather,
+          parentId: null,
+          category: "english",
+          description: "Daily reflections",
+        },
+        {
+          name: "📚 Vocabulary",
+          icon: Brain,
+          parentId: null,
+          category: "english",
+          description: "Word collection",
+          subCategory: [
+            {
+              name: "📖 Common Words",
+              icon: BookOpen,
+              // color: "from-green-500 to-emerald-500",
+            },
+            {
+              name: "🧠 Advanced Words",
+              icon: Brain,
+              // color: "from-purple-500 to-pink-500",
+            },
+            {
+              name: "🌍 Foreign Words",
+              icon: Globe,
+              // color: "from-yellow-500 to-amber-500",
+            },
+            {
+              name: "📚 Vocabulary",
+              icon: Brain,
+              // color: "from-blue-500 to-indigo-500",
+            },
+          ],
+        },
+        {
+          name: "📝 Grammar",
+          icon: BookOpen,
+          parentId: null,
+          category: "english",
+          description: "Grammar rules",
+        },
+        {
+          name: "🎨 Creative Writing",
+          icon: Sparkles,
+          parentId: null,
+          category: "english",
+          description: "Short stories",
+        },
+        {
+          name: "💡 Writing Prompts",
+          icon: Lightbulb,
+          parentId: null,
+          category: "english",
+          description: "Inspiration",
+        },
+      ];
+    default:
+      return [];
+  }
+};
+
+export default function WritingPage() {
+  const [selectedCategory, setSelectedCategory] =
+    useState<MainCategory>("english");
+  const [folders, setFolders] = useState<Folder[]>([]);
+  const [entries, setEntries] = useState<WritingEntry[]>([]);
+  const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
+  const [selectedEntry, setSelectedEntry] = useState<WritingEntry | null>(null);
+  console.log(selectedCategory);
+
+  // Drag and drop state
+  const [draggedEntry, setDraggedEntry] = useState<WritingEntry | null>(null);
+  const [dragOverFolderId, setDragOverFolderId] = useState<string | null>(null);
+
+  // Form state
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [wordCount, setWordCount] = useState(0);
+  const [tags, setTags] = useState("");
+
+  // UI state
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [expandedFolders, setExpandedFolders] = useState<Set<string>>(
+    new Set(),
+  );
+  const [showNewFolderModal, setShowNewFolderModal] = useState(false);
+  const [newFolderName, setNewFolderName] = useState("");
+  const [showContextMenu, setShowContextMenu] = useState<{
+    x: number;
+    y: number;
+    folderId: string;
+  } | null>(null);
+  const [newFolderDescription, setNewFolderDescription] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  const [showStats, setShowStats] = useState(false);
+  const [notification, setNotification] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
+
+  // Load data
+  useEffect(() => {
+    const savedFolders = localStorage.getItem("wisdom-folders");
+    const savedEntries = localStorage.getItem("wisdom-entries");
+
+    if (savedFolders) {
+      setFolders(JSON.parse(savedFolders));
+    } else {
+      // Initialize with default folders for all categories
+      const allDefaultFolders: Folder[] = [];
+      categories.forEach((cat) => {
+        const defaultFolders = getDefaultFolders(cat.id);
+        defaultFolders.forEach((f, idx) => {
+          allDefaultFolders.push({
+            ...f,
+            id: `folder-${cat.id}-${idx}-${Date.now()}`,
+            createdAt: new Date().toISOString(),
+          });
+        });
+      });
+      setFolders(allDefaultFolders);
+      localStorage.setItem("wisdom-folders", JSON.stringify(allDefaultFolders));
+    }
+
+    if (savedEntries) {
+      setEntries(JSON.parse(savedEntries));
+    }
+  }, []);
+
+  // Save to localStorage whenever data changes
+  useEffect(() => {
+    if (folders.length > 0) {
+      localStorage.setItem("wisdom-folders", JSON.stringify(folders));
+    }
+  }, [folders]);
+
+  useEffect(() => {
+    localStorage.setItem("wisdom-entries", JSON.stringify(entries));
+  }, [entries]);
+
+  // Calculate word count
+  useEffect(() => {
+    const words = content
+      .trim()
+      .split(/\s+/)
+      .filter((w) => w.length > 0);
+    setWordCount(words.length);
+  }, [content]);
+
+  // Get current category folders
+  const currentCategoryFolders = folders.filter(
+    (f) => f.category === selectedCategory,
+  );
+
+  // Get entries for a specific folder with filters
+  const getFolderEntries = (folderId: string) => {
+    let folderEntries = entries.filter((e) => e.folderId === folderId);
+
+    if (searchQuery) {
+      folderEntries = folderEntries.filter(
+        (e) =>
+          e.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          e.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          (e.tags &&
+            e.tags.some((tag) =>
+              tag.toLowerCase().includes(searchQuery.toLowerCase()),
+            )),
+      );
+    }
+
+    if (showFavoritesOnly) {
+      folderEntries = folderEntries.filter((e) => e.isFavorite);
+    }
+
+    return folderEntries;
+  };
+
+  const showNotification = (message: string, type: "success" | "error") => {
+    setNotification({ message, type });
+    setTimeout(() => setNotification(null), 3000);
+  };
+
+  // Drag and drop handlers
+  const handleDragStart = (e: React.DragEvent, entry: WritingEntry) => {
+    setDraggedEntry(entry);
+    e.dataTransfer.effectAllowed = "move";
+    e.dataTransfer.setData("text/plain", entry.id);
+    if (e.currentTarget instanceof HTMLElement) {
+      e.currentTarget.style.opacity = "0.5";
+    }
+  };
+
+  const handleDragEnd = (e: React.DragEvent) => {
+    setDraggedEntry(null);
+    setDragOverFolderId(null);
+    if (e.currentTarget instanceof HTMLElement) {
+      e.currentTarget.style.opacity = "1";
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent, folderId: string) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+    setDragOverFolderId(folderId);
+  };
+
+  const handleDragLeave = () => {
+    setDragOverFolderId(null);
+  };
+
+  const handleDrop = (e: React.DragEvent, targetFolderId: string) => {
+    e.preventDefault();
+    setDragOverFolderId(null);
+
+    if (!draggedEntry) return;
+
+    if (draggedEntry.folderId === targetFolderId) {
+      showNotification("Entry is already in this folder", "error");
+      return;
+    }
+
+    const targetFolder = folders.find((f) => f.id === targetFolderId);
+    const sourceFolder = folders.find((f) => f.id === draggedEntry.folderId);
+
+    if (!targetFolder || !sourceFolder) return;
+
+    if (targetFolder.category !== sourceFolder.category) {
+      const confirmMove = confirm(
+        `Move "${draggedEntry.title}" from "${sourceFolder.name}" to "${targetFolder.name}"? Category will change to ${targetFolder.category}.`,
+      );
+      if (!confirmMove) return;
+    }
+
+    const updatedEntry = {
+      ...draggedEntry,
+      folderId: targetFolderId,
+      category: targetFolder.category,
+      date: new Date().toISOString(),
+      version: (draggedEntry.version || 0) + 1,
+    };
+
+    setEntries(
+      entries.map((e) => (e.id === draggedEntry.id ? updatedEntry : e)),
+    );
+
+    if (selectedEntry?.id === draggedEntry.id) {
+      setSelectedEntry(updatedEntry);
+    }
+
+    showNotification(
+      `Moved "${draggedEntry.title}" to ${targetFolder.name}`,
+      "success",
+    );
+    setDraggedEntry(null);
+  };
+
+  // Create new folder
+  const createFolder = () => {
+    if (!newFolderName.trim()) return;
+
+    const newFolder: Folder = {
+      id: `folder-${Date.now()}`,
+      name: newFolderName.trim(),
+      icon: Folder,
+      parentId: null,
+      category: selectedCategory,
+      createdAt: new Date().toISOString(),
+      description: newFolderDescription.trim() || undefined,
+    };
+
+    setFolders([...folders, newFolder]);
+    setExpandedFolders(new Set([...expandedFolders, newFolder.id]));
+    setNewFolderName("");
+    setNewFolderDescription("");
+    setShowNewFolderModal(false);
+    showNotification(`Folder "${newFolder.name}" created!`, "success");
+  };
+
+  // Delete folder
+  const deleteFolder = (folderId: string) => {
+    const folder = folders.find((f) => f.id === folderId);
+    if (confirm(`Delete folder "${folder?.name}" and all entries inside?`)) {
+      setFolders(folders.filter((f) => f.id !== folderId));
+      setEntries(entries.filter((e) => e.folderId !== folderId));
+      if (selectedFolderId === folderId) {
+        setSelectedFolderId(null);
+        setSelectedEntry(null);
+      }
+      showNotification(`Folder "${folder?.name}" deleted`, "success");
+    }
+    setShowContextMenu(null);
+  };
+
+  // Save entry
+  const saveEntry = () => {
+    if (!title.trim() || !content.trim() || !selectedFolderId) {
+      showNotification(
+        "Please add title, content, and select a folder",
+        "error",
+      );
+      return;
+    }
+
+    const tagList = tags
+      .split(",")
+      .map((t) => t.trim())
+      .filter((t) => t);
+
+    const newEntry: WritingEntry = {
+      id: selectedEntry?.id || `entry-${Date.now()}`,
+      title: title.trim(),
+      content: content.trim(),
+      folderId: selectedFolderId,
+      category: selectedCategory,
+      date: new Date().toISOString(),
+      wordCount,
+      tags: tagList,
+      isFavorite: selectedEntry?.isFavorite || false,
+      version: (selectedEntry?.version || 0) + 1,
+    };
+
+    if (selectedEntry) {
+      setEntries(
+        entries.map((e) => (e.id === selectedEntry.id ? newEntry : e)),
+      );
+      showNotification("Entry updated!", "success");
+    } else {
+      setEntries([newEntry, ...entries]);
+      showNotification("Entry saved!", "success");
+    }
+
+    setTitle("");
+    setContent("");
+    setTags("");
+    setSelectedEntry(null);
+  };
+
+  // Load entry for editing
+  const loadEntry = (entry: WritingEntry) => {
+    setSelectedEntry(entry);
+    setTitle(entry.title);
+    setContent(entry.content);
+    setSelectedFolderId(entry.folderId);
+    setTags(entry.tags?.join(", ") || "");
+  };
+
+  // Delete entry
+  const deleteEntry = (entryId: string) => {
+    if (confirm("Delete this entry?")) {
+      setEntries(entries.filter((e) => e.id !== entryId));
+      if (selectedEntry?.id === entryId) {
+        setSelectedEntry(null);
+        setTitle("");
+        setContent("");
+        setTags("");
+      }
+      showNotification("Entry deleted", "success");
+    }
+  };
+
+  // Toggle favorite
+  const toggleFavorite = (entryId: string) => {
+    setEntries(
+      entries.map((e) =>
+        e.id === entryId ? { ...e, isFavorite: !e.isFavorite } : e,
+      ),
+    );
+  };
+
+  // New writing
+  const newWriting = () => {
+    setSelectedEntry(null);
+    setTitle("");
+    setContent("");
+    setTags("");
+  };
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffDays = Math.floor(
+      (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24),
+    );
+
+    if (diffDays === 0) return "Today";
+    if (diffDays === 1) return "Yesterday";
+    if (diffDays < 7) return `${diffDays} days ago`;
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  };
+
+  const toggleFolder = (folderId: string) => {
+    const newExpanded = new Set(expandedFolders);
+    if (newExpanded.has(folderId)) {
+      newExpanded.delete(folderId);
+    } else {
+      newExpanded.add(folderId);
+    }
+    setExpandedFolders(newExpanded);
+  };
+
+  // Get statistics
+  const getStats = () => ({
+    totalEntries: entries.length,
+    totalWords: entries.reduce((sum, e) => sum + e.wordCount, 0),
+    favoriteEntries: entries.filter((e) => e.isFavorite).length,
+    categoriesWithContent: new Set(entries.map((e) => e.category)).size,
+  });
+
+  const stats = getStats();
+  const currentCategoryData = categories.find((c) => c.id === selectedCategory);
+  const CategoryIcon = currentCategoryData?.icon || BookOpen;
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
+      {/* Notification */}
+      {notification && (
+        <div
+          className={`fixed top-20 right-4 z-50 flex items-center gap-2 px-4 py-3 rounded-lg shadow-lg ${
+            notification.type === "success"
+              ? "bg-green-500 text-white"
+              : "bg-red-500 text-white"
+          }`}
+        >
+          {notification.message}
+        </div>
+      )}
+
+      {/* Header */}
+      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-20 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+              >
+                {sidebarOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
+              </button>
+              <div className="flex items-center gap-2">
+                <div
+                  className={`p-2 rounded-lg bg-gradient-to-r ${currentCategoryData?.color}`}
+                >
+                  <CategoryIcon className="h-5 w-5 text-white" />
+                </div>
+                <h1 className="text-xl font-bold text-gray-800 dark:text-white">
+                  Wisdom Library
+                </h1>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 flex-wrap">
+              {/* Search */}
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white w-48 focus:w-64 transition-all"
+              />
+
+              {/* Filters */}
+              <button
+                onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
+                className={`p-2 rounded-lg transition-colors ${
+                  showFavoritesOnly
+                    ? "bg-yellow-500 text-white"
+                    : "bg-gray-100 dark:bg-gray-700 text-gray-600"
+                }`}
+              >
+                <Star className="h-4 w-4" />
+              </button>
+
+              <button
+                onClick={() => setShowStats(!showStats)}
+                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600"
+              >
+                <Lightbulb className="h-4 w-4" />
+              </button>
+
+              <Button
+                onClick={() => setShowNewFolderModal(true)}
+                className="cursor-pointer flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg"
+              >
+                <Folder className="h-4 w-4" />
+                New Folder
+              </Button>
+
+              <Button
+                onClick={newWriting}
+                disabled={!selectedFolderId}
+                className="cursor-pointer flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white rounded-lg"
+              >
+                <Plus className="h-4 w-4" />
+                New Entry
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Panel */}
+      {showStats && (
+        <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-600">
+                {stats.totalEntries}
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Total Entries
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-600">
+                {stats.totalWords.toLocaleString()}
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Total Words
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-yellow-600">
+                {stats.favoriteEntries}
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Favorites
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-green-600">
+                {stats.categoriesWithContent}
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Categories Used
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="flex">
+        {/* Sidebar */}
+        {sidebarOpen && (
+          <div className="w-80 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 min-h-[calc(100vh-73px)] overflow-y-auto">
+            <div className="p-4">
+              {/* Category Selector */}
+              <div className="mb-6">
+                <Label className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase mb-2 block">
+                  Select Category
+                </Label>
+                <Select
+                  value={selectedCategory}
+                  onValueChange={(value) => {
+                    setSelectedCategory(value as MainCategory);
+                    setSelectedFolderId(null);
+                    setSelectedEntry(null);
+                    newWriting();
+                  }}
+                >
+                  <SelectTrigger className="w-full cursor-pointer">
+                    <SelectValue placeholder="Select category" />
+                  </SelectTrigger>
+                  <SelectContent
+                    position="popper"
+                    className="w-full"
+                    sideOffset={4}
+                  >
+                    <SelectGroup>
+                      {categories.map((cat) => (
+                        <SelectItem
+                          className="cursor-pointer data-[state=checked]:bg-blue-500 data-[state=checked]:text-white"
+                          key={cat.id}
+                          value={cat.id}
+                        >
+                          {cat.label}
+                        </SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Folders Tree */}
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+                    FOLDERS
+                  </h2>
+                  <span className="text-xs text-gray-400">
+                    {currentCategoryFolders.length}
+                  </span>
+                </div>
+
+                {currentCategoryFolders.length === 0 ? (
+                  <p className="text-sm text-gray-400 text-center py-8">
+                    No folders yet. Create one!
+                  </p>
+                ) : (
+                  <div className="space-y-1">
+                    {currentCategoryFolders.map((folder) => {
+                      const folderEntries = getFolderEntries(folder.id);
+                      const isExpanded = expandedFolders.has(folder.id);
+                      const isDragOver = dragOverFolderId === folder.id;
+
+                      return (
+                        <div key={folder.id}>
+                          <div
+                            className={`flex items-center justify-between p-2 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 group transition-all ${
+                              selectedFolderId === folder.id
+                                ? "bg-purple-50 dark:bg-purple-900/20"
+                                : ""
+                            } ${isDragOver ? "bg-blue-100 dark:bg-blue-900/30 border-2 border-blue-500" : ""}`}
+                            onDragOver={(e) => handleDragOver(e, folder.id)}
+                            onDragLeave={handleDragLeave}
+                            onDrop={(e) => handleDrop(e, folder.id)}
+                          >
+                            <div
+                              className="flex items-center gap-2 flex-1"
+                              onClick={() => {
+                                setSelectedFolderId(folder.id);
+                                newWriting();
+                              }}
+                            >
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  toggleFolder(folder.id);
+                                }}
+                                className="p-0.5"
+                              >
+                                {isExpanded ? (
+                                  <ChevronDown className="h-4 w-4 text-gray-400" />
+                                ) : (
+                                  <ChevronRight className="h-4 w-4 text-gray-400" />
+                                )}
+                              </button>
+                              {isExpanded ? (
+                                <FolderOpen className="h-4 w-4 text-yellow-500" />
+                              ) : (
+                                <Folder className="h-4 w-4 text-yellow-500" />
+                              )}
+                              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                                {folder.name}
+                              </span>
+                              <span className="text-xs text-gray-400">
+                                ({folderEntries.length})
+                              </span>
+                            </div>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setShowContextMenu({
+                                  x: e.clientX,
+                                  y: e.clientY,
+                                  folderId: folder.id,
+                                });
+                              }}
+                              className="p-1 opacity-0 group-hover:opacity-100 hover:bg-gray-200 dark:hover:bg-gray-600 rounded"
+                            >
+                              <MoreVertical className="h-3 w-3 text-gray-500" />
+                            </button>
+                          </div>
+
+                          {/* Entries */}
+                          {isExpanded && folderEntries.length > 0 && (
+                            <div className="ml-6 pl-2 border-l-2 border-gray-200 dark:border-gray-700 space-y-1 mt-1">
+                              {folderEntries.map((entry) => (
+                                <div
+                                  key={entry.id}
+                                  draggable={true}
+                                  onDragStart={(e) => handleDragStart(e, entry)}
+                                  onDragEnd={handleDragEnd}
+                                  className={`p-2 rounded-lg cursor-move transition-all group ${
+                                    selectedEntry?.id === entry.id
+                                      ? "bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500"
+                                      : "hover:bg-gray-50 dark:hover:bg-gray-700/50"
+                                  } ${draggedEntry?.id === entry.id ? "opacity-50" : ""}`}
+                                  onClick={() => {
+                                    loadEntry(entry);
+                                    // console.log("Entry clicked:", entry);
+                                  }}
+                                >
+                                  <div className="flex items-start justify-between">
+                                    <div className="flex-1 min-w-0">
+                                      <div>
+                                        {folder?.subCategory && (
+                                          <span
+                                            className={`inline-block px-2 py-1 text-xs rounded-full bg-gradient-to-r ${entry.subCategory.color} text-white`}
+                                          >
+                                            {folder?.subCategory.name}
+                                          </span>
+                                        )}
+                                        <p onClick={() => console.log(folder)}>
+                                          MOSES MWANGI
+                                        </p>
+                                      </div>
+                                      <div className="flex items-center gap-2">
+                                        <Move className="h-3 w-3 text-gray-400 cursor-grab" />
+                                        <FileText className="h-3 w-3 text-gray-400" />
+                                        <h4 className="font-medium text-sm text-gray-800 dark:text-white truncate">
+                                          {entry.title} GGG
+                                        </h4>
+                                        {entry.isFavorite && (
+                                          <Star className="h-3 w-3 text-yellow-500 fill-yellow-500" />
+                                        )}
+                                      </div>
+                                      <div className="flex items-center gap-2 text-xs text-gray-400 mt-1 ml-5">
+                                        <Clock className="h-3 w-3" />
+                                        <span>{formatDate(entry.date)}</span>
+                                        <span>•</span>
+                                        <span>{entry.wordCount} words</span>
+                                      </div>
+                                      {entry.tags && entry.tags.length > 0 && (
+                                        <div className="flex gap-1 mt-1 ml-5 flex-wrap">
+                                          {entry.tags.slice(0, 2).map((tag) => (
+                                            <span
+                                              key={tag}
+                                              className="text-xs px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded"
+                                            >
+                                              {tag}
+                                            </span>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                    <div className="flex gap-1 opacity-0 group-hover:opacity-100">
+                                      <button
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          toggleFavorite(entry.id);
+                                        }}
+                                        className="p-1 hover:bg-yellow-100 rounded"
+                                      >
+                                        <Star
+                                          className={`h-3 w-3 ${entry.isFavorite ? "fill-yellow-500 text-yellow-500" : "text-gray-400"}`}
+                                        />
+                                      </button>
+                                      <button
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          deleteEntry(entry.id);
+                                        }}
+                                        className="p-1 hover:bg-red-100 rounded"
+                                      >
+                                        <Trash2 className="h-3 w-3 text-red-500" />
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+
+              {/* Drag Tip */}
+              <div className="mt-6 p-3 bg-gray-50 dark:bg-gray-700/30 rounded-lg">
+                <p className="text-xs text-gray-500 flex items-center gap-2">
+                  <Move className="h-3 w-3" />
+                  💡 Drag any entry to move it to another folder
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Context Menu */}
+        {showContextMenu && (
+          <>
+            <div
+              className="fixed inset-0 z-40"
+              onClick={() => setShowContextMenu(null)}
+            />
+            <div
+              className="fixed bg-white dark:bg-gray-800 rounded-lg shadow-lg border py-1 z-50 min-w-40"
+              style={{ top: showContextMenu.y, left: showContextMenu.x }}
+            >
+              <button
+                onClick={() => deleteFolder(showContextMenu.folderId)}
+                className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100 flex items-center gap-2"
+              >
+                <Trash2 className="h-4 w-4" />
+                Delete Folder
+              </button>
+            </div>
+          </>
+        )}
+
+        {/* Main Content */}
+        <div className="flex-1 p-6">
+          <div className="max-w-4xl mx-auto">
+            {selectedFolderId && (
+              <div
+                onClick={() =>
+                  console.log(
+                    "Button clicked!",
+                    folders.find((f) => f.id === selectedFolderId)?.name ===
+                      " Vocabulary",
+                  )
+                }
+                className="mb-4 flex items-center gap-2 text-sm text-gray-600"
+              >
+                <Folder className="h-4 w-4 text-yellow-500" />
+                <span>Writing in:</span>
+                <span className="font-semibold text-purple-600">
+                  {folders.find((f) => f.id === selectedFolderId)?.name}
+                </span>
+              </div>
+            )}
+
+            {/* Writing Area */}
+            <>
+              {selectedCategory === "english" &&
+                folders
+                  .find((f) => f.id === selectedFolderId)
+                  ?.name.slice(3) === "Vocabulary" && <EnglishPage />}
+
+              {selectedCategory === "english" &&
+                folders
+                  .find((f) => f.id === selectedFolderId)
+                  ?.name.slice(3) === "Essays" && (
+                  <Essay
+                    title={title}
+                    content={content}
+                    tags={tags}
+                    wordCount={wordCount}
+                    saveEntry={saveEntry}
+                    setTitle={setTitle}
+                    setContent={setContent}
+                    setTags={setTags}
+                    selectedFolderId={selectedFolderId}
+                    selectedEntry={selectedEntry}
+                  />
+                )}
+            </>
+
+            {/* {selectedCategory === "bible" && (
+              <Essay
+                selectedEntry={selectedEntry}
+                selectedFolderId={selectedFolderId}
+              />
+            )} */}
+
+            {/* {selectedCategory === "philosophy" && <PhilosophyPage />}
+            {selectedCategory === "science" && <SciencePage />}
+            {selectedCategory === "spirituality" && <SpiritualityPage />}
+            {selectedCategory === "technology" && <TechnologyPage />}
+            {selectedCategory === "other" && <OtherPage />} */}
+          </div>
+        </div>
+      </div>
+
+      {/* New Folder Modal */}
+      {showNewFolderModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 w-96">
+            <h2 className="text-xl font-bold mb-4">Create New Folder</h2>
+            <input
+              type="text"
+              placeholder="Folder name"
+              value={newFolderName}
+              onChange={(e) => setNewFolderName(e.target.value)}
+              className="w-full p-2 border rounded-lg mb-4 bg-gray-50 dark:bg-gray-700"
+              autoFocus
+              onKeyDown={(e) => e.key === "Enter" && createFolder()}
+            />
+            <input
+              type="text"
+              placeholder="Description (optional)"
+              value={newFolderDescription}
+              onChange={(e) => setNewFolderDescription(e.target.value)}
+              className="w-full p-2 border rounded-lg mb-4 bg-gray-50 dark:bg-gray-700 text-sm"
+            />
+            <div className="flex gap-3">
+              <button
+                onClick={createFolder}
+                className="flex-1 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg"
+              >
+                Create
+              </button>
+              <button
+                onClick={() => setShowNewFolderModal(false)}
+                className="flex-1 py-2 bg-gray-300 hover:bg-gray-400 rounded-lg"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
