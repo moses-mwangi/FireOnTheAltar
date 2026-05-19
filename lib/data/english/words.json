@@ -1,0 +1,960 @@
+{
+  "words": [
+    {
+      "id": "word-1779200010001",
+      "word": "serene",
+      "meaning": "Calm, peaceful, and untroubled; free from disturbance",
+      "example": "The lake was serene under the golden sunset.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "serene-0",
+          "word": "serenely",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "serene-1",
+          "word": "serenity",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "serene-2",
+          "word": "sereneness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "tranquil",
+        "peaceful",
+        "calm",
+        "placid",
+        "still",
+        "undisturbed",
+        "quiet",
+        "harmonious",
+        "composed",
+        "untroubled"
+      ],
+      "antonyms": [
+        "chaotic",
+        "turbulent",
+        "agitated",
+        "stormy",
+        "anxious",
+        "wild",
+        "frantic",
+        "hectic",
+        "unsettled",
+        "tempestuous"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010002",
+      "word": "ubiquitous",
+      "meaning": "Present, appearing, or found everywhere",
+      "example": "Smartphones have become ubiquitous in modern society.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "ubiquitous-0",
+          "word": "ubiquitously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "ubiquitous-1",
+          "word": "ubiquity",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "ubiquitous-2",
+          "word": "ubiquitousness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "omnipresent",
+        "everywhere",
+        "pervasive",
+        "universal",
+        "commonplace",
+        "prevalent",
+        "widespread",
+        "boundless",
+        "limitless",
+        "ever-present"
+      ],
+      "antonyms": [
+        "rare",
+        "scarce",
+        "limited",
+        "infrequent",
+        "uncommon",
+        "sparse",
+        "occasional",
+        "scattered",
+        "isolated",
+        "unique"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010003",
+      "word": "reluctant",
+      "meaning": "Unwilling and hesitant; disinclined to do something",
+      "example": "She was reluctant to accept the job offer far from home.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "reluctant-0",
+          "word": "reluctantly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "reluctant-1",
+          "word": "reluctance",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "unwilling",
+        "hesitant",
+        "disinclined",
+        "averse",
+        "resistant",
+        "dubious",
+        "cautious",
+        "wary",
+        "unenthusiastic",
+        "grudging"
+      ],
+      "antonyms": [
+        "willing",
+        "eager",
+        "enthusiastic",
+        "ready",
+        "inclined",
+        "keen",
+        "desirous",
+        "game",
+        "prepared",
+        "favorable"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010004",
+      "word": "ephemeral",
+      "meaning": "Lasting for a very short time; transient",
+      "example": "The beauty of cherry blossoms is ephemeral.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "ephemeral-0",
+          "word": "ephemerally",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "ephemeral-1",
+          "word": "ephemerality",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "ephemeral-2",
+          "word": "ephemeralness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "transient",
+        "temporary",
+        "fleeting",
+        "short-lived",
+        "momentary",
+        "brief",
+        "evanescent",
+        "passing",
+        "fugitive",
+        "impermanent"
+      ],
+      "antonyms": [
+        "permanent",
+        "eternal",
+        "everlasting",
+        "enduring",
+        "endless",
+        "infinite",
+        "immortal",
+        "timeless",
+        "perpetual",
+        "unceasing"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010005",
+      "word": "happy",
+      "meaning": "Feeling or showing pleasure, joy, or contentment",
+      "example": "She felt happy when she saw her old friend.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "happy-0",
+          "word": "happily",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "happy-1",
+          "word": "happiness",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "happy-2",
+          "word": "happier",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "happy-3",
+          "word": "happiest",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "joyful",
+        "cheerful",
+        "content",
+        "delighted",
+        "pleased",
+        "elated",
+        "ecstatic",
+        "jubilant",
+        "merry",
+        "blissful"
+      ],
+      "antonyms": [
+        "sad",
+        "unhappy",
+        "miserable",
+        "depressed",
+        "gloomy",
+        "sorrowful",
+        "heartbroken",
+        "dejected",
+        "despondent",
+        "melancholy"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010006",
+      "word": "mellifluous",
+      "meaning": "Sweet or musical; pleasant to hear",
+      "example": "The singer's mellifluous voice captivated the audience.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "mellifluous-0",
+          "word": "mellifluously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "mellifluous-1",
+          "word": "mellifluousness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "melodious",
+        "harmonious",
+        "lyrical",
+        "sweet-sounding",
+        "dulcet",
+        "euphonious",
+        "tuneful",
+        "musical",
+        "golden",
+        "silvery"
+      ],
+      "antonyms": [
+        "cacophonous",
+        "discordant",
+        "harsh",
+        "grating",
+        "jarring",
+        "strident",
+        "raucous",
+        "dissonant",
+        "unmelodic",
+        "noisy"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010007",
+      "word": "brave",
+      "meaning": "Ready to face and endure danger or pain; courageous",
+      "example": "The firefighters were brave in saving the family.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "brave-0",
+          "word": "bravely",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "brave-1",
+          "word": "bravery",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "brave-2",
+          "word": "braver",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "courageous",
+        "fearless",
+        "valiant",
+        "heroic",
+        "intrepid",
+        "gallant",
+        "bold",
+        "daring",
+        "plucky",
+        "audacious"
+      ],
+      "antonyms": [
+        "cowardly",
+        "timid",
+        "fearful",
+        "afraid",
+        "scared",
+        "frightened",
+        "timorous",
+        "craven",
+        "gutless",
+        "spineless"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010008",
+      "word": "laconic",
+      "meaning": "Using very few words; concise to the point of seeming rude",
+      "example": "His laconic reply was simply 'No.'",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "laconic-0",
+          "word": "laconically",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "laconic-1",
+          "word": "laconicism",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "brief",
+        "concise",
+        "terse",
+        "succinct",
+        "short",
+        "pithy",
+        "compendious",
+        "crisp",
+        "curt",
+        "abrupt"
+      ],
+      "antonyms": [
+        "verbose",
+        "loquacious",
+        "garrulous",
+        "talkative",
+        "wordy",
+        "prolix",
+        "long-winded",
+        "rambling",
+        "lengthy",
+        "diffuse"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010009",
+      "word": "generous",
+      "meaning": "Showing readiness to give more than is expected; kind",
+      "example": "She made a generous donation to the charity.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "generous-0",
+          "word": "generously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "generous-1",
+          "word": "generosity",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "charitable",
+        "benevolent",
+        "munificent",
+        "magnanimous",
+        "open-handed",
+        "liberal",
+        "bountiful",
+        "altruistic",
+        "philanthropic",
+        "lavish"
+      ],
+      "antonyms": [
+        "stingy",
+        "selfish",
+        "miserly",
+        "greedy",
+        "ungenerous",
+        "tight-fisted",
+        "penurious",
+        "parsimonious",
+        "mean",
+        "self-centered"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010010",
+      "word": "nefarious",
+      "meaning": "Wicked, villainous, or criminal in nature",
+      "example": "The villain's nefarious plan was finally uncovered.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "nefarious-0",
+          "word": "nefariously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "nefarious-1",
+          "word": "nefariousness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "wicked",
+        "evil",
+        "villainous",
+        "heinous",
+        "atrocious",
+        "vicious",
+        "diabolical",
+        "malevolent",
+        "malicious",
+        "sinister"
+      ],
+      "antonyms": [
+        "virtuous",
+        "righteous",
+        "noble",
+        "good",
+        "honorable",
+        "admirable",
+        "benevolent",
+        "upright",
+        "moral",
+        "ethical"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010011",
+      "word": "fast",
+      "meaning": "Moving or capable of moving at high speed",
+      "example": "The cheetah is the fastest land animal.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "fast-0",
+          "word": "faster",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "fast-1",
+          "word": "fastest",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "fast-2",
+          "word": "fastly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "fast-3",
+          "word": "fastness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "quick",
+        "swift",
+        "rapid",
+        "speedy",
+        "hasty",
+        "brisk",
+        "fleet",
+        "expeditious",
+        "lightning",
+        "whirlwind"
+      ],
+      "antonyms": [
+        "slow",
+        "sluggish",
+        "leisurely",
+        "unhurried",
+        "slow-moving",
+        "gradual",
+        "plodding",
+        "crawling",
+        "dawdling",
+        "tardy"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010012",
+      "word": "onerous",
+      "meaning": "Involving a great burden or difficulty",
+      "example": "The new manager was given onerous responsibilities.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "onerous-0",
+          "word": "onerously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "onerous-1",
+          "word": "onerousness",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "onerous-2",
+          "word": "onus",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "burdensome",
+        "taxing",
+        "arduous",
+        "heavy",
+        "demanding",
+        "difficult",
+        "exacting",
+        "grinding",
+        "oppressive",
+        "laborious"
+      ],
+      "antonyms": [
+        "easy",
+        "light",
+        "effortless",
+        "simple",
+        "undemanding",
+        "trivial",
+        "painless",
+        "manageable",
+        "facile",
+        "unburdensome"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010013",
+      "word": "beautiful",
+      "meaning": "Pleasing the senses or mind aesthetically",
+      "example": "The sunset over the ocean was truly beautiful.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "beautiful-0",
+          "word": "beautifully",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "beautiful-1",
+          "word": "beauty",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "beautiful-2",
+          "word": "beautify",
+          "partOfSpeech": "verb"
+        }
+      ],
+      "synonyms": [
+        "lovely",
+        "gorgeous",
+        "stunning",
+        "breathtaking",
+        "magnificent",
+        "elegant",
+        "exquisite",
+        "picturesque",
+        "radiant",
+        "resplendent"
+      ],
+      "antonyms": [
+        "ugly",
+        "hideous",
+        "repulsive",
+        "grotesque",
+        "unsightly",
+        "unattractive",
+        "plain",
+        "homely",
+        "unpleasant",
+        "frightful"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010014",
+      "word": "ineffable",
+      "meaning": "Too great or extreme to be expressed in words",
+      "example": "The mother felt ineffable joy at seeing her child.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "ineffable-0",
+          "word": "ineffably",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "ineffable-1",
+          "word": "ineffability",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "indescribable",
+        "unspeakable",
+        "unutterable",
+        "inexpressible",
+        "beyond words",
+        "overwhelming",
+        "transcendent",
+        "nameless",
+        "unfathomable",
+        "immeasurable"
+      ],
+      "antonyms": [
+        "describable",
+        "expressible",
+        "speakable",
+        "definable",
+        "explainable",
+        "communicable",
+        "sayable",
+        "tellable"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010015",
+      "word": "easy",
+      "meaning": "Achieved without great effort; presenting few difficulties",
+      "example": "The test was surprisingly easy for everyone.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "easy-0",
+          "word": "easily",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "easy-1",
+          "word": "easiness",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "easy-2",
+          "word": "ease",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "simple",
+        "effortless",
+        "straightforward",
+        "uncomplicated",
+        "facile",
+        "painless",
+        "clear",
+        "elementary",
+        "basic",
+        "undemanding"
+      ],
+      "antonyms": [
+        "difficult",
+        "hard",
+        "challenging",
+        "complex",
+        "complicated",
+        "tough",
+        "arduous",
+        "demanding",
+        "laborious",
+        "exacting"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010016",
+      "word": "epiphany",
+      "meaning": "A sudden, profound realization or understanding",
+      "example": "He had an epiphany about his career path during the lecture.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "epiphany-0",
+          "word": "epiphanic",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "revelation",
+        "insight",
+        "realization",
+        "awakening",
+        "enlightenment",
+        "discovery",
+        "breakthrough",
+        "illumination",
+        "understanding",
+        "inspiration"
+      ],
+      "antonyms": [
+        "confusion",
+        "ignorance",
+        "obtuseness",
+        "misunderstanding",
+        "perplexity",
+        "bewilderment",
+        "unawareness",
+        "obliviousness"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010017",
+      "word": "old",
+      "meaning": "Having lived or existed for a long time",
+      "example": "The old oak tree stood in the field for centuries.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "old-0",
+          "word": "older",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "old-1",
+          "word": "oldest",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "old-2",
+          "word": "oldness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "aged",
+        "elderly",
+        "ancient",
+        "antique",
+        "venerable",
+        "mature",
+        "seasoned",
+        "vintage",
+        "senior",
+        "timeworn"
+      ],
+      "antonyms": [
+        "new",
+        "young",
+        "modern",
+        "fresh",
+        "youthful",
+        "newborn",
+        "contemporary",
+        "novel",
+        "recent",
+        "current"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010018",
+      "word": "labyrinthine",
+      "meaning": "Complicated, intricate, or maze-like in structure",
+      "example": "The labyrinthine corridors of the ancient castle confused visitors.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "labyrinthine-0",
+          "word": "labyrinth",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "labyrinthine-1",
+          "word": "labyrinthinely",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "synonyms": [
+        "maze-like",
+        "complex",
+        "intricate",
+        "convoluted",
+        "tangled",
+        "winding",
+        "twisting",
+        "mazy",
+        "involved",
+        "complicated"
+      ],
+      "antonyms": [
+        "simple",
+        "straightforward",
+        "direct",
+        "uncomplicated",
+        "clear",
+        "linear",
+        "plain",
+        "basic",
+        "easy",
+        "unwinding"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010019",
+      "word": "sad",
+      "meaning": "Feeling or showing sorrow; unhappy",
+      "example": "She felt sad after saying goodbye to her friend.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "sad-0",
+          "word": "sadly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "sad-1",
+          "word": "sadness",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "sad-2",
+          "word": "sadder",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "unhappy",
+        "sorrowful",
+        "gloomy",
+        "depressed",
+        "miserable",
+        "melancholy",
+        "downcast",
+        "despondent",
+        "heartbroken",
+        "grief-stricken"
+      ],
+      "antonyms": [
+        "happy",
+        "joyful",
+        "cheerful",
+        "delighted",
+        "elated",
+        "content",
+        "merry",
+        "jubilant",
+        "blissful",
+        "ecstatic"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010020",
+      "word": "perspicacious",
+      "meaning": "Having keen mental perception and understanding",
+      "example": "The perspicacious detective solved the mystery quickly.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "perspicacious-0",
+          "word": "perspicaciously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "perspicacious-1",
+          "word": "perspicacity",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "astute",
+        "shrewd",
+        "discerning",
+        "insightful",
+        "perceptive",
+        "keen",
+        "sharp",
+        "intelligent",
+        "wise",
+        "sagacious"
+      ],
+      "antonyms": [
+        "obtuse",
+        "dull",
+        "stupid",
+        "unintelligent",
+        "slow",
+        "dense",
+        "insensitive",
+        "unperceptive",
+        "blind",
+        "ignorant"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    }
+  ]
+}

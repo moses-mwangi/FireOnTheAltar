@@ -1,0 +1,354 @@
+{
+  "folders": [
+    {
+      "id": "folder-vocab-1734567891000",
+      "name": "Vocabulary",
+      "icon": "BookOpen",
+      "parentId": null,
+      "category": "english",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Master word collection with organized subcategories",
+      "hasSubCategories": true
+    },
+    {
+      "id": "folder-poems-1734567891001",
+      "name": "Poems",
+      "icon": "Feather",
+      "parentId": null,
+      "category": "english",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Original poetry and favorite verses",
+      "hasSubCategories": true
+    },
+    {
+      "id": "folder-essays-1734567891002",
+      "name": "Essays",
+      "icon": "FileText",
+      "parentId": null,
+      "category": "english",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Structured writings on various topics",
+      "hasSubCategories": true
+    },
+    {
+      "id": "folder-journal-1734567891003",
+      "name": "Journal",
+      "icon": "Calendar",
+      "parentId": null,
+      "category": "english",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Daily thoughts, reflections, and personal growth",
+      "hasSubCategories": true
+    },
+    {
+      "id": "folder-creative-1734567891004",
+      "name": "Creative Writings",
+      "icon": "PenTool",
+      "parentId": null,
+      "category": "english",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Stories, flash fiction, and imaginative pieces",
+      "hasSubCategories": true
+    },
+    {
+      "id": "folder-letters-1734567891005",
+      "name": "Letters & Correspondence",
+      "icon": "Mail",
+      "parentId": null,
+      "category": "english",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Personal and professional letters",
+      "hasSubCategories": false
+    },
+    {
+      "id": "folder-quotes-1734567891006",
+      "name": "Quotes & Wisdom",
+      "icon": "Quote",
+      "parentId": null,
+      "category": "english",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Inspiring quotes and meaningful phrases",
+      "hasSubCategories": false
+    },
+    {
+      "id": "folder-drafts-1734567891007",
+      "name": "Drafts & Ideas",
+      "icon": "Edit3",
+      "parentId": null,
+      "category": "english",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Unfinished works and brainstorming",
+      "hasSubCategories": false
+    },
+    {
+      "id": "folder-1779200106937",
+      "name": "TEST",
+      "icon": "Folder",
+      "parentId": null,
+      "category": "english",
+      "hasSubCategories": false,
+      "createdAt": "2026-05-19T14:15:06.937Z"
+    }
+  ],
+  "subCategories": [
+    {
+      "id": "sub-vocab-basics-1734567892000",
+      "name": "Common Words",
+      "icon": "Star",
+      "isFolder": false,
+      "parentFolderId": "folder-vocab-1734567891000",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Everyday essential vocabulary"
+    },
+    {
+      "id": "sub-vocab-grouped-1734567892001",
+      "name": "Grouped Words",
+      "icon": "Layers",
+      "isFolder": true,
+      "parentFolderId": "folder-vocab-1734567891000",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Words organized by themes and topics"
+    },
+    {
+      "id": "sub-vocab-advanced-1734567892002",
+      "name": "Advanced Words",
+      "icon": "TrendingUp",
+      "isFolder": false,
+      "parentFolderId": "folder-vocab-1734567891000",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Sophisticated vocabulary for fluent writing"
+    },
+    {
+      "id": "sub-vocab-foreign-1734567892003",
+      "name": "Foreign Words",
+      "icon": "Globe",
+      "isFolder": true,
+      "parentFolderId": "folder-vocab-1734567891000",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Loanwords and borrowed expressions"
+    },
+    {
+      "id": "sub-vocab-idioms-1734567892004",
+      "name": "Idioms & Phrases",
+      "icon": "MessageCircle",
+      "isFolder": false,
+      "parentFolderId": "folder-vocab-1734567891000",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Figurative expressions and sayings"
+    },
+    {
+      "id": "sub-poems-original-1734567892005",
+      "name": "Original Poems",
+      "icon": "PenLine",
+      "isFolder": true,
+      "parentFolderId": "folder-poems-1734567891001",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "My own poetry"
+    },
+    {
+      "id": "sub-poems-favorites-1734567892006",
+      "name": "Favorite Poems",
+      "icon": "Heart",
+      "isFolder": false,
+      "parentFolderId": "folder-poems-1734567891001",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Poems I love by others"
+    },
+    {
+      "id": "sub-poems-haiku-1734567892007",
+      "name": "Haiku & Short Forms",
+      "icon": "Minimize",
+      "isFolder": false,
+      "parentFolderId": "folder-poems-1734567891001",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Minimalist poetry"
+    },
+    {
+      "id": "sub-essays-argumentative-1734567892008",
+      "name": "Argumentative Essays",
+      "icon": "Zap",
+      "isFolder": true,
+      "parentFolderId": "folder-essays-1734567891002",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Persuasive and debate-style essays"
+    },
+    {
+      "id": "sub-essays-narrative-1734567892009",
+      "name": "Narrative Essays",
+      "icon": "Book",
+      "isFolder": true,
+      "parentFolderId": "folder-essays-1734567891002",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Storytelling and personal experience essays"
+    },
+    {
+      "id": "sub-essays-descriptive-1734567892010",
+      "name": "Descriptive Essays",
+      "icon": "Eye",
+      "isFolder": true,
+      "parentFolderId": "folder-essays-1734567891002",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Vivid sensory details and imagery"
+    },
+    {
+      "id": "sub-essays-expository-1734567892011",
+      "name": "Expository Essays",
+      "icon": "Info",
+      "isFolder": false,
+      "parentFolderId": "folder-essays-1734567891002",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Explanatory and informative essays"
+    },
+    {
+      "id": "sub-journal-daily-1734567892012",
+      "name": "Daily Entries",
+      "icon": "Sun",
+      "isFolder": true,
+      "parentFolderId": "folder-journal-1734567891003",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Day-to-day reflections"
+    },
+    {
+      "id": "sub-journal-gratitude-1734567892013",
+      "name": "Gratitude Journal",
+      "icon": "Smile",
+      "isFolder": true,
+      "parentFolderId": "folder-journal-1734567891003",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Things I'm thankful for"
+    },
+    {
+      "id": "sub-journal-dreams-1734567892014",
+      "name": "Dream Journal",
+      "icon": "Moon",
+      "isFolder": false,
+      "parentFolderId": "folder-journal-1734567891003",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Recording and interpreting dreams"
+    },
+    {
+      "id": "sub-journal-reflections-1734567892015",
+      "name": "Deep Reflections",
+      "icon": "Compass",
+      "isFolder": true,
+      "parentFolderId": "folder-journal-1734567891003",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Philosophical and personal growth entries"
+    },
+    {
+      "id": "sub-creative-stories-1734567892016",
+      "name": "Short Stories",
+      "icon": "BookOpen",
+      "isFolder": true,
+      "parentFolderId": "folder-creative-1734567891004",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Fiction under 7,500 words"
+    },
+    {
+      "id": "sub-creative-flash-1734567892017",
+      "name": "Flash Fiction",
+      "icon": "Zap",
+      "isFolder": false,
+      "parentFolderId": "folder-creative-1734567891004",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Very short stories under 1,000 words"
+    },
+    {
+      "id": "sub-creative-novels-1734567892018",
+      "name": "Novel Drafts",
+      "icon": "Book",
+      "isFolder": true,
+      "parentFolderId": "folder-creative-1734567891004",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Long-form fiction projects"
+    },
+    {
+      "id": "sub-creative-prompts-1734567892019",
+      "name": "Writing Prompts",
+      "icon": "Lightbulb",
+      "isFolder": false,
+      "parentFolderId": "folder-creative-1734567891004",
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "description": "Ideas to spark creativity"
+    },
+    {
+      "id": "sub-1779200128862",
+      "name": "Try1",
+      "icon": "SubCategory",
+      "parentFolderId": "folder-1779200106937",
+      "createdAt": "2026-05-19T14:15:28.862Z",
+      "isFolder": true
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-welcome-1734567893000",
+      "title": "Welcome to Your Writing Hub",
+      "content": "This is your personal writing space. Start by creating your first entry in any folder or subcategory. Every great writer begins with a single word.",
+      "folderId": "folder-journal-1734567891003",
+      "subCategoryId": "sub-journal-daily-1734567892012",
+      "category": "english",
+      "date": "2026-05-19T08:00:00.000Z",
+      "wordCount": 22,
+      "tags": [
+        "welcome",
+        "getting-started"
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "updatedAt": "2026-05-19T08:00:00.000Z"
+    },
+    {
+      "id": "entry-sample-vocab-1734567893001",
+      "title": "How to Use Vocabulary Folders",
+      "content": "Add new words with definitions, example sentences, and etymology. Group related words together for better retention.",
+      "folderId": "folder-vocab-1734567891000",
+      "subCategoryId": "sub-vocab-basics-1734567892000",
+      "category": "english",
+      "date": "2026-05-19T08:00:00.000Z",
+      "wordCount": 18,
+      "tags": [
+        "guide",
+        "vocabulary-tips"
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "updatedAt": "2026-05-19T08:00:00.000Z"
+    },
+    {
+      "id": "entry-sample-poem-1734567893002",
+      "title": "The Writer's Dawn",
+      "content": "Blank page awaits,\nFingers dance upon the keys,\nStories born from thought.",
+      "folderId": "folder-poems-1734567891001",
+      "subCategoryId": "sub-poems-haiku-1734567892007",
+      "category": "english",
+      "date": "2026-05-19T08:00:00.000Z",
+      "wordCount": 12,
+      "tags": [
+        "haiku",
+        "inspiration"
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "updatedAt": "2026-05-19T08:00:00.000Z"
+    },
+    {
+      "id": "entry-sample-creative-1734567893003",
+      "title": "The Old Key",
+      "content": "In the dusty attic, she found a brass key no bigger than her thumb. Little did she know it would unlock not a door, but a memory her grandmother had buried decades ago...",
+      "folderId": "folder-creative-1734567891004",
+      "subCategoryId": "sub-creative-flash-1734567892017",
+      "category": "english",
+      "date": "2026-05-19T08:00:00.000Z",
+      "wordCount": 35,
+      "tags": [
+        "fiction",
+        "mystery",
+        "flash-fiction"
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-05-19T08:00:00.000Z",
+      "updatedAt": "2026-05-19T08:00:00.000Z"
+    }
+  ]
+}

@@ -23,6 +23,7 @@ const eslintConfig = defineConfig([
       // "no-console": "warn",
       "react/react-in-jsx-scope": "off",
       "@typescript-eslint/no-explicit-any": "off",
+      "react-hooks/set-state-in-effect": "off",
     },
   },
 ]);
