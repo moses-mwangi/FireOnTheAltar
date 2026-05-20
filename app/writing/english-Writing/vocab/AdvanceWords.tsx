@@ -15,16 +15,29 @@ export default function AdvanceWordsUI() {
   const [words, setWords] = useState<Word[]>([]);
 
   const [openAddModal, setOpenAddModal] = useState(false);
+  const [openDeleteModal, setOpenDeleteModal] = useState(false);
 
   const [newWord, setNewWord] = useState({
     word: "",
     meaning: "",
     example: "",
     level: "advanced",
-    anatomy: "",
-    synonyms: "",
-    wordFamily: "",
+    antonyms: [""],
+    synonyms: [""],
+    wordFamily: [],
   });
+
+  const resetForm = () => {
+    setNewWord({
+      word: "",
+      meaning: "",
+      example: "",
+      level: "",
+      antonyms: [""],
+      synonyms: [""],
+      wordFamily: [],
+    });
+  };
 
   const fetchCommonVocab = async () => {
     try {
@@ -52,6 +65,7 @@ export default function AdvanceWordsUI() {
       });
       setOpenAddModal(false);
       if (!response.ok) throw new Error("Failed to save data");
+      resetForm();
       return true;
     } catch (err) {
       console.error("Save error:", err);
@@ -120,6 +134,8 @@ export default function AdvanceWordsUI() {
         setNewWord={setNewWord}
         openAddModal={openAddModal}
         setOpenAddModal={setOpenAddModal}
+        openDeleteModal={openDeleteModal}
+        setOpenDeleteModal={setOpenDeleteModal}
         onEditWord={handleEditWord}
         onDeleteWord={handleDeleteWord}
         fetchWords={fetchCommonVocab}

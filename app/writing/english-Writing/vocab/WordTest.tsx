@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { Trash2, ChevronDown, ChevronUp, Edit } from "lucide-react";
 import { HiOutlineSpeakerWave, HiOutlineSpeakerXMark } from "react-icons/hi2";
 import { Word } from "../../../../lib/types/vocabTypes";
@@ -12,13 +12,13 @@ import EditWordModal from "./EditWordModal";
 
 interface Props {
   word: Word | Partial<Word>;
-  onDelete: () => void;
   showDetails: boolean;
   onToggleDetails?: () => void;
   familyId?: string;
   fetchFamilies?: () => Promise<void>;
   fetchWords?: () => Promise<void>;
   isFamilyWord?: boolean;
+  setOpenDeleteModal: (open: boolean) => void;
 }
 
 export default function WordCard({
@@ -29,7 +29,7 @@ export default function WordCard({
   familyId,
   fetchFamilies,
   fetchWords,
-  onDelete,
+  setOpenDeleteModal,
 }: Props) {
   const [showWordFamily, setShowWordFamily] = useState(false);
   const [showWordUpdateModal, setShowWordUpdateModal] = useState(false);
@@ -164,7 +164,7 @@ export default function WordCard({
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                onDelete();
+                setOpenDeleteModal(true);
               }}
               className={`${showDetails ? "bg-gray-50" : "bg-gray-100 hidden"} p-[7px] rounded-full text-gray-600 hover:bg-gray-200 hover:text-gray-800 transition`}
             >

@@ -13,14 +13,16 @@ type Word = {
 export default function CommonWordsUI() {
   const [words, setWords] = useState<Word[]>([]);
   const [openAddModal, setOpenAddModal] = useState(false);
+  const [openDeleteModal, setOpenDeleteModal] = useState(false);
+
   const [newWord, setNewWord] = useState({
     word: "",
     meaning: "",
     example: "",
     level: "common",
-    anatomy: "",
-    synonyms: "",
-    wordFamily: "",
+    antonyms: [],
+    synonyms: [],
+    wordFamily: [],
   });
 
   const fetchCommonVocab = async () => {
@@ -85,8 +87,6 @@ export default function CommonWordsUI() {
   };
 
   const handleDeleteWord = async (word: Word) => {
-    if (!confirm("Are you sure you want to delete this word?")) return;
-
     const updatedWords = words.filter((w) => w.id !== word.id);
     const saved = await saveToFile(updatedWords);
     if (saved) {
@@ -114,6 +114,8 @@ export default function CommonWordsUI() {
         setNewWord={setNewWord}
         openAddModal={openAddModal}
         setOpenAddModal={setOpenAddModal}
+        openDeleteModal={openDeleteModal}
+        setOpenDeleteModal={setOpenDeleteModal}
         onEditWord={handleEditWord}
         onDeleteWord={handleDeleteWord}
         fetchWords={fetchCommonVocab}

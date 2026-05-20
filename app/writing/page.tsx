@@ -800,8 +800,7 @@ export default function WritingPage() {
       case "Common Words":
         return (
           <>
-            {/* <GroupedWordsUI word={selectedFamily.name} /> */}
-            <CommonWordsUI />;
+            <CommonWordsUI />
           </>
         );
 

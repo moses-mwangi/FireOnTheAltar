@@ -1,6 +1,1322 @@
 {
   "words": [
     {
+      "id": "word-2001",
+      "word": "assertive",
+      "meaning": "Confidently expressing opinions or needs",
+      "example": "He remained assertive without being aggressive.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "assertive-0",
+          "word": "assertively",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "assertive-1",
+          "word": "assertiveness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "confident",
+        "forceful",
+        "self-assured",
+        "direct",
+        "firm",
+        "decisive",
+        "bold",
+        "clear",
+        "authoritative",
+        "strong"
+      ],
+      "antonyms": [
+        "passive",
+        "timid",
+        "hesitant",
+        "uncertain",
+        "weak",
+        "submissive",
+        "meek",
+        "indecisive",
+        "shy",
+        "reserved"
+      ]
+    },
+    {
+      "id": "word-2002",
+      "word": "convincing",
+      "meaning": "Capable of causing someone to believe something",
+      "example": "She gave a convincing explanation.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "convincing-0",
+          "word": "convincingly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "convincing-1",
+          "word": "convince",
+          "partOfSpeech": "verb"
+        }
+      ],
+      "synonyms": [
+        "persuasive",
+        "credible",
+        "compelling",
+        "effective",
+        "logical",
+        "sound",
+        "strong",
+        "valid",
+        "powerful",
+        "influential"
+      ],
+      "antonyms": [
+        "unconvincing",
+        "weak",
+        "doubtful",
+        "flawed",
+        "invalid",
+        "poor",
+        "ineffective",
+        "unsound",
+        "implausible",
+        "questionable"
+      ]
+    },
+    {
+      "id": "word-2003",
+      "word": "dominant",
+      "meaning": "Exercising power or influence over others",
+      "example": "He maintained a dominant presence in the room.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "dominant-0",
+          "word": "dominantly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "dominant-1",
+          "word": "dominance",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "powerful",
+        "authoritative",
+        "controlling",
+        "influential",
+        "commanding",
+        "strong",
+        "leading",
+        "superior",
+        "prevailing",
+        "overriding"
+      ],
+      "antonyms": [
+        "submissive",
+        "weak",
+        "inferior",
+        "passive",
+        "yielding",
+        "secondary",
+        "insignificant",
+        "powerless",
+        "minor",
+        "dependent"
+      ]
+    },
+    {
+      "id": "word-2004",
+      "word": "influential",
+      "meaning": "Having the power to affect decisions or actions",
+      "example": "She is an influential figure in business.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "influential-0",
+          "word": "influentially",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "influential-1",
+          "word": "influence",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "powerful",
+        "persuasive",
+        "impactful",
+        "significant",
+        "authoritative",
+        "effective",
+        "notable",
+        "important",
+        "commanding",
+        "strong"
+      ],
+      "antonyms": [
+        "powerless",
+        "insignificant",
+        "weak",
+        "ineffective",
+        "minor",
+        "irrelevant",
+        "negligible",
+        "trivial",
+        "uninfluential",
+        "small"
+      ]
+    },
+    {
+      "id": "word-2005",
+      "word": "strategic",
+      "meaning": "Carefully designed to achieve a specific goal",
+      "example": "He made a strategic decision to wait.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "strategic-0",
+          "word": "strategically",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "strategic-1",
+          "word": "strategy",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "tactical",
+        "planned",
+        "calculated",
+        "deliberate",
+        "purposeful",
+        "methodical",
+        "intelligent",
+        "systematic",
+        "intentional",
+        "clever"
+      ],
+      "antonyms": [
+        "random",
+        "careless",
+        "unplanned",
+        "impulsive",
+        "reckless",
+        "haphazard",
+        "thoughtless",
+        "irrational",
+        "spontaneous",
+        "disorganized"
+      ]
+    },
+    {
+      "id": "word-2006",
+      "word": "articulate",
+      "meaning": "Able to express ideas clearly and effectively",
+      "example": "She is highly articulate in debates.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "articulate-0",
+          "word": "articulately",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "articulate-1",
+          "word": "articulation",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "eloquent",
+        "fluent",
+        "clear",
+        "expressive",
+        "well-spoken",
+        "coherent",
+        "precise",
+        "lucid",
+        "persuasive",
+        "verbal"
+      ],
+      "antonyms": [
+        "inarticulate",
+        "unclear",
+        "confused",
+        "awkward",
+        "hesitant",
+        "mute",
+        "uncertain",
+        "garbled",
+        "vague",
+        "incoherent"
+      ]
+    },
+    {
+      "id": "word-2007",
+      "word": "decisive",
+      "meaning": "Showing the ability to make decisions quickly",
+      "example": "A decisive leader inspires confidence.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "decisive-0",
+          "word": "decisively",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "decisive-1",
+          "word": "decisiveness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "firm",
+        "resolute",
+        "determined",
+        "clear-cut",
+        "confident",
+        "bold",
+        "conclusive",
+        "strong",
+        "assertive",
+        "definitive"
+      ],
+      "antonyms": [
+        "indecisive",
+        "hesitant",
+        "uncertain",
+        "weak",
+        "wavering",
+        "doubtful",
+        "confused",
+        "irresolute",
+        "passive",
+        "unsure"
+      ]
+    },
+    {
+      "id": "word-2008",
+      "word": "compelling",
+      "meaning": "Evoking strong interest or persuasion",
+      "example": "That was a compelling argument.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "compelling-0",
+          "word": "compellingly",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "synonyms": [
+        "persuasive",
+        "convincing",
+        "forceful",
+        "powerful",
+        "gripping",
+        "engaging",
+        "influential",
+        "credible",
+        "strong",
+        "effective"
+      ],
+      "antonyms": [
+        "weak",
+        "boring",
+        "unconvincing",
+        "flat",
+        "ineffective",
+        "dull",
+        "unpersuasive",
+        "trivial",
+        "poor",
+        "insignificant"
+      ]
+    },
+    {
+      "id": "word-2009",
+      "word": "authoritative",
+      "meaning": "Having or showing authority and confidence",
+      "example": "He spoke in an authoritative tone.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "authoritative-0",
+          "word": "authoritatively",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "authoritative-1",
+          "word": "authority",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "commanding",
+        "dominant",
+        "confident",
+        "powerful",
+        "influential",
+        "firm",
+        "decisive",
+        "strong",
+        "assertive",
+        "credible"
+      ],
+      "antonyms": [
+        "weak",
+        "uncertain",
+        "hesitant",
+        "timid",
+        "passive",
+        "unconvincing",
+        "soft",
+        "doubtful",
+        "insecure",
+        "indecisive"
+      ]
+    },
+    {
+      "id": "word-2010",
+      "word": "credible",
+      "meaning": "Believable and trustworthy",
+      "example": "The source is highly credible.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "credible-0",
+          "word": "credibly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "credible-1",
+          "word": "credibility",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "believable",
+        "reliable",
+        "trustworthy",
+        "convincing",
+        "plausible",
+        "valid",
+        "authentic",
+        "sound",
+        "dependable",
+        "solid"
+      ],
+      "antonyms": [
+        "unreliable",
+        "false",
+        "dubious",
+        "questionable",
+        "implausible",
+        "invalid",
+        "fake",
+        "weak",
+        "untrustworthy",
+        "shaky"
+      ]
+    },
+    {
+      "id": "word-3007",
+      "word": "lucid",
+      "meaning": "Clear and easy to understand",
+      "example": "He gave a lucid explanation.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "lucid-0",
+          "word": "lucidity",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "clear",
+        "coherent",
+        "precise",
+        "intelligible",
+        "logical",
+        "explicit"
+      ],
+      "antonyms": [
+        "confusing",
+        "vague",
+        "unclear",
+        "ambiguous",
+        "obscure",
+        "dense"
+      ]
+    },
+    {
+      "id": "word-3008",
+      "word": "audacious",
+      "meaning": "Willing to take bold risks",
+      "example": "It was an audacious decision.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "audacious-0",
+          "word": "audacity",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "bold",
+        "daring",
+        "fearless",
+        "brave",
+        "reckless",
+        "venturesome"
+      ],
+      "antonyms": [
+        "timid",
+        "fearful",
+        "cautious",
+        "hesitant",
+        "shy",
+        "meek"
+      ]
+    },
+    {
+      "id": "word-1779200010022",
+      "word": "tenacious",
+      "meaning": "Holding firmly; persistent and determined",
+      "example": "She remained tenacious despite repeated failures.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "tenacious-0",
+          "word": "tenaciously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "tenacious-1",
+          "word": "tenacity",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "persistent",
+        "resilient",
+        "determined",
+        "dogged",
+        "unyielding",
+        "resolute",
+        "steadfast",
+        "gritty",
+        "relentless",
+        "indomitable"
+      ],
+      "antonyms": [
+        "weak",
+        "yielding",
+        "quitting",
+        "irresolute",
+        "lazy",
+        "indifferent",
+        "fragile",
+        "inconstant",
+        "hesitant",
+        "passive"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010023",
+      "word": "meticulous",
+      "meaning": "Showing great attention to detail; very careful",
+      "example": "He kept meticulous records of every transaction.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "meticulous-0",
+          "word": "meticulously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "meticulous-1",
+          "word": "meticulousness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "precise",
+        "careful",
+        "thorough",
+        "exact",
+        "scrupulous",
+        "detailed",
+        "fastidious",
+        "methodical",
+        "rigorous",
+        "accurate"
+      ],
+      "antonyms": [
+        "careless",
+        "sloppy",
+        "negligent",
+        "rough",
+        "hasty",
+        "imprecise",
+        "reckless",
+        "messy",
+        "inaccurate",
+        "casual"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010024",
+      "word": "charismatic",
+      "meaning": "Having a compelling charm that attracts others",
+      "example": "The charismatic leader inspired millions.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "charismatic-0",
+          "word": "charismatically",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "charismatic-1",
+          "word": "charisma",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "magnetic",
+        "charming",
+        "captivating",
+        "appealing",
+        "engaging",
+        "influential",
+        "alluring",
+        "dynamic",
+        "enchanting",
+        "attractive"
+      ],
+      "antonyms": [
+        "dull",
+        "boring",
+        "repulsive",
+        "unappealing",
+        "awkward",
+        "unattractive",
+        "bland",
+        "uninspiring",
+        "cold",
+        "detached"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010025",
+      "word": "resilient",
+      "meaning": "Able to recover quickly from difficulties",
+      "example": "Children are often more resilient than adults.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "resilient-0",
+          "word": "resiliently",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "resilient-1",
+          "word": "resilience",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "strong",
+        "tough",
+        "adaptable",
+        "flexible",
+        "durable",
+        "hardy",
+        "elastic",
+        "robust",
+        "recovering",
+        "enduring"
+      ],
+      "antonyms": [
+        "fragile",
+        "weak",
+        "brittle",
+        "delicate",
+        "vulnerable",
+        "unstable",
+        "sensitive",
+        "breakable",
+        "soft",
+        "frail"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010026",
+      "word": "pragmatic",
+      "meaning": "Dealing with things realistically and practically",
+      "example": "We need a pragmatic solution, not an ideal one.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "pragmatic-0",
+          "word": "pragmatically",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "pragmatic-1",
+          "word": "pragmatism",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "practical",
+        "realistic",
+        "sensible",
+        "logical",
+        "rational",
+        "down-to-earth",
+        "efficient",
+        "reasonable",
+        "grounded",
+        "utilitarian"
+      ],
+      "antonyms": [
+        "idealistic",
+        "impractical",
+        "unrealistic",
+        "naive",
+        "dreamy",
+        "foolish",
+        "irrational",
+        "abstract",
+        "visionary",
+        "theoretical"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010027",
+      "word": "audacious",
+      "meaning": "Showing a willingness to take bold risks",
+      "example": "It was an audacious move to challenge the system.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "audacious-0",
+          "word": "audaciously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "audacious-1",
+          "word": "audacity",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "bold",
+        "daring",
+        "fearless",
+        "reckless",
+        "brave",
+        "venturesome",
+        "intrepid",
+        "courageous",
+        "brazen",
+        "defiant"
+      ],
+      "antonyms": [
+        "timid",
+        "cowardly",
+        "cautious",
+        "fearful",
+        "meek",
+        "hesitant",
+        "shy",
+        "reserved",
+        "withdrawn",
+        "careful"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-1779200010029",
+      "word": "formidable",
+      "meaning": "Inspiring fear or respect through being impressive",
+      "example": "She was a formidable opponent in debate.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "formidable-0",
+          "word": "formidably",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "formidable-1",
+          "word": "formidability",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "powerful",
+        "intimidating",
+        "imposing",
+        "strong",
+        "fearsome",
+        "daunting",
+        "dominant",
+        "impressive",
+        "mighty",
+        "serious"
+      ],
+      "antonyms": [
+        "weak",
+        "harmless",
+        "easy",
+        "unimpressive",
+        "gentle",
+        "feeble",
+        "soft",
+        "nonthreatening",
+        "inferior",
+        "minor"
+      ],
+      "createdAt": "2026-05-19T10:00:00.000Z",
+      "updatedAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "word-2011",
+      "word": "resolute",
+      "meaning": "Admirably purposeful, determined, and unwavering",
+      "example": "She remained resolute despite the opposition.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "resolute-0",
+          "word": "resolutely",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "resolute-1",
+          "word": "resoluteness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "determined",
+        "firm",
+        "steadfast",
+        "unwavering",
+        "persistent",
+        "tenacious",
+        "unyielding",
+        "strong-willed",
+        "decisive",
+        "committed"
+      ],
+      "antonyms": [
+        "irresolute",
+        "hesitant",
+        "weak-willed",
+        "wavering",
+        "uncertain",
+        "vacillating",
+        "half-hearted",
+        "yielding",
+        "passive",
+        "undecided"
+      ]
+    },
+    {
+      "id": "word-2012",
+      "word": "persuasive",
+      "meaning": "Good at convincing others to do or believe something",
+      "example": "His persuasive speech changed many minds.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "persuasive-0",
+          "word": "persuasively",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "persuasive-1",
+          "word": "persuasiveness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "convincing",
+        "compelling",
+        "influential",
+        "effective",
+        "eloquent",
+        "forceful",
+        "cogent",
+        "plausible",
+        "credible",
+        "strong"
+      ],
+      "antonyms": [
+        "unpersuasive",
+        "weak",
+        "ineffective",
+        "unconvincing",
+        "feeble",
+        "doubtful",
+        "implausible",
+        "poor",
+        "lame",
+        "hollow"
+      ]
+    },
+    {
+      "id": "word-2013",
+      "word": "commanding",
+      "meaning": "Having a position of authority or presenting oneself powerfully",
+      "example": "He has a commanding presence on stage.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "commanding-0",
+          "word": "commandingly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "commanding-1",
+          "word": "command",
+          "partOfSpeech": "verb"
+        }
+      ],
+      "synonyms": [
+        "dominant",
+        "authoritative",
+        "imposing",
+        "impressive",
+        "powerful",
+        "controlling",
+        "assertive",
+        "leading",
+        "magnetic",
+        "strong"
+      ],
+      "antonyms": [
+        "submissive",
+        "weak",
+        "unimpressive",
+        "humble",
+        "timid",
+        "passive",
+        "insignificant",
+        "unassertive",
+        "meek",
+        "withdrawn"
+      ]
+    },
+    {
+      "id": "word-2014",
+      "word": "tactful",
+      "meaning": "Skilled in handling difficult situations without giving offense",
+      "example": "She gave a tactful but honest answer.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "tactful-0",
+          "word": "tactfully",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "tactful-1",
+          "word": "tact",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "diplomatic",
+        "discreet",
+        "polite",
+        "sensitive",
+        "considerate",
+        "subtle",
+        "thoughtful",
+        "courteous",
+        "graceful",
+        "careful"
+      ],
+      "antonyms": [
+        "tactless",
+        "blunt",
+        "rude",
+        "insensitive",
+        "clumsy",
+        "indiscreet",
+        "awkward",
+        "thoughtless",
+        "direct",
+        "crude"
+      ]
+    },
+    {
+      "id": "word-2015",
+      "word": "poised",
+      "meaning": "Ready and composed; showing graceful self-control",
+      "example": "She remained poised under pressure.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "poised-0",
+          "word": "poisedly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "poised-1",
+          "word": "poise",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "composed",
+        "self-assured",
+        "balanced",
+        "graceful",
+        "calm",
+        "collected",
+        "confident",
+        "elegant",
+        "steady",
+        "unflappable"
+      ],
+      "antonyms": [
+        "awkward",
+        "nervous",
+        "unbalanced",
+        "flustered",
+        "clumsy",
+        "unsure",
+        "tense",
+        "agitated",
+        "shaky",
+        "discomposed"
+      ]
+    },
+    {
+      "id": "word-2016",
+      "word": "emphatic",
+      "meaning": "Expressing strong and definite emphasis",
+      "example": "His refusal was emphatic and clear.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "emphatic-0",
+          "word": "emphatically",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "emphatic-1",
+          "word": "emphasis",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "forceful",
+        "assertive",
+        "unequivocal",
+        "decisive",
+        "vehement",
+        "positive",
+        "determined",
+        "vigorous",
+        "strong",
+        "absolute"
+      ],
+      "antonyms": [
+        "hesitant",
+        "weak",
+        "tentative",
+        "uncertain",
+        "equivocal",
+        "gentle",
+        "mild",
+        "passive",
+        "half-hearted",
+        "indefinite"
+      ]
+    },
+    {
+      "id": "word-2017",
+      "word": "diplomatic",
+      "meaning": "Skilled in handling negotiations or sensitive issues tactfully",
+      "example": "Her diplomatic response avoided conflict.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "diplomatic-0",
+          "word": "diplomatically",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "diplomatic-1",
+          "word": "diplomacy",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "tactful",
+        "discreet",
+        "strategic",
+        "polished",
+        "subtle",
+        "graceful",
+        "smooth",
+        "prudent",
+        "judicious",
+        "politic"
+      ],
+      "antonyms": [
+        "blunt",
+        "tactless",
+        "rude",
+        "clumsy",
+        "direct",
+        "indiscreet",
+        "awkward",
+        "offensive",
+        "boorish",
+        "insensitive"
+      ]
+    },
+    {
+      "id": "word-2019",
+      "word": "cogent",
+      "meaning": "Clear, logical, and convincing",
+      "example": "He presented a cogent argument for change.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "cogent-0",
+          "word": "cogently",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "cogent-1",
+          "word": "cogency",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "convincing",
+        "persuasive",
+        "compelling",
+        "logical",
+        "sound",
+        "valid",
+        "powerful",
+        "strong",
+        "lucid",
+        "coherent"
+      ],
+      "antonyms": [
+        "weak",
+        "unconvincing",
+        "illogical",
+        "flawed",
+        "incoherent",
+        "confused",
+        "invalid",
+        "muddled",
+        "hollow",
+        "unpersuasive"
+      ]
+    },
+    {
+      "id": "word-2020",
+      "word": "deft",
+      "meaning": "Skillful and quick in movement or thought",
+      "example": "Her deft handling of the question impressed everyone.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "deft-0",
+          "word": "deftly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "deft-1",
+          "word": "deftness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "skillful",
+        "adroit",
+        "nimble",
+        "clever",
+        "graceful",
+        "apt",
+        "expert",
+        "precise",
+        "smart",
+        "tactful"
+      ],
+      "antonyms": [
+        "clumsy",
+        "awkward",
+        "inept",
+        "unskillful",
+        "bungling",
+        "heavy-handed",
+        "slow",
+        "inexpert",
+        "graceless",
+        "stupid"
+      ]
+    },
+    {
+      "id": "word-2021",
+      "word": "unwavering",
+      "meaning": "Not changing or becoming weaker; steady and constant",
+      "example": "Her unwavering commitment inspired the team.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "unwavering-0",
+          "word": "unwaveringly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "unwavering-1",
+          "word": "unwaveringness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "steadfast",
+        "resolute",
+        "determined",
+        "firm",
+        "constant",
+        "persistent",
+        "unshakable",
+        "unyielding",
+        "stable",
+        "committed"
+      ],
+      "antonyms": [
+        "wavering",
+        "irresolute",
+        "unstable",
+        "hesitant",
+        "vacillating",
+        "weak",
+        "fickle",
+        "inconsistent",
+        "uncertain",
+        "yielding"
+      ]
+    },
+    {
+      "id": "word-2025",
+      "word": "gripping",
+      "meaning": "So exciting or interesting that it holds attention completely",
+      "example": "His storytelling was absolutely gripping.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "gripping-0",
+          "word": "grippingly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "gripping-1",
+          "word": "grip",
+          "partOfSpeech": "verb"
+        }
+      ],
+      "synonyms": [
+        "engrossing",
+        "absorbing",
+        "captivating",
+        "compelling",
+        "exciting",
+        "thrilling",
+        "enthralling",
+        "riveting",
+        "spellbinding",
+        "fascinating"
+      ],
+      "antonyms": [
+        "boring",
+        "dull",
+        "uninteresting",
+        "tedious",
+        "monotonous",
+        "unexciting",
+        "dry",
+        "lifeless",
+        "flat",
+        "uninspiring"
+      ]
+    },
+    {
+      "id": "word-2026",
+      "word": "self-assured",
+      "meaning": "Confident in one's own abilities or character",
+      "example": "She spoke with a self-assured calmness.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "self-assured-0",
+          "word": "self-assuredly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "self-assured-1",
+          "word": "self-assurance",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "confident",
+        "poised",
+        "composed",
+        "assertive",
+        "self-reliant",
+        "secure",
+        "collected",
+        "unflappable",
+        "calm",
+        "certain"
+      ],
+      "antonyms": [
+        "insecure",
+        "unsure",
+        "hesitant",
+        "timid",
+        "anxious",
+        "self-doubting",
+        "nervous",
+        "uncertain",
+        "shy",
+        "wavering"
+      ]
+    },
+    {
       "id": "word-1779200010001",
       "word": "serene",
       "meaning": "Calm, peaceful, and untroubled; free from disturbance",
@@ -814,7 +2130,7 @@
         "current"
       ],
       "createdAt": "2026-05-19T10:00:00.000Z",
-      "updatedAt": "2026-05-19T13:52:16.709Z"
+      "updatedAt": "2026-05-19T10:00:00.000Z"
     },
     {
       "id": "word-1779200010018",
@@ -909,7 +2225,7 @@
         "ecstatic"
       ],
       "createdAt": "2026-05-19T10:00:00.000Z",
-      "updatedAt": "2026-05-19T13:49:40.247Z"
+      "updatedAt": "2026-05-19T10:00:00.000Z"
     },
     {
       "id": "word-1779200010020",
@@ -957,16 +2273,814 @@
       "updatedAt": "2026-05-19T10:00:00.000Z"
     },
     {
-      "word": "TRY",
-      "meaning": "DDD",
-      "example": "DD",
+      "word": "supplant",
+      "meaning": "To replace something",
+      "example": "The printed books will soon be supplanted by e-books",
+      "level": "common",
+      "anatomy": "",
+      "synonyms": [
+        "replace",
+        "supersede",
+        "displace"
+      ],
+      "wordFamily": [
+        {
+          "id": "0d9ba803-ee54-4c72-8687-c6a869ac2692-1779213682150",
+          "word": "",
+          "partOfSpeech": "verb",
+          "example": ""
+        }
+      ],
+      "id": 1779213660988,
+      "antonyms": [
+        "maintain",
+        "uphold",
+        "sustain",
+        "preserve"
+      ],
+      "updatedAt": "2026-05-19T18:13:21.969Z"
+    },
+    {
+      "word": "proclivity",
+      "meaning": "a natural, automatic, or habitual tendency inclination to behave in a certain way, often used to suggest predictable behavior that can be influenced. often one that is considered negative, controversial, or difficult to resist",
+      "example": "The printed books will soon be supplanted by e-books",
       "level": "advanced",
       "anatomy": "",
-      "synonyms": [],
-      "wordFamily": [],
-      "id": 1779202115693,
-      "antonyms": [],
-      "updatedAt": "2026-05-19T14:49:59.134Z"
+      "synonyms": [
+        "tendency",
+        "inclination",
+        "tendency",
+        "inclination",
+        "leaning",
+        "disposition",
+        "predisposition",
+        "propensity",
+        "bent",
+        "aptitude",
+        "bias",
+        "habit"
+      ],
+      "wordFamily": [
+        {
+          "id": "ba271d3d-4329-4e65-b27e-c6e1cd122a50-1779214704505",
+          "word": "proclivities",
+          "partOfSpeech": "verb",
+          "example": ""
+        }
+      ],
+      "id": 1779214674439,
+      "antonyms": [
+        "aversion",
+        "disinclination",
+        "antipathy",
+        "repulsion",
+        "avoidance",
+        "resistance",
+        "opposition",
+        "unwillingness",
+        "distaste",
+        "Repugnance"
+      ],
+      "updatedAt": "2026-05-19T18:39:49.406Z"
+    },
+    {
+      "id": "word-2028",
+      "word": "transcend",
+      "meaning": "To go beyond the usual limits; to rise above or surpass ordinary boundaries, expectations, or divisions",
+      "example": "A great leader's message transcends politics and speaks to our shared humanity.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "transcend-0",
+          "word": "transcends",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "transcend-1",
+          "word": "transcended",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "transcend-2",
+          "word": "transcending",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "transcend-3",
+          "word": "transcendence",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "transcend-4",
+          "word": "transcendent",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "surpass",
+        "exceed",
+        "go beyond",
+        "outstrip",
+        "outdo",
+        "outshine",
+        "eclipse",
+        "rise above",
+        "overcome",
+        "break through"
+      ],
+      "antonyms": [
+        "fall short",
+        "remain within",
+        "sink below",
+        "fail to reach",
+        "trail behind",
+        "succumb to",
+        "be limited by",
+        "stay under",
+        "languish",
+        "stagnate"
+      ]
+    },
+    {
+      "id": "word-2029",
+      "word": "inculcate",
+      "meaning": "To instill an idea, attitude, or habit through persistent repetition or strong emphasis",
+      "example": "Great leaders inculcate a sense of purpose in their teams through daily reinforcement.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "inculcate-0",
+          "word": "inculcates",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "inculcate-1",
+          "word": "inculcated",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "inculcate-2",
+          "word": "inculcating",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "inculcate-3",
+          "word": "inculcation",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "instill",
+        "implant",
+        "infuse",
+        "ingrain",
+        "embed",
+        "impress",
+        "drill",
+        "teach repeatedly",
+        "reinforce",
+        "indoctrinate"
+      ],
+      "antonyms": [
+        "remove",
+        "eradicate",
+        "extract",
+        "ignore",
+        "neglect",
+        "forget",
+        "unlearn",
+        "abandon",
+        "reject",
+        "dismiss"
+      ]
+    },
+    {
+      "id": "word-2031",
+      "word": "elevate",
+      "meaning": "To raise to a more important, impressive, or higher level (intellectually, morally, or socially)",
+      "example": "A persuasive leader elevates the conversation beyond petty disagreements.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "elevate-0",
+          "word": "elevate",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        {
+          "id": "elevate-1",
+          "word": "elevates",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "elevate-2",
+          "word": "elevated",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "elevate-3",
+          "word": "elevating",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "elevate-4",
+          "word": "elevation",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "elevate-5",
+          "word": "elevator",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "elevate-6",
+          "word": "elevator pitch",
+          "partOfSpeech": "phrase"
+        }
+      ],
+      "synonyms": [
+        "uplift",
+        "raise",
+        "promote",
+        "advance",
+        "upgrade",
+        "enhance",
+        "dignify",
+        "exalt",
+        "aggrandize",
+        "amplify"
+      ],
+      "antonyms": [
+        "lower",
+        "degrade",
+        "diminish",
+        "reduce",
+        "humiliate",
+        "demote",
+        "worsen",
+        "depress",
+        "belittle",
+        "sink"
+      ]
+    },
+    {
+      "id": "word-2032",
+      "word": "proffer",
+      "meaning": "To offer or present something for acceptance (often in a formal, respectful, or hesitant manner)",
+      "example": "He proffered a solution before anyone could object.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "proffer-0",
+          "word": "proffer",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        {
+          "id": "proffer-1",
+          "word": "proffers",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "proffer-2",
+          "word": "proffered",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "proffer-3",
+          "word": "proffering",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "proffer-4",
+          "word": "proffer",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "proffer-5",
+          "word": "profferer",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "offer",
+        "tender",
+        "present",
+        "volunteer",
+        "extend",
+        "suggest",
+        "put forward",
+        "submit",
+        "propose",
+        "advance"
+      ],
+      "antonyms": [
+        "withhold",
+        "refuse",
+        "retract",
+        "take back",
+        "deny",
+        "conceal",
+        "suppress",
+        "ignore",
+        "reject",
+        "spurn"
+      ]
+    },
+    {
+      "id": "word-2033",
+      "word": "commence",
+      "meaning": "To begin or start something formal or significant",
+      "example": "Once trust is established, real influence commences.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "commence-0",
+          "word": "commence",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        {
+          "id": "commence-1",
+          "word": "commences",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "commence-2",
+          "word": "commenced",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "commence-3",
+          "word": "commencing",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "commence-4",
+          "word": "commencement",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "begin",
+        "start",
+        "initiate",
+        "launch",
+        "open",
+        "embark on",
+        "originate",
+        "trigger",
+        "inaugurate",
+        "set in motion"
+      ],
+      "antonyms": [
+        "conclude",
+        "end",
+        "finish",
+        "terminate",
+        "cease",
+        "stop",
+        "halt",
+        "complete",
+        "close",
+        "dissolve"
+      ]
+    },
+    {
+      "id": "word-2034",
+      "word": "compliance",
+      "meaning": "The act of conforming to a request, rule, or command; willingness to follow",
+      "example": "Elite speakers gain compliance through value alignment, not force.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "compliance-0",
+          "word": "comply",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        {
+          "id": "compliance-1",
+          "word": "complies",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "compliance-2",
+          "word": "complied",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "compliance-3",
+          "word": "complying",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "compliance-4",
+          "word": "compliance",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "compliance-5",
+          "word": "compliant",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "compliance-6",
+          "word": "compliantly",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "synonyms": [
+        "conformity",
+        "obedience",
+        "acquiescence",
+        "agreement",
+        "adherence",
+        "submission",
+        "deference",
+        "consent",
+        "alignment",
+        "cooperation"
+      ],
+      "antonyms": [
+        "defiance",
+        "resistance",
+        "disobedience",
+        "rebellion",
+        "noncompliance",
+        "opposition",
+        "refusal",
+        "insubordination",
+        "dissent",
+        "recalcitrance"
+      ]
+    },
+    {
+      "id": "word-2035",
+      "word": "impeccable",
+      "meaning": "Flawless, faultless, or beyond criticism (often used to build credibility)",
+      "example": "Her impeccable logic left no room for objection.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "impeccable-0",
+          "word": "impeccable",
+          "partOfSpeech": "adjective",
+          "root": true
+        },
+        {
+          "id": "impeccable-1",
+          "word": "impeccably",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "impeccable-2",
+          "word": "impeccability",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "flawless",
+        "perfect",
+        "faultless",
+        "exemplary",
+        "immaculate",
+        "unblemished",
+        "spotless",
+        "pristine",
+        "unassailable",
+        "irreproachable"
+      ],
+      "antonyms": [
+        "flawed",
+        "imperfect",
+        "faulty",
+        "defective",
+        "blemished",
+        "inferior",
+        "poor",
+        "shoddy",
+        "negligent",
+        "unreliable"
+      ]
+    },
+    {
+      "id": "word-2036",
+      "word": "immune",
+      "meaning": "Protected or exempt from something negative (criticism, persuasion, harm, or influence)",
+      "example": "No one is immune to a well-crafted emotional appeal.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "immune-0",
+          "word": "immune",
+          "partOfSpeech": "adjective",
+          "root": true
+        },
+        {
+          "id": "immune-1",
+          "word": "immunity",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "immune-2",
+          "word": "immunize",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "immune-3",
+          "word": "immunization",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "resistant",
+        "protected",
+        "exempt",
+        "unsusceptible",
+        "invulnerable",
+        "safe",
+        "secure",
+        "untouchable",
+        "hardened",
+        "inaccessible"
+      ],
+      "antonyms": [
+        "susceptible",
+        "vulnerable",
+        "exposed",
+        "prone",
+        "sensitive",
+        "defenseless",
+        "open",
+        "receptive",
+        "affected",
+        "unprotected"
+      ]
+    },
+    {
+      "id": "word-2037",
+      "word": "appeal",
+      "meaning": "The power to attract, interest, or persuade; a request or invocation that resonates emotionally or logically",
+      "example": "His speech made an emotional appeal that no one could resist.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "appeal-0",
+          "word": "appeal",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        {
+          "id": "appeal-1",
+          "word": "appeal",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "appeal-2",
+          "word": "appeals",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "appeal-3",
+          "word": "appealed",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "appeal-4",
+          "word": "appealing",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "appeal-5",
+          "word": "appealingly",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "synonyms": [
+        "attraction",
+        "pull",
+        "draw",
+        "magnetism",
+        "charm",
+        "enticement",
+        "persuasiveness",
+        "influence",
+        "request",
+        "invocation"
+      ],
+      "antonyms": [
+        "repulsion",
+        "revulsion",
+        "disgust",
+        "deterrence",
+        "offensiveness",
+        "unattractiveness",
+        "boredom",
+        "indifference",
+        "aversion",
+        "alienation"
+      ]
+    },
+    {
+      "id": "word-2038",
+      "word": "allure",
+      "meaning": "A powerful, often mysterious or subtle, quality that attracts and tempts",
+      "example": "The allure of certainty makes people follow confident leaders.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "allure-1",
+          "word": "allure",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "allure-2",
+          "word": "allures",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "allure-3",
+          "word": "allured",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "allure-4",
+          "word": "alluring",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "allure-5",
+          "word": "alluringly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "allure-6",
+          "word": "allurement",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "temptation",
+        "seduction",
+        "magnetism",
+        "glamour",
+        "enticement",
+        "draw",
+        "pull",
+        "fascination",
+        "enchantment",
+        "captivation"
+      ],
+      "antonyms": [
+        "repulsion",
+        "ugliness",
+        "disgust",
+        "dullness",
+        "offensiveness",
+        "boredom",
+        "repellence",
+        "unattractiveness",
+        "revulsion",
+        "aversion"
+      ],
+      "updatedAt": "2026-05-20T07:15:44.243Z"
+    },
+    {
+      "word": "seclude",
+      "meaning": "To isolate or keep someone/something apart from other; isolate deliberately often to create focus, and exclusivity",
+      "example": "He would seclude himself before major speechs in order sharpen his message without a distraction",
+      "level": "advanced",
+      "synonyms": [
+        "isolate",
+        "withdraw",
+        "segregate",
+        "retreat",
+        "confine",
+        "separate",
+        "quarantine",
+        "hide away",
+        "detach",
+        "insulate"
+      ],
+      "antonyms": [
+        "include",
+        "integrate",
+        "expose",
+        "connect",
+        "socialize",
+        "engage",
+        "unite",
+        "gather",
+        "associate",
+        "interact",
+        "publicize",
+        "mingle"
+      ],
+      "wordFamily": [
+        {
+          "id": "seclude-0",
+          "word": "seclude",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        {
+          "id": "seclude-1",
+          "word": "secludes",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "seclude-2",
+          "word": "secluded",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "seclude-3",
+          "word": "secluding",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "seclude-4",
+          "word": "seclusion",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "seclude-5",
+          "word": "seclusive",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "id": 1779259861108,
+      "updatedAt": "2026-05-20T07:01:58.476Z"
+    },
+    {
+      "id": "word-2040",
+      "word": "allude",
+      "meaning": "To refer to something indirectly or subtly, without explicit mention — a powerful persuasion tool for implication and mystery",
+      "example": "The speaker alluded to a hidden opportunity, making everyone lean in closer.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "allude-0",
+          "word": "allude",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        {
+          "id": "allude-1",
+          "word": "alludes",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "allude-2",
+          "word": "alluded",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "allude-3",
+          "word": "alluding",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "allude-4",
+          "word": "allusion",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "allude-5",
+          "word": "allusive",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "allude-6",
+          "word": "allusively",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "synonyms": [
+        "imply",
+        "suggest",
+        "hint",
+        "intimate",
+        "refer indirectly",
+        "insinuate",
+        "evoke",
+        "mention subtly",
+        "point to",
+        "signal"
+      ],
+      "antonyms": [
+        "declare",
+        "state",
+        "announce",
+        "explicitly say",
+        "reveal",
+        "disclose",
+        "proclaim",
+        "assert",
+        "blurt",
+        "spell out"
+      ]
     }
   ]
 }

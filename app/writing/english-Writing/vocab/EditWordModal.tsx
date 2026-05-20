@@ -248,7 +248,7 @@ export default function EditWordModal({
             <Label className="block text-sm font-medium mb-2">
               Example Sentence
             </Label>
-            <Input
+            <Textarea
               type="text"
               value={example}
               onChange={(e) => setExample(e.target.value)}

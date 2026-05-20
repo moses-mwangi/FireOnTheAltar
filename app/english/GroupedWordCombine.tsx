@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import SynonymFamilyComponent from "./components/FamilyComponent";
 import { SynonymFamily } from "../../lib/types/vocabTypes";
+import { useFamilies } from "../hooks/useFamilies";
 
 export const initialSynonymFamilies: SynonymFamily[] = [
   {
@@ -345,19 +346,21 @@ export const initialSynonymFamilies: SynonymFamily[] = [
 ];
 
 export default function GroupedWordCombine() {
-  const [synonymFamilies, setSynonymFamilies] = useState<SynonymFamily[]>(
-    () => {
-      if (typeof window === "undefined") return initialSynonymFamilies;
-      try {
-        const saved = localStorage.getItem("english-synonym-families");
-        if (!saved) return initialSynonymFamilies;
-        return JSON.parse(saved) as SynonymFamily[];
-      } catch (e) {
-        console.error("Failed to load saved vocabulary");
-        return initialSynonymFamilies;
-      }
-    },
-  );
+  const { families } = useFamilies();
+
+  // const [synonymFamilies, setSynonymFamilies] = useState<SynonymFamily[]>(
+  //   () => {
+  //     if (typeof window === "undefined") return initialSynonymFamilies;
+  //     try {
+  //       const saved = localStorage.getItem("english-synonym-families");
+  //       if (!saved) return initialSynonymFamilies;
+  //       return JSON.parse(saved) as SynonymFamily[];
+  //     } catch (e) {
+  //       console.error("Failed to load saved vocabulary");
+  //       return initialSynonymFamilies;
+  //     }
+  //   },
+  // );
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFamilyId, setSelectedFamilyId] = useState<string | null>(null);
@@ -367,16 +370,16 @@ export default function GroupedWordCombine() {
   >("vocabulary");
 
   // Save to localStorage
-  useEffect(() => {
-    localStorage.setItem(
-      "english-synonym-families",
-      JSON.stringify(synonymFamilies),
-    );
-  }, [synonymFamilies]);
+  // useEffect(() => {
+  //   localStorage.setItem(
+  //     "english-synonym-families",
+  //     JSON.stringify(synonymFamilies),
+  //   );
+  // }, [synonymFamilies]);
 
   // Add this function before the return statement
   const getAllWords = () => {
-    return synonymFamilies.flatMap((family) => family.words);
+    return families.flatMap((family) => family.words);
   };
 
   const handleAddWord = (
@@ -400,23 +403,23 @@ export default function GroupedWordCombine() {
       createdAt: new Date(),
     };
 
-    setSynonymFamilies((families) =>
-      families.map((family) =>
-        family.id === familyId
-          ? { ...family, words: [...family.words, newWord] }
-          : family,
-      ),
-    );
+    // setSynonymFamilies((families) =>
+    //   families.map((family) =>
+    //     family.id === familyId
+    //       ? { ...family, words: [...family.words, newWord] }
+    //       : family,
+    //   ),
+    // );
   };
 
   const handleDeleteWord = (familyId: string, wordId: string) => {
-    setSynonymFamilies((families) =>
-      families.map((family) =>
-        family.id === familyId
-          ? { ...family, words: family.words.filter((w) => w.id !== wordId) }
-          : family,
-      ),
-    );
+    // setSynonymFamilies((families) =>
+    //   families.map((family) =>
+    //     family.id === familyId
+    //       ? { ...family, words: family.words.filter((w) => w.id !== wordId) }
+    //       : family,
+    //   ),
+    // );
   };
 
   const handleAddFamily = () => {
@@ -439,10 +442,10 @@ export default function GroupedWordCombine() {
       words: [],
     };
 
-    setSynonymFamilies([...synonymFamilies, newFamily]);
+    // setSynonymFamilies([...synonymFamilies, newFamily]);
   };
 
-  const filteredFamilies = synonymFamilies
+  const filteredFamilies = families
     .map((family) => ({
       ...family,
       words: family.words.filter(
