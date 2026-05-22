@@ -14,6 +14,13 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface Props {
   isOpen: boolean;
@@ -113,12 +120,20 @@ export default function AddWordModal({
     <div className="fixed inset-0 bg-black/70 backdrop-blur-xs flex items-center justify-center z-50 p-4 no-scrollbar overflow-y-auto">
       <div className="bg-white dark:bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] no-scrollbar overflow-y-auto">
         <div className="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-700 sticky top-0 bg-white dark:bg-gray-800">
+          <Dialog open={openAddModal} onOpenChange={setOpenAddModal}>
+            <DialogContent className=" min-w-3xl h-[70vh] no-scrollbar overflow-y-scroll">
+              <DialogHeader>
+                <DialogTitle>Add New Word</DialogTitle>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
           <h2 className="text-xl font-bold">Add New Word with Word Family</h2>
           <button
             onClick={onClose}
             className="text-gray-500 cursor-pointer hover:text-gray-700"
           >
             <X className="h-5 w-5" />
+            <Button>CLCLCL</Button>
           </button>
         </div>
 

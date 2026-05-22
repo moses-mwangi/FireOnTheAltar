@@ -32,10 +32,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import Essay from "@/app/writing/english-Writing/Essay";
-import CommonWordsUI from "./english-Writing/vocab/CommonWords";
-import AdvanceWordsUI from "./english-Writing/vocab/AdvanceWords";
-import GroupedWordsUI from "./english-Writing/vocab/GroupedWords";
+import Essay from "@/app/writing/components/categoryFolder/Essay";
+import CommonWordsUI from "./components/vocab/CommonWords";
+import AdvanceWordsUI from "./components/vocab/AdvanceWords";
+import GroupedWordsUI from "./components/vocab/GroupedWords";
 import {
   useEntries,
   useFolders,
@@ -48,6 +48,8 @@ import { SynonymFamily } from "@/lib/types/vocabTypes";
 import { useFamilies } from "../hooks/useFamilies";
 import GroupedWordCombine from "../english/GroupedWordCombine";
 import DefaultInput from "./DefaulDispalyInput";
+import ConfusingWordsComponent from "./components/vocab/ConfusingWords";
+import Journal from "./components/journal/Journal";
 
 const Bible = () => (
   <svg
@@ -806,6 +808,8 @@ export default function WritingPage() {
 
       case "Advanced Words":
         return <AdvanceWordsUI />;
+      case "Confusing Words":
+        return <ConfusingWordsComponent />;
 
       case "Grouped Words":
         if (selectedFamily) {
@@ -919,6 +923,9 @@ export default function WritingPage() {
       case "Foreign Words":
         return <p>FOREIGN</p>;
 
+      case "Journal":
+        return <p>FOREIGN</p>;
+
       case "Idioms & Phrases":
         return <p>Idioms & Phrases</p>;
 
@@ -935,6 +942,8 @@ export default function WritingPage() {
     switch (selectedFolder?.name) {
       case "Vocabulary":
         return renderEnglish();
+      case "Journal":
+        return <Journal />;
       default:
         return (
           <DefaultInput

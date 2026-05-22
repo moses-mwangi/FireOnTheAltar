@@ -31,10 +31,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import Essay from "@/app/writing/english-Writing/Essay";
-import CommonWordsUI from "./english-Writing/vocab/CommonWords";
-import AdvanceWordsUI from "./english-Writing/vocab/AdvanceWords";
-import GroupedWordsUI from "./english-Writing/vocab/GroupedWords";
+import Essay from "@/app/writing/components/categoryFolder/Essay";
+import CommonWordsUI from "./components/vocab/CommonWords";
+import AdvanceWordsUI from "./components/vocab/AdvanceWords";
+import GroupedWordsUI from "./components/vocab/GroupedWords";
 import {
   useEntries,
   useFolders,

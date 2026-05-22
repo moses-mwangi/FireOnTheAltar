@@ -123,31 +123,11 @@ export default function SharedVocabComponent({
     setAntonyms(updated);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     const validWordFamily = wordFamily.filter((wf) => wf.word.trim());
     const validSynonyms = synonyms.filter((s) => s.trim());
     const validAntonyms = antonyms.filter((s) => s.trim());
-
-    const finalWord = {
-      anatomy: antonyms,
-      example: newWord.example,
-      level: newWord.level,
-      meaning: newWord.meaning,
-      synonyms: synonyms,
-      word: newWord.word,
-      wordFamily: wordFamily,
-    };
-    console.log(newWord);
-
-    // Reset form
-    // setWord("");
-    // setDescription("");
-    // setExample("");
-
-    // onClose();
   };
-  // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\////////////////
 
   const selectedWord = words?.find(
     (word) => String(word.id) === selectedWordId,

@@ -20,9 +20,9 @@ export default function CommonWordsUI() {
     meaning: "",
     example: "",
     level: "common",
-    antonyms: [],
-    synonyms: [],
-    wordFamily: [],
+    antonyms: [""],
+    synonyms: [""],
+    wordFamily: [""],
   });
 
   const fetchCommonVocab = async () => {
@@ -38,6 +38,18 @@ export default function CommonWordsUI() {
     }
   };
 
+  const resetForm = () => {
+    setNewWord({
+      word: "",
+      meaning: "",
+      example: "",
+      level: "common",
+      antonyms: [""],
+      synonyms: [""],
+      wordFamily: [],
+    });
+  };
+
   const saveToFile = async (updatedWords: Word[]) => {
     try {
       const response = await fetch("/api/common", {
@@ -47,6 +59,7 @@ export default function CommonWordsUI() {
       });
       setOpenAddModal(false);
       if (!response.ok) throw new Error("Failed to save data");
+      resetForm();
       return true;
     } catch (err) {
       console.error("Save error:", err);
@@ -119,6 +132,7 @@ export default function CommonWordsUI() {
         onEditWord={handleEditWord}
         onDeleteWord={handleDeleteWord}
         fetchWords={fetchCommonVocab}
+        // resetForm={resetForm}
       />
     </div>
   );

@@ -384,6 +384,7 @@ export default function EnglishPage({
       example: string;
     }[],
     synonyms: string[],
+    antonyms: string[],
   ) => {
     if (!selectedFamilyId) return;
 
@@ -397,6 +398,7 @@ export default function EnglishPage({
         ...wf,
       })),
       synonyms,
+      antonyms,
       createdAt: new Date(),
     };
 

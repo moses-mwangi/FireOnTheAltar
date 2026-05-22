@@ -476,14 +476,7 @@
         "reckless",
         "venturesome"
       ],
-      "antonyms": [
-        "timid",
-        "fearful",
-        "cautious",
-        "hesitant",
-        "shy",
-        "meek"
-      ]
+      "antonyms": ["timid", "fearful", "cautious", "hesitant", "shy", "meek"]
     },
     {
       "id": "word-1779200010022",
@@ -2278,11 +2271,7 @@
       "example": "The printed books will soon be supplanted by e-books",
       "level": "common",
       "anatomy": "",
-      "synonyms": [
-        "replace",
-        "supersede",
-        "displace"
-      ],
+      "synonyms": ["replace", "supersede", "displace"],
       "wordFamily": [
         {
           "id": "0d9ba803-ee54-4c72-8687-c6a869ac2692-1779213682150",
@@ -2292,12 +2281,7 @@
         }
       ],
       "id": 1779213660988,
-      "antonyms": [
-        "maintain",
-        "uphold",
-        "sustain",
-        "preserve"
-      ],
+      "antonyms": ["maintain", "uphold", "sustain", "preserve"],
       "updatedAt": "2026-05-19T18:13:21.969Z"
     },
     {
@@ -2318,7 +2302,10 @@
         "bent",
         "aptitude",
         "bias",
-        "habit"
+        "habit",
+        "nature",
+        "character",
+        "attitude"
       ],
       "wordFamily": [
         {
@@ -2341,7 +2328,7 @@
         "distaste",
         "Repugnance"
       ],
-      "updatedAt": "2026-05-19T18:39:49.406Z"
+      "updatedAt": "2026-05-22T15:08:04.345Z"
     },
     {
       "id": "word-2028",
@@ -2508,7 +2495,8 @@
         "dignify",
         "exalt",
         "aggrandize",
-        "amplify"
+        "amplify",
+        "spiral"
       ],
       "antonyms": [
         "lower",
@@ -2521,7 +2509,8 @@
         "depress",
         "belittle",
         "sink"
-      ]
+      ],
+      "updatedAt": "2026-05-20T22:51:44.102Z"
     },
     {
       "id": "word-2032",
@@ -3080,6 +3069,1930 @@
         "assert",
         "blurt",
         "spell out"
+      ]
+    },
+    {
+      "word": "Entity",
+      "meaning": "The existence of something independently without being reliable to something else",
+      "example": "The god of christianity is a formation of 3 entities that share the same essence or being",
+      "level": "common",
+      "antonyms": [],
+      "synonyms": ["Entitie"],
+      "wordFamily": [],
+      "id": 1779342145951
+    },
+    {
+      "word": "Delegate",
+      "meaning": "its an act of entrusting someone/something with a task or rather a responsibility",
+      "example": "I got delegated to bring the project to completion by the end of this week",
+      "level": "common",
+      "antonyms": [
+        "retain",
+        "centralize",
+        "monopolize",
+        "keep",
+        "hoard",
+        "accumulate",
+        "witholhold"
+      ],
+      "synonyms": [
+        "assign",
+        "entrust",
+        "consign",
+        "commission",
+        "appoint",
+        "depute",
+        "mandate",
+        "hand over",
+        "designate"
+      ],
+      "wordFamily": [
+        {
+          "id": "delegate-0",
+          "word": "delegate",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        {
+          "id": "delegate-1",
+          "word": "delegates",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "delegate-2",
+          "word": "delegated",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "delegate-3",
+          "word": "delegating",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "delegate-4",
+          "word": "delegation",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "delegate-5",
+          "word": "delegator",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "delegate-6",
+          "word": "delegate",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "id": 1779344632089,
+      "updatedAt": "2026-05-21T06:25:47.288Z"
+    },
+    {
+      "word": "obligate",
+      "meaning": "To bind or compel someone to do something through law or moral duty",
+      "example": "By offering the valuable services, they got an oppotunity to obligate the client to return the favor",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "obligate-0",
+          "word": "obligate",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        {
+          "id": "obligate-1",
+          "word": "obligates",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "obligate-2",
+          "word": "obligated",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "obligate-3",
+          "word": "obligating",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "obligate-4",
+          "word": "obligation",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "obligate-5",
+          "word": "obligatory",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "obligate-6",
+          "word": "obligor",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "bind",
+        "compel",
+        "require",
+        "force",
+        "commit",
+        "indebt",
+        "constrain",
+        "oblige",
+        "enforce",
+        "necessitate"
+      ],
+      "antonyms": [
+        "release",
+        "free",
+        "exempt",
+        "absolve",
+        "discharge",
+        "liberate",
+        "excuse",
+        "option",
+        "choice",
+        "voluntary"
+      ],
+      "id": 1779346223907
+    },
+    {
+      "word": "antonymity",
+      "meaning": "The lingustic relationship between words that have an opposite meaning",
+      "example": "I cant see the antonymity between the two word",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": [""],
+      "wordFamily": [],
+      "id": 1779354688271
+    },
+    {
+      "word": "synonymity",
+      "meaning": "The lingustic relationship between two or more words that share the same or identical meaning",
+      "example": "The synonymity between the word impeccable and perfect is apparent",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": [""],
+      "wordFamily": [],
+      "id": 1779354866277
+    },
+    {
+      "word": "decorum",
+      "meaning": "Behaviour that is morally correct and acceptable by many",
+      "example": "The people who belong to christ are expected to act with a proper decorum",
+      "level": "advanced",
+      "antonyms": [
+        "Indecency",
+        "indecorum",
+        "Impropriety",
+        "improper",
+        "inaprpriate"
+      ],
+      "synonyms": ["propriety", "politeness", "correctitude", "decency"],
+      "wordFamily": [],
+      "id": 1779355307246,
+      "updatedAt": "2026-05-21T09:27:03.482Z"
+    },
+    {
+      "word": "improvise",
+      "meaning": "The act of inventing or ceating something spontaneously without preparation or planing in order to adapt ",
+      "example": "The great leader do not just recite the script but also improvise with it and make the audience feel unique",
+      "level": "advanced",
+      "antonyms": [
+        "plan",
+        "rehearse",
+        "prepare",
+        "script",
+        "arrange",
+        "organize",
+        "premeditate",
+        "outline",
+        "practise",
+        "schedule"
+      ],
+      "synonyms": ["spontaneously create"],
+      "wordFamily": [],
+      "id": 1779356362497,
+      "updatedAt": "2026-05-21T17:42:01.969Z"
+    },
+    {
+      "word": "destitute",
+      "meaning": "The condition of being deprive the necessity of life",
+      "example": "The destitute families were provided with food",
+      "level": "advanced",
+      "antonyms": [
+        "affluent",
+        "wealthy",
+        "prosporous",
+        "abundant",
+        "plentifull",
+        "filled",
+        "fortunate",
+        "privileged",
+        "opulent"
+      ],
+      "synonyms": [
+        "impoverish",
+        "penniless",
+        "deprive",
+        "bankrupt",
+        "need",
+        "devoid",
+        "empty",
+        "insolvent",
+        "lacking"
+      ],
+      "wordFamily": [],
+      "id": 1779385464974,
+      "updatedAt": "2026-05-21T17:51:57.815Z"
+    },
+    {
+      "word": "convolute",
+      "meaning": "to make something comlex or intricate",
+      "example": "Dont convolute you life with the pressure of social media",
+      "level": "advanced",
+      "antonyms": [
+        "simplify",
+        "clarify",
+        "\"straighten",
+        "untangle",
+        "resolve",
+        "streamline",
+        "",
+        ""
+      ],
+      "synonyms": [
+        "complicate",
+        "intricate",
+        "entangle",
+        "confuse",
+        "twist",
+        "distort",
+        "obscur"
+      ],
+      "wordFamily": [
+        {
+          "word": "convolute",
+          "partOfSpeech": "verb",
+          "example": ""
+        },
+        {
+          "word": "convoluting",
+          "partOfSpeech": "verb",
+          "example": ""
+        },
+        {
+          "word": "convolution",
+          "partOfSpeech": "verb",
+          "example": ""
+        }
+      ],
+      "id": 1779386344153
+    },
+    {
+      "id": "word-4001",
+      "word": "genesis",
+      "meaning": "The origin or beginning of something",
+      "example": "This marked the genesis of a new era.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "genesis-0",
+          "word": "generate",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "genesis-1",
+          "word": "generation",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "genesis-2",
+          "word": "generative",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "origin",
+        "beginning",
+        "creation",
+        "inception",
+        "birth",
+        "source"
+      ],
+      "antonyms": [
+        "end",
+        "termination",
+        "conclusion",
+        "cessation",
+        "finale",
+        "closure"
+      ]
+    },
+    {
+      "word": "primal",
+      "meaning": "Relating to an original or fundamental state",
+      "example": "Fear is a primal instinct.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "primal-0",
+          "word": "primarily",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "primal-1",
+          "word": "primacy",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "primal-2",
+          "word": "prime",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "primitive",
+        "original",
+        "fundamental",
+        "basic",
+        "instinctive",
+        "elemental"
+      ],
+      "antonyms": [
+        "advanced",
+        "developed",
+        "refined",
+        "modern",
+        "complex",
+        "evolved"
+      ]
+    },
+    {
+      "id": "word-4004",
+      "word": "confer",
+      "meaning": "To discuss or exchange ideas; to grant or bestow",
+      "example": "They conferred before making a decision.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "confer-0",
+          "word": "conference",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "confer-1",
+          "word": "conferral",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "discuss",
+        "consult",
+        "deliberate",
+        "grant",
+        "bestow",
+        "assign"
+      ],
+      "antonyms": ["withhold", "refuse", "deny", "ignore", "reject", "dismiss"]
+    },
+    {
+      "word": "disposition",
+      "meaning": "",
+      "example": "",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": [""],
+      "wordFamily": [],
+      "id": 1779386583368
+    },
+    {
+      "word": "altercation",
+      "meaning": "To argue or dispute angrily",
+      "example": "They altercated over a trivial matter.",
+      "level": "advanced",
+      "antonyms": ["agree", "reconcile", "settle", "harmonize", "resolve"],
+      "synonyms": ["argue", "quarrel", "dispute", "clash", "debate", "contend"],
+      "wordFamily": [
+        {
+          "id": "1",
+          "word": "altercation",
+          "partOfSpeech": "noun",
+          "example": ""
+        }
+      ],
+      "id": 1779386595569,
+      "updatedAt": "2026-05-22T15:27:58.544Z"
+    },
+    {
+      "word": "supposition",
+      "meaning": "An assumption or belife without a proof",
+      "example": "Tha claim is based on supposition",
+      "level": "advanced",
+      "antonyms": [
+        "fact",
+        "certainty",
+        "proof",
+        "evidence",
+        "reality",
+        "truth"
+      ],
+      "synonyms": [
+        "hypothesis",
+        "assumption",
+        "theory",
+        "belief",
+        "guess",
+        "speculation",
+        "surmise",
+        "conjecture"
+      ],
+      "wordFamily": [
+        {
+          "word": "suppose",
+          "partOfSpeech": "verb",
+          "example": ""
+        },
+        {
+          "word": "supposedly",
+          "partOfSpeech": "verb",
+          "example": ""
+        }
+      ],
+      "id": 1779386905234,
+      "updatedAt": "2026-05-22T15:11:51.757Z"
+    },
+    {
+      "id": "word-2045",
+      "word": "dichotomy",
+      "meaning": "A division or contrast between two things that are represented as being entirely opposite or radically different",
+      "example": "The false dichotomy between logic and emotion limits a truly persuasive speaker.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "dichotomy-0",
+          "word": "dichotomy",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        {
+          "id": "dichotomy-1",
+          "word": "dichotomies",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "dichotomy-2",
+          "word": "dichotomous",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "dichotomy-3",
+          "word": "dichotomously",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "dichotomy-4",
+          "word": "dichotomize",
+          "partOfSpeech": "verb"
+        }
+      ],
+      "synonyms": [
+        "division",
+        "contrast",
+        "duality",
+        "split",
+        "separation",
+        "bifurcation",
+        "polarity",
+        "opposition",
+        "contradistinction",
+        "disjunction"
+      ],
+      "antonyms": [
+        "unity",
+        "harmony",
+        "fusion",
+        "merger",
+        "synthesis",
+        "integration",
+        "combination",
+        "oneness",
+        "continuum",
+        "blend"
+      ]
+    },
+    {
+      "id": "word-2046",
+      "word": "polarity",
+      "meaning": "The state of having two opposite or contrasting tendencies, opinions, or aspects; a sharp opposition that creates tension and energy",
+      "example": "Great speakers exploit the polarity between what is and what could be.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "polarity-0",
+          "word": "polarity",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        {
+          "id": "polarity-1",
+          "word": "polarities",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "polarity-2",
+          "word": "polar",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "polarity-3",
+          "word": "polarize",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "polarity-4",
+          "word": "polarization",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "polarity-5",
+          "word": "polarizing",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "opposition",
+        "contrast",
+        "duality",
+        "division",
+        "dichotomy",
+        "separation",
+        "antithesis",
+        "contradiction",
+        "disparity",
+        "divergence"
+      ],
+      "antonyms": [
+        "agreement",
+        "similarity",
+        "harmony",
+        "uniformity",
+        "unity",
+        "consensus",
+        "accord",
+        "convergence",
+        "sameness",
+        "consistency"
+      ]
+    },
+    {
+      "word": "commensurate",
+      "meaning": "",
+      "example": "",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": [""],
+      "wordFamily": [],
+      "id": 1779388060527
+    },
+    {
+      "word": "juxtaposition",
+      "meaning": "The act of placing two or more distinc things, object, concept or images close to each other to highlight their differencess",
+      "example": "The movie use juxtaposition between poverty and wealth to make a point",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": ["contrast", "contiguity", "proximity", "nearness"],
+      "wordFamily": [],
+      "id": 1779388119952,
+      "updatedAt": "2026-05-22T14:48:33.141Z"
+    },
+    {
+      "word": "subjugate",
+      "meaning": "",
+      "example": "",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": [""],
+      "wordFamily": [],
+      "id": 1779388181862
+    },
+    {
+      "word": "infatuation",
+      "meaning": "The state of intense or overwheliming attraction torward someone or something",
+      "example": "I got infatuated the moment i saw her",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": ["mesmeriz"],
+      "wordFamily": [
+        {
+          "word": "Infatuate",
+          "partOfSpeech": "verb",
+          "example": ""
+        },
+        {
+          "word": "infatuated",
+          "partOfSpeech": "verb",
+          "example": ""
+        },
+        {
+          "word": "infatuation",
+          "partOfSpeech": "noun",
+          "example": ""
+        }
+      ],
+      "id": 1779454818540
+    },
+    {
+      "word": "deplete",
+      "meaning": "",
+      "example": "",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": [""],
+      "wordFamily": [],
+      "id": 1779461323025
+    },
+    {
+      "word": "dissipate",
+      "meaning": "",
+      "example": "",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": ["dissapear"],
+      "wordFamily": [],
+      "id": 1779461459295
+    },
+    {
+      "word": "meritocratic",
+      "meaning": "its a situation where people advance, succedes or rise to a higher position based on their perfomance rather than wealth, family, connection or social status",
+      "example": "",
+      "level": "advanced",
+      "antonyms": [""],
+      "synonyms": [""],
+      "wordFamily": [],
+      "id": 1779462030117
+    },
+    {
+      "word": "infer",
+      "meaning": "To deduce or conclude from evidence",
+      "example": "We can infer meaning from context.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "infer-0",
+          "word": "inference",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "infer-1",
+          "word": "inferential",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "deduce",
+        "conclude",
+        "reason",
+        "derive",
+        "interpret",
+        "assume"
+      ],
+      "antonyms": [
+        "guess blindly",
+        "ignore",
+        "misinterpret",
+        "overlook",
+        "misjudge"
+      ],
+      "id": 1779463034015
+    },
+    {
+      "id": "word-2047",
+      "word": "inflated",
+      "meaning": "Excessively or unrealistically high; exaggerated beyond truth — often used to deflate false confidence or claims",
+      "example": "His inflated promises collapsed under the first real question.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "inflated-0",
+          "word": "inflate",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "inflated-1", "word": "inflates", "partOfSpeech": "verb" },
+        { "id": "inflated-2", "word": "inflated", "partOfSpeech": "adjective" },
+        { "id": "inflated-3", "word": "inflating", "partOfSpeech": "verb" },
+        { "id": "inflated-4", "word": "inflation", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "exaggerated",
+        "overblown",
+        "puffed up",
+        "hypertrophied",
+        "excessive",
+        "overstated",
+        "ballooned",
+        "swollen",
+        "grandiose",
+        "overestimated"
+      ],
+      "antonyms": [
+        "deflated",
+        "reduced",
+        "minimized",
+        "understated",
+        "accurate",
+        "humble",
+        "modest",
+        "realistic",
+        "compressed",
+        "shrunk"
+      ]
+    },
+    {
+      "id": "word-2048",
+      "word": "convey",
+      "meaning": "To communicate an idea, feeling, or message effectively; to transmit meaning",
+      "example": "The best speakers convey certainty without arrogance.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "convey-0",
+          "word": "convey",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "convey-1", "word": "conveys", "partOfSpeech": "verb" },
+        { "id": "convey-2", "word": "conveyed", "partOfSpeech": "verb" },
+        { "id": "convey-3", "word": "conveying", "partOfSpeech": "verb" },
+        { "id": "convey-4", "word": "conveyance", "partOfSpeech": "noun" },
+        { "id": "convey-5", "word": "conveyor", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "communicate",
+        "express",
+        "transmit",
+        "relay",
+        "impart",
+        "connote",
+        "denote",
+        "send",
+        "deliver",
+        "reveal"
+      ],
+      "antonyms": [
+        "withhold",
+        "conceal",
+        "suppress",
+        "hide",
+        "obscure",
+        "muffle",
+        "mask",
+        "camouflage",
+        "keep secret",
+        "retain"
+      ]
+    },
+    {
+      "id": "word-2049",
+      "word": "portray",
+      "meaning": "To depict or describe someone or something in a particular way; to represent",
+      "example": "He portrayed the competitor's argument fairly before dismantling it.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "portray-0",
+          "word": "portray",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "portray-1", "word": "portrays", "partOfSpeech": "verb" },
+        { "id": "portray-2", "word": "portrayed", "partOfSpeech": "verb" },
+        { "id": "portray-3", "word": "portraying", "partOfSpeech": "verb" },
+        { "id": "portray-4", "word": "portrayal", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "depict",
+        "represent",
+        "describe",
+        "characterize",
+        "render",
+        "illustrate",
+        "picture",
+        "evoke",
+        "paint",
+        "delineate"
+      ],
+      "antonyms": [
+        "misrepresent",
+        "distort",
+        "caricature",
+        "falsify",
+        "obscure",
+        "confuse",
+        "mask",
+        "hide",
+        "disguise",
+        "mangle"
+      ]
+    },
+    {
+      "id": "word-2050",
+      "word": "display",
+      "meaning": "To show or make visible; a deliberate demonstration of quality, emotion, or intent",
+      "example": "A display of confidence can be more persuasive than a display of data.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "display-0",
+          "word": "display",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "display-1", "word": "displays", "partOfSpeech": "verb" },
+        { "id": "display-2", "word": "displayed", "partOfSpeech": "verb" },
+        { "id": "display-3", "word": "displaying", "partOfSpeech": "verb" },
+        { "id": "display-4", "word": "display", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "show",
+        "exhibit",
+        "present",
+        "demonstrate",
+        "reveal",
+        "unveil",
+        "manifest",
+        "disclose",
+        "expose",
+        "parade"
+      ],
+      "antonyms": [
+        "hide",
+        "conceal",
+        "cover",
+        "mask",
+        "suppress",
+        "disguise",
+        "veil",
+        "camouflage",
+        "obscure",
+        "withhold"
+      ]
+    },
+    {
+      "id": "word-2051",
+      "word": "superstition",
+      "meaning": "An irrational belief arising from ignorance or fear, often exploited in persuasion to create false patterns",
+      "example": "Smart marketers replace superstition with evidence to build lasting trust.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "superstition-0",
+          "word": "superstition",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        {
+          "id": "superstition-1",
+          "word": "superstitions",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "superstition-2",
+          "word": "superstitious",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "superstition-3",
+          "word": "superstitiously",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "synonyms": [
+        "myth",
+        "fallacy",
+        "old wives' tale",
+        "illusion",
+        "delusion",
+        "misbelief",
+        "irrationality",
+        "false belief",
+        "credulity",
+        "magical thinking"
+      ],
+      "antonyms": [
+        "fact",
+        "evidence",
+        "science",
+        "rationality",
+        "logic",
+        "truth",
+        "certainty",
+        "knowledge",
+        "reason",
+        "empiricism"
+      ]
+    },
+    {
+      "id": "word-2052",
+      "word": "susceptible",
+      "meaning": "Likely to be influenced or harmed by something; vulnerable to persuasion",
+      "example": "People are most susceptible to influence when they feel uncertain.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "susceptible-0",
+          "word": "susceptible",
+          "partOfSpeech": "adjective",
+          "root": true
+        },
+        {
+          "id": "susceptible-1",
+          "word": "susceptibly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "susceptible-2",
+          "word": "susceptibility",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "vulnerable",
+        "impressionable",
+        "receptive",
+        "open",
+        "sensitive",
+        "prone",
+        "inclined",
+        "disposed",
+        "responsive",
+        "defenseless"
+      ],
+      "antonyms": [
+        "resistant",
+        "immune",
+        "impervious",
+        "hardened",
+        "unaffected",
+        "invulnerable",
+        "insusceptible",
+        "unresponsive",
+        "tough",
+        "thick-skinned"
+      ]
+    },
+    {
+      "id": "word-2053",
+      "word": "respite",
+      "meaning": "A short period of rest or relief from something difficult or unpleasant",
+      "example": "He gave the audience a moment of respite before delivering the hard truth.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "respite-0",
+          "word": "respite",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        { "id": "respite-1", "word": "respites", "partOfSpeech": "noun" },
+        { "id": "respite-2", "word": "respite", "partOfSpeech": "verb" },
+        { "id": "respite-3", "word": "respited", "partOfSpeech": "verb" }
+      ],
+      "synonyms": [
+        "break",
+        "pause",
+        "rest",
+        "relief",
+        "interval",
+        "recess",
+        "breather",
+        "hiatus",
+        "lull",
+        "reprieve"
+      ],
+      "antonyms": [
+        "continuation",
+        "persistence",
+        "relentlessness",
+        "ordeal",
+        "strain",
+        "pressure",
+        "burden",
+        "stress",
+        "punishment",
+        "suffering"
+      ]
+    },
+    {
+      "id": "word-2054",
+      "word": "cynical",
+      "meaning": "Believing that people are motivated purely by self-interest; distrustful of sincerity",
+      "example": "A cynical audience requires proof, not promises.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "cynical-0",
+          "word": "cynical",
+          "partOfSpeech": "adjective",
+          "root": true
+        },
+        { "id": "cynical-1", "word": "cynically", "partOfSpeech": "adverb" },
+        { "id": "cynical-2", "word": "cynic", "partOfSpeech": "noun" },
+        { "id": "cynical-3", "word": "cynicism", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "skeptical",
+        "distrustful",
+        "suspicious",
+        "pessimistic",
+        "dismissive",
+        "disbelieving",
+        "untrusting",
+        "misanthropic",
+        "sardonic",
+        "scornful"
+      ],
+      "antonyms": [
+        "trusting",
+        "optimistic",
+        "idealistic",
+        "naive",
+        "hopeful",
+        "believing",
+        "sincere",
+        "earnest",
+        "innocent",
+        "uncynical"
+      ]
+    },
+    {
+      "id": "word-2055",
+      "word": "insatiable",
+      "meaning": "Impossible to satisfy; constantly wanting more — useful for creating desire or urgency",
+      "example": "The insatiable demand for certainty makes people follow confident leaders blindly.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "insatiable-0",
+          "word": "insatiable",
+          "partOfSpeech": "adjective",
+          "root": true
+        },
+        {
+          "id": "insatiable-1",
+          "word": "insatiably",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "insatiable-2",
+          "word": "insatiability",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "insatiable-3",
+          "word": "insatiate",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "unquenchable",
+        "unappeasable",
+        "greedy",
+        "voracious",
+        "ravenous",
+        "hungry",
+        "devouring",
+        "consuming",
+        "uncontrollable",
+        "unlimited"
+      ],
+      "antonyms": [
+        "satisfiable",
+        "quenchable",
+        "appeasable",
+        "moderate",
+        "controlled",
+        "sated",
+        "fulfilled",
+        "content",
+        "gratified",
+        "limited"
+      ]
+    },
+    {
+      "id": "word-2056",
+      "word": "presume",
+      "meaning": "To suppose something without proof; to assume or take for granted",
+      "example": "Never presume your audience agrees with you — prove your case.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "presume-0",
+          "word": "presume",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "presume-1", "word": "presumes", "partOfSpeech": "verb" },
+        { "id": "presume-2", "word": "presumed", "partOfSpeech": "verb" },
+        { "id": "presume-3", "word": "presuming", "partOfSpeech": "verb" },
+        { "id": "presume-4", "word": "presumption", "partOfSpeech": "noun" },
+        {
+          "id": "presume-5",
+          "word": "presumptuous",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "assume",
+        "suppose",
+        "surmise",
+        "conjecture",
+        "believe",
+        "think",
+        "guess",
+        "infer",
+        "postulate",
+        "take for granted"
+      ],
+      "antonyms": [
+        "know",
+        "prove",
+        "verify",
+        "confirm",
+        "ascertain",
+        "demonstrate",
+        "establish",
+        "validate",
+        "question",
+        "doubt"
+      ]
+    },
+    {
+      "id": "word-2057",
+      "word": "comprehend",
+      "meaning": "To grasp mentally; to understand fully",
+      "example": "People cannot be persuaded by what they cannot comprehend.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "comprehend-0",
+          "word": "comprehend",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "comprehend-1", "word": "comprehends", "partOfSpeech": "verb" },
+        {
+          "id": "comprehend-2",
+          "word": "comprehended",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "comprehend-3",
+          "word": "comprehending",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "comprehend-4",
+          "word": "comprehension",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "comprehend-5",
+          "word": "comprehensive",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "understand",
+        "grasp",
+        "fathom",
+        "discern",
+        "perceive",
+        "apprehend",
+        "realize",
+        "know",
+        "assimilate",
+        "digest"
+      ],
+      "antonyms": [
+        "misunderstand",
+        "misinterpret",
+        "confuse",
+        "overlook",
+        "ignore",
+        "miss",
+        "neglect",
+        "misapprehend",
+        "disregard",
+        "be baffled"
+      ]
+    },
+    {
+      "id": "word-2058",
+      "word": "entail",
+      "meaning": "To involve or require as a necessary part or consequence",
+      "example": "Persuasion entails listening more than talking.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "entail-0",
+          "word": "entail",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "entail-1", "word": "entails", "partOfSpeech": "verb" },
+        { "id": "entail-2", "word": "entailed", "partOfSpeech": "verb" },
+        { "id": "entail-3", "word": "entailing", "partOfSpeech": "verb" }
+      ],
+      "synonyms": [
+        "involve",
+        "require",
+        "necessitate",
+        "demand",
+        "call for",
+        "mean",
+        "imply",
+        "include",
+        "encompass",
+        "carry with it"
+      ],
+      "antonyms": [
+        "exclude",
+        "omit",
+        "remove",
+        "avoid",
+        "bypass",
+        "skip",
+        "neglect",
+        "forgo",
+        "ignore",
+        "eliminate"
+      ]
+    },
+    {
+      "id": "word-2059",
+      "word": "bestowed",
+      "meaning": "Given or presented as a gift, honor, or privilege",
+      "example": "Trust is not bestowed automatically — it is earned through consistency.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "bestowed-0",
+          "word": "bestow",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "bestowed-1", "word": "bestows", "partOfSpeech": "verb" },
+        { "id": "bestowed-2", "word": "bestowed", "partOfSpeech": "verb" },
+        { "id": "bestowed-3", "word": "bestowing", "partOfSpeech": "verb" },
+        { "id": "bestowed-4", "word": "bestowal", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "conferred",
+        "granted",
+        "presented",
+        "awarded",
+        "given",
+        "endowed",
+        "furnished",
+        "supplied",
+        "offered",
+        "donated"
+      ],
+      "antonyms": [
+        "taken",
+        "removed",
+        "withheld",
+        "deprived",
+        "stripped",
+        "confiscated",
+        "seized",
+        "kept",
+        "denied",
+        "refused"
+      ]
+    },
+    {
+      "id": "word-2060",
+      "word": "endowed",
+      "meaning": "Provided with a particular quality, ability, or asset naturally or by gift",
+      "example": "She is endowed with the rare ability to make complex ideas simple.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "endowed-0",
+          "word": "endow",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "endowed-1", "word": "endows", "partOfSpeech": "verb" },
+        { "id": "endowed-2", "word": "endowed", "partOfSpeech": "adjective" },
+        { "id": "endowed-3", "word": "endowing", "partOfSpeech": "verb" },
+        { "id": "endowed-4", "word": "endowment", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "blessed",
+        "gifted",
+        "favored",
+        "granted",
+        "provided",
+        "supplied",
+        "equipped",
+        "invested",
+        "furnished",
+        "empowered"
+      ],
+      "antonyms": [
+        "deprived",
+        "stripped",
+        "dispossessed",
+        "bereft",
+        "lacking",
+        "without",
+        "denied",
+        "forfeited",
+        "robbed",
+        "cursed"
+      ]
+    },
+    {
+      "id": "word-2061",
+      "word": "embody",
+      "meaning": "To give a tangible or visible form to an idea, quality, or feeling",
+      "example": "A great leader embodies the values they preach.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "embody-0",
+          "word": "embody",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "embody-1", "word": "embodies", "partOfSpeech": "verb" },
+        { "id": "embody-2", "word": "embodied", "partOfSpeech": "verb" },
+        { "id": "embody-3", "word": "embodying", "partOfSpeech": "verb" },
+        { "id": "embody-4", "word": "embodiment", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "exemplify",
+        "personify",
+        "represent",
+        "incarnate",
+        "manifest",
+        "realize",
+        "concretize",
+        "express",
+        "incorporate",
+        "symbolize"
+      ],
+      "antonyms": [
+        "hide",
+        "conceal",
+        "disembody",
+        "obscure",
+        "mask",
+        "camouflage",
+        "suppress",
+        "represent poorly",
+        "distort",
+        "misrepresent"
+      ]
+    },
+    {
+      "id": "word-2062",
+      "word": "sentiment",
+      "meaning": "A view, feeling, or attitude toward something; often used to gauge emotional alignment",
+      "example": "Public sentiment shifts faster than facts — persuasive leaders ride the wave.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "sentiment-0",
+          "word": "sentiment",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        { "id": "sentiment-1", "word": "sentiments", "partOfSpeech": "noun" },
+        {
+          "id": "sentiment-2",
+          "word": "sentimental",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "sentiment-3",
+          "word": "sentimentality",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "feeling",
+        "emotion",
+        "attitude",
+        "opinion",
+        "view",
+        "perspective",
+        "inclination",
+        "disposition",
+        "heart",
+        "mood"
+      ],
+      "antonyms": [
+        "indifference",
+        "apathy",
+        "coldness",
+        "detachment",
+        "objectivity",
+        "dispassion",
+        "unconcern",
+        "callousness",
+        "insensitivity",
+        "reason"
+      ]
+    },
+    {
+      "id": "word-2063",
+      "word": "despair",
+      "meaning": "The complete loss or absence of hope — a powerful emotional state to acknowledge, then overcome",
+      "example": "He named the audience's despair first, then offered a path forward.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "despair-0",
+          "word": "despair",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        { "id": "despair-1", "word": "despair", "partOfSpeech": "verb" },
+        { "id": "despair-2", "word": "despairs", "partOfSpeech": "verb" },
+        { "id": "despair-3", "word": "despaired", "partOfSpeech": "verb" },
+        { "id": "despair-4", "word": "despairing", "partOfSpeech": "adjective" }
+      ],
+      "synonyms": [
+        "hopelessness",
+        "anguish",
+        "misery",
+        "sorrow",
+        "grief",
+        "desolation",
+        "wretchedness",
+        "dejection",
+        "despondency",
+        "melancholy"
+      ],
+      "antonyms": [
+        "hope",
+        "optimism",
+        "joy",
+        "happiness",
+        "elation",
+        "cheer",
+        "confidence",
+        "anticipation",
+        "trust",
+        "faith"
+      ]
+    },
+    {
+      "id": "word-2064",
+      "word": "console",
+      "meaning": "To comfort someone in distress or disappointment",
+      "example": "He didn't just console his team — he gave them a reason to fight again.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "console-0",
+          "word": "console",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "console-1", "word": "consoles", "partOfSpeech": "verb" },
+        { "id": "console-2", "word": "consoled", "partOfSpeech": "verb" },
+        { "id": "console-3", "word": "consoling", "partOfSpeech": "adjective" },
+        { "id": "console-4", "word": "consolation", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "comfort",
+        "soothe",
+        "reassure",
+        "solace",
+        "cheer",
+        "uplift",
+        "calm",
+        "relieve",
+        "tend to",
+        "hearten"
+      ],
+      "antonyms": [
+        "upset",
+        "distress",
+        "torment",
+        "trouble",
+        "aggravate",
+        "worsen",
+        "ignore",
+        "abandon",
+        "hurt",
+        "neglect"
+      ]
+    },
+    {
+      "id": "word-2065",
+      "word": "compose",
+      "meaning": "To calm or settle oneself; also, to create or arrange deliberately",
+      "example": "Before speaking, compose your mind, then compose your message.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "compose-0",
+          "word": "compose",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "compose-1", "word": "composes", "partOfSpeech": "verb" },
+        { "id": "compose-2", "word": "composed", "partOfSpeech": "adjective" },
+        { "id": "compose-3", "word": "composing", "partOfSpeech": "verb" },
+        { "id": "compose-4", "word": "composure", "partOfSpeech": "noun" },
+        { "id": "compose-5", "word": "composition", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "calm",
+        "settle",
+        "collect",
+        "quiet",
+        "soothe",
+        "pacify",
+        "regulate",
+        "arrange",
+        "formulate",
+        "construct"
+      ],
+      "antonyms": [
+        "agitate",
+        "disturb",
+        "discompose",
+        "upset",
+        "fluster",
+        "ruffle",
+        "unsettle",
+        "disarrange",
+        "confuse",
+        "scatter"
+      ]
+    },
+    {
+      "id": "word-2066",
+      "word": "closure",
+      "meaning": "A sense of resolution or conclusion; psychological completion after uncertainty",
+      "example": "Every persuasive speech needs emotional closure, not just logical finality.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "closure-0",
+          "word": "closure",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        { "id": "closure-1", "word": "closures", "partOfSpeech": "noun" },
+        { "id": "closure-2", "word": "close", "partOfSpeech": "verb" }
+      ],
+      "synonyms": [
+        "resolution",
+        "conclusion",
+        "ending",
+        "finality",
+        "completion",
+        "settlement",
+        "catharsis",
+        "termination",
+        "wrap-up",
+        "closing"
+      ],
+      "antonyms": [
+        "openness",
+        "uncertainty",
+        "confusion",
+        "doubt",
+        "ambiguity",
+        "cliffhanger",
+        "perpetuity",
+        "ongoing",
+        "unfinished",
+        "unresolved"
+      ]
+    },
+    {
+      "id": "word-2067",
+      "word": "strive",
+      "meaning": "To make great efforts to achieve or obtain something",
+      "example": "Elite speakers strive for clarity, not cleverness.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "strive-0",
+          "word": "strive",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "strive-1", "word": "strives", "partOfSpeech": "verb" },
+        { "id": "strive-2", "word": "strove", "partOfSpeech": "verb" },
+        { "id": "strive-3", "word": "striven", "partOfSpeech": "verb" },
+        { "id": "strive-4", "word": "striving", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "endeavor",
+        "struggle",
+        "labor",
+        "aspire",
+        "aim",
+        "push",
+        "fight",
+        "toil",
+        "try hard",
+        "work toward"
+      ],
+      "antonyms": [
+        "quit",
+        "surrender",
+        "abandon",
+        "neglect",
+        "ignore",
+        "laze",
+        "idle",
+        "relinquish",
+        "give up",
+        "cease"
+      ]
+    },
+    {
+      "id": "word-2068",
+      "word": "orient",
+      "meaning": "To align or position oneself toward something; to familiarize or adapt",
+      "example": "Orient every argument toward the audience's self-interest.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "orient-0",
+          "word": "orient",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "orient-1", "word": "orients", "partOfSpeech": "verb" },
+        { "id": "orient-2", "word": "oriented", "partOfSpeech": "adjective" },
+        { "id": "orient-3", "word": "orienting", "partOfSpeech": "verb" },
+        { "id": "orient-4", "word": "orientation", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "align",
+        "direct",
+        "position",
+        "aim",
+        "point",
+        "focus",
+        "acclimatize",
+        "adapt",
+        "adjust",
+        "familiarize"
+      ],
+      "antonyms": [
+        "disorient",
+        "confuse",
+        "misalign",
+        "unsettle",
+        "distract",
+        "derail",
+        "divert",
+        "bewilder",
+        "disconcert",
+        "unbalance"
+      ]
+    },
+    {
+      "id": "word-2069",
+      "word": "apprehend",
+      "meaning": "To understand or perceive; also, to anticipate with fear or anxiety",
+      "example": "Audiences cannot apprehend your message if it is buried in jargon.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "apprehend-0",
+          "word": "apprehend",
+          "partOfSpeech": "verb",
+          "root": true
+        },
+        { "id": "apprehend-1", "word": "apprehends", "partOfSpeech": "verb" },
+        { "id": "apprehend-2", "word": "apprehended", "partOfSpeech": "verb" },
+        { "id": "apprehend-3", "word": "apprehending", "partOfSpeech": "verb" },
+        { "id": "apprehend-4", "word": "apprehension", "partOfSpeech": "noun" },
+        {
+          "id": "apprehend-5",
+          "word": "apprehensive",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "understand",
+        "grasp",
+        "perceive",
+        "comprehend",
+        "discern",
+        "fathom",
+        "recognize",
+        "see",
+        "anticipate",
+        "dread"
+      ],
+      "antonyms": [
+        "misunderstand",
+        "ignore",
+        "overlook",
+        "disregard",
+        "miss",
+        "be unaware",
+        "welcome",
+        "embrace",
+        "not fear",
+        "feel safe"
+      ]
+    },
+    {
+      "id": "word-2070",
+      "word": "finite",
+      "meaning": "Limited in size, extent, or duration; having bounds",
+      "example": "Attention is finite — spend it wisely.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "finite-0",
+          "word": "finite",
+          "partOfSpeech": "adjective",
+          "root": true
+        },
+        { "id": "finite-1", "word": "finitely", "partOfSpeech": "adverb" },
+        { "id": "finite-2", "word": "finiteness", "partOfSpeech": "noun" },
+        { "id": "finite-3", "word": "finitude", "partOfSpeech": "noun" }
+      ],
+      "synonyms": [
+        "limited",
+        "bounded",
+        "restricted",
+        "measurable",
+        "definite",
+        "determinate",
+        "fixed",
+        "circumscribed",
+        "temporary",
+        "short-term"
+      ],
+      "antonyms": [
+        "infinite",
+        "unlimited",
+        "endless",
+        "boundless",
+        "limitless",
+        "eternal",
+        "perpetual",
+        "unbounded",
+        "immeasurable",
+        "never-ending"
+      ]
+    },
+    {
+      "id": "word-2071",
+      "word": "reciprocity",
+      "meaning": "The practice of exchanging things for mutual benefit; a powerful psychological trigger for persuasion",
+      "example": "Give value first — reciprocity will bring the return.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "reciprocity-0",
+          "word": "reciprocity",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        {
+          "id": "reciprocity-1",
+          "word": "reciprocal",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "reciprocity-2",
+          "word": "reciprocally",
+          "partOfSpeech": "adverb"
+        },
+        { "id": "reciprocity-3", "word": "reciprocate", "partOfSpeech": "verb" }
+      ],
+      "synonyms": [
+        "mutuality",
+        "exchange",
+        "give-and-take",
+        "trade-off",
+        "back-scratching",
+        "tit for tat",
+        "quid pro quo",
+        "interchange",
+        "balance",
+        "return"
+      ],
+      "antonyms": [
+        "selfishness",
+        "one-sidedness",
+        "taking",
+        "exploitation",
+        "extraction",
+        "non-reciprocation",
+        "ingratitude",
+        "unreturned favor",
+        "indifference",
+        "taking without giving"
+      ]
+    },
+    {
+      "id": "word-2072",
+      "word": "medicament",
+      "meaning": "A substance used for healing or medical treatment; metaphorically, something that cures a problem",
+      "example": "For a skeptical audience, data is the medicament that heals doubt.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "medicament-0",
+          "word": "medicament",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        { "id": "medicament-1", "word": "medicaments", "partOfSpeech": "noun" },
+        {
+          "id": "medicament-2",
+          "word": "medicamental",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "remedy",
+        "medicine",
+        "cure",
+        "treatment",
+        "medication",
+        "drug",
+        "therapy",
+        "antidote",
+        "healing agent",
+        "corrective"
+      ],
+      "antonyms": [
+        "poison",
+        "toxin",
+        "disease",
+        "affliction",
+        "curse",
+        "bane",
+        "harm",
+        "damage",
+        "injury",
+        "contagion"
+      ]
+    },
+    {
+      "id": "word-2073",
+      "word": "predicament",
+      "meaning": "A difficult, unpleasant, or embarrassing situation — often used to name a problem before solving it",
+      "example": "He named their predicament honestly, then walked them out of it.",
+      "level": "common",
+      "wordFamily": [
+        {
+          "id": "predicament-0",
+          "word": "predicament",
+          "partOfSpeech": "noun",
+          "root": true
+        },
+        {
+          "id": "predicament-1",
+          "word": "predicaments",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "quandary",
+        "dilemma",
+        "mess",
+        "tight spot",
+        "difficulty",
+        "crisis",
+        "fix",
+        "bind",
+        "plight",
+        "trouble"
+      ],
+      "antonyms": [
+        "solution",
+        "resolution",
+        "advantage",
+        "benefit",
+        "opportunity",
+        "ease",
+        "comfort",
+        "escape",
+        "relief",
+        "breakthrough"
       ]
     }
   ]

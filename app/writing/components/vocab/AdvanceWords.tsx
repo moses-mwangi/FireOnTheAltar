@@ -32,7 +32,7 @@ export default function AdvanceWordsUI() {
       word: "",
       meaning: "",
       example: "",
-      level: "",
+      level: "advanced",
       antonyms: [""],
       synonyms: [""],
       wordFamily: [],

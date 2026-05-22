@@ -79,15 +79,6 @@
       "createdAt": "2026-05-19T08:00:00.000Z",
       "description": "Unfinished works and brainstorming",
       "hasSubCategories": false
-    },
-    {
-      "id": "folder-1779200106937",
-      "name": "TEST",
-      "icon": "Folder",
-      "parentId": null,
-      "category": "english",
-      "hasSubCategories": false,
-      "createdAt": "2026-05-19T14:15:06.937Z"
     }
   ],
   "subCategories": [
@@ -272,12 +263,13 @@
       "description": "Ideas to spark creativity"
     },
     {
-      "id": "sub-1779200128862",
-      "name": "Try1",
+      "id": "sub-1779346648239",
+      "name": "Confusing Words",
       "icon": "SubCategory",
-      "parentFolderId": "folder-1779200106937",
-      "createdAt": "2026-05-19T14:15:28.862Z",
-      "isFolder": true
+      "parentFolderId": "folder-vocab-1734567891000",
+      "createdAt": "2026-05-21T06:57:28.239Z",
+      "isFolder": true,
+      "updatedAt": "2026-05-21T06:57:59.086Z"
     }
   ],
   "entries": [

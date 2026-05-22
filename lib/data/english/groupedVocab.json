@@ -145,6 +145,48 @@
           ],
           "createdAt": "2026-05-19T13:56:55.996Z",
           "updatedAt": "2026-05-19T13:56:55.996Z"
+        },
+        {
+          "id": "gggdgd-1779357602526",
+          "word": "gggdgd",
+          "description": "gsdgggdgd",
+          "example": "dhdhdhhhd",
+          "wordFamily": [
+            {
+              "id": "1779357602526-0",
+              "word": "dggd",
+              "partOfSpeech": "verb",
+              "example": ""
+            }
+          ],
+          "synonyms": [
+            "dd",
+            "dd"
+          ],
+          "createdAt": "2026-05-21T10:00:02.577Z",
+          "updatedAt": "2026-05-21T10:00:02.577Z"
+        },
+        {
+          "id": "test-1779359327900",
+          "word": "test",
+          "description": "sss",
+          "example": "sss",
+          "wordFamily": [
+            {
+              "id": "1779359327900-0",
+              "word": "tester",
+              "partOfSpeech": "verb",
+              "example": ""
+            }
+          ],
+          "synonyms": [
+            "try"
+          ],
+          "antonyms": [
+            "try "
+          ],
+          "createdAt": "2026-05-21T10:28:47.953Z",
+          "updatedAt": "2026-05-21T10:28:47.953Z"
         }
       ],
       "createdAt": "2026-05-19T09:00:00.000Z",
