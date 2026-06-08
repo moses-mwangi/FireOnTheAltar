@@ -10,6 +10,7 @@ export interface Word {
   root: string;
   word: string;
   description: string;
+  meaning?: string;
   example?: string;
   wordFamily: WordFamilyMember[]; // communicate, communication, communicator, communicative
   synonyms: string[]; // related words within the same group

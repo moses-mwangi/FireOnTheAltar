@@ -1,167 +1,6 @@
-// "use client";
-
-// import { useState } from "react";
-// import { HelpCircle } from "lucide-react";
-// import { Card, CardTitle } from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
-// import { Separator } from "@/components/ui/separator";
-
-// type ConfusingPair = {
-//   id: string;
-//   word1: string;
-//   word2: string;
-//   meaning1: string;
-//   meaning2: string;
-//   example1: string;
-//   example2: string;
-// };
-
-// const defaultPairs: ConfusingPair[] = [
-//   {
-//     id: "1",
-//     word1: "Affect",
-//     word2: "Effect",
-//     meaning1: "To influence something",
-//     meaning2: "The result of something",
-//     example1: "The weather can affect your mood.",
-//     example2: "The medicine had a great effect.",
-//   },
-//   {
-//     id: "2",
-//     word1: "Then",
-//     word2: "Than",
-//     meaning1: "At that time / next",
-//     meaning2: "Comparison",
-//     example1: "I ate breakfast, then went to work.",
-//     example2: "She is taller than me.",
-//   },
-//   {
-//     id: "3",
-//     word1: "There",
-//     word2: "Their",
-//     meaning1: "A place",
-//     meaning2: "Belongs to them",
-//     example1: "The book is over there.",
-//     example2: "That is their car.",
-//   },
-//   {
-//     id: "4",
-//     word1: "Lose",
-//     word2: "Loose",
-//     meaning1: "To misplace or fail to win",
-//     meaning2: "Not tight",
-//     example1: "Don't lose your keys.",
-//     example2: "This shirt is too loose.",
-//   },
-//   {
-//     id: "5",
-//     word1: "Accept",
-//     word2: "Except",
-//     meaning1: "To receive",
-//     meaning2: "To exclude",
-//     example1: "I accept your apology.",
-//     example2: "Everyone except John came.",
-//   },
-// ];
-
-// export default function ConfusingWords() {
-//   const [selectedPair, setSelectedPair] = useState<ConfusingPair | null>(null);
-
-//   const nextPair = () => {
-//     const currentIndex = defaultPairs.findIndex(
-//       (p) => p.id === selectedPair?.id,
-//     );
-//     const nextIndex = (currentIndex + 1) % defaultPairs.length;
-//     setSelectedPair(defaultPairs[nextIndex]);
-//   };
-
-//   const selectPair = (pair: ConfusingPair) => {
-//     setSelectedPair(pair);
-//   };
-
-//   return (
-//     <div className="bg-white dark:bg-gray-800 shadow-lg overflow-hidden">
-//       <div className="flex justify-between items-center w-full px-4 py-4">
-//         <h1 className="text-xl font-bold">Confusing Words</h1>
-//         <Button
-//           // onClick={() => setOpenAddModal(true)}
-//           className="px-3 cursor-pointer h-[31px] text-sm bg-blue-500 text-white hover:bg-blue-600 transition-all"
-//         >
-//           + Add Words
-//         </Button>
-//       </div>
-//       <Separator />
-//       <div className="p-6">
-//         {/* Word List */}
-//         <div className="mb-6">
-//           <h3 className="text-sm font-semibold text-gray-500 mb-3">
-//             Choose a pair:
-//           </h3>
-//           <div className="flex flex-wrap gap-2">
-//             {defaultPairs.map((pair) => (
-//               <button
-//                 key={pair.id}
-//                 onClick={() => selectPair(pair)}
-//                 className={`rounded-2xl px-4 py-2 text-sm font-medium cursor-pointer transition-all text-left ${
-//                   selectedPair?.id === pair.id
-//                     ? "bg-purple-600 text-white"
-//                     : "bg-gray-100 hover:bg-gray-200"
-//                 }`}
-//               >
-//                 {pair.word1} / {pair.word2}
-//               </button>
-//             ))}
-//           </div>
-//         </div>
-
-//         {selectedPair && (
-//           <div className="space-y-6">
-//             {/* Word Cards */}
-//             <div className="grid md:grid-cols-2 gap-4">
-//               <Card className="px-4">
-//                 <h3 className="text-xl font-bold text-purple-600">
-//                   {selectedPair.word1}
-//                 </h3>
-//                 <p className="text-sm text-gray-600">{selectedPair.meaning1}</p>
-//                 <p className="text-sm italic text-gray-500">
-//                   &quot;{selectedPair.example1}&quot;
-//                 </p>
-//               </Card>
-
-//               <Card className="px-4">
-//                 <h3 className="text-xl font-bold text-blue-600">
-//                   {selectedPair.word2}
-//                 </h3>
-//                 <span className="text-sm text-gray-600">
-//                   {selectedPair.meaning2}
-//                 </span>
-//                 <span className="text-sm italic text-gray-500">
-//                   &quot;{selectedPair.example2}&quot;
-//                 </span>
-//               </Card>
-//             </div>
-
-//             {/* Next Button */}
-//             <Button onClick={nextPair} className="w-full">
-//               Next Pair →
-//             </Button>
-//           </div>
-//         )}
-
-//         {!selectedPair && (
-//           <div className="text-center py-12 text-gray-500">
-//             <HelpCircle className="h-12 w-12 mx-auto mb-3 opacity-50" />
-//             <p>Select a word pair to start learning</p>
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HelpCircle, Pencil, Trash2 } from "lucide-react";
 
 import { Card } from "@/components/ui/card";
@@ -188,30 +27,8 @@ type ConfusingPair = {
   example2: string;
 };
 
-const defaultPairs: ConfusingPair[] = [
-  {
-    id: "1",
-    word1: "Affect",
-    word2: "Effect",
-    meaning1: "To influence something",
-    meaning2: "The result of something",
-    example1: "The weather can affect your mood.",
-    example2: "The medicine had a great effect.",
-  },
-  {
-    id: "2",
-    word1: "Then",
-    word2: "Than",
-    meaning1: "At that time / next",
-    meaning2: "Comparison",
-    example1: "I ate breakfast, then went to work.",
-    example2: "She is taller than me.",
-  },
-];
-
 export default function ConfusingWords() {
-  const [pairs, setPairs] = useState(defaultPairs);
-
+  const [pairs, setPairs] = useState<ConfusingPair[]>([]);
   const [selectedPair, setSelectedPair] = useState<ConfusingPair | null>(null);
 
   const [openAddModal, setOpenAddModal] = useState(false);
@@ -230,6 +47,30 @@ export default function ConfusingWords() {
 
   const [formData, setFormData] = useState<ConfusingPair>(emptyForm);
 
+  const getConfusedWord = async () => {
+    try {
+      const response = await fetch("/api/confuse");
+      if (!response.ok)
+        throw new Error("Failed to load common vocabulary data");
+      const data = await response.json();
+      console.log(data.words);
+      setPairs(data.words || []);
+    } catch (err) {
+      console.error(err);
+    } finally {
+    }
+  };
+
+  useEffect(() => {
+    getConfusedWord();
+
+    return () => {
+      if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -241,15 +82,34 @@ export default function ConfusingWords() {
 
   // ---------------- ADD ----------------
 
-  const handleAdd = () => {
+  const handleAdd = async () => {
     const newPair = {
       ...formData,
       id: Date.now().toString(),
     };
+    console.log({ words: newPair });
 
-    setPairs((prev) => [...prev, newPair]);
-    setFormData(emptyForm);
-    setOpenAddModal(false);
+    try {
+      const response = await fetch("/api/confuse", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          word: newPair,
+        }),
+      });
+      if (!response.ok)
+        throw new Error("Failed to load common vocabulary data");
+      setPairs((prev) => [...prev, newPair]);
+      const data = await response.json();
+      setPairs(data.words || []);
+      setFormData(emptyForm);
+      setOpenAddModal(false);
+    } catch (err) {
+      console.error(err);
+    } finally {
+    }
   };
 
   // ---------------- EDIT ----------------
@@ -259,30 +119,73 @@ export default function ConfusingWords() {
     setOpenEditModal(true);
   };
 
-  const handleEdit = () => {
-    const updated = pairs.map((pair) =>
-      pair.id === formData.id ? formData : pair,
-    );
+  // ---------------- EDIT ----------------
 
-    setPairs(updated);
+  const handleEdit = async () => {
+    try {
+      const response = await fetch("/api/confuse", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: formData.id,
+          updatedWord: formData,
+        }),
+      });
 
-    if (selectedPair?.id === formData.id) {
-      setSelectedPair(formData);
+      if (!response.ok) {
+        throw new Error("Failed to update pair");
+      }
+
+      const data = await response.json();
+
+      setPairs(data.words || []);
+
+      if (selectedPair?.id === formData.id) {
+        setSelectedPair(formData);
+      }
+
+      setOpenEditModal(false);
+
+      setFormData(emptyForm);
+    } catch (err) {
+      console.error(err);
     }
-
-    setOpenEditModal(false);
   };
 
   // ---------------- DELETE ----------------
 
-  const handleDelete = () => {
+  // ---------------- DELETE ----------------
+
+  const handleDelete = async () => {
     if (!selectedPair) return;
 
-    const filtered = pairs.filter((pair) => pair.id !== selectedPair.id);
+    try {
+      const response = await fetch("/api/confuse", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: selectedPair.id,
+        }),
+      });
 
-    setPairs(filtered);
-    setSelectedPair(null);
-    setOpenDeleteModal(false);
+      if (!response.ok) {
+        throw new Error("Failed to delete pair");
+      }
+
+      const data = await response.json();
+
+      setPairs(data.words || []);
+
+      setSelectedPair(null);
+
+      setOpenDeleteModal(false);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   // ---------------- NEXT ----------------
@@ -553,7 +456,11 @@ export default function ConfusingWords() {
 
           <div className="py-4">
             <p className="text-sm text-muted-foreground">
-              Are you sure you want to delete this confusing pair?
+              Are you sure you want to delete
+              <span className="font-semibold px-2">
+                {selectedPair?.word1} / {selectedPair?.word2}
+              </span>
+              ?
             </p>
           </div>
 

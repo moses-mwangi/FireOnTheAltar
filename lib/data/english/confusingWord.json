@@ -1,0 +1,49 @@
+{
+  "words": [
+    {
+      "id": "confusing-1779200020004",
+      "word1": "compliment",
+      "word2": "complement",
+      "meaning1": "An expression of praise or admiration",
+      "meaning2": "Something that completes or goes well with something else",
+      "example1": "She received a lovely compliment on her new haircut.",
+      "example2": "The red wine was a perfect complement to the steak."
+    },
+    {
+      "id": "10",
+      "word1": "Principal",
+      "word2": "Principle",
+      "meaning1": "Main or head of a school",
+      "meaning2": "A fundamental rule or belief",
+      "example1": "The principal addressed the students.",
+      "example2": "Honesty is an important principle."
+    },
+    {
+      "id": "1779530936434",
+      "word1": "afflict",
+      "word2": "inflict",
+      "meaning1": "To suffer from something. The focus is on the victim",
+      "meaning2": "To force or impose something unwelcome on someone.(The action of causing alot of pain)",
+      "example1": "The disease afflicted him.",
+      "example2": "The disease inflicted pain on him."
+    },
+    {
+      "id": "1779530950063",
+      "word1": "oppress",
+      "word2": "suppress",
+      "meaning1": "The prolonged act of mistreating people",
+      "meaning2": "The act of Physical stoping or hinding something",
+      "example1": "The tyranical goverment of william ruto is oppresing those who are opposing its unjust action",
+      "example2": "The goverment deployed army to suppress the prolonged demonstration "
+    },
+    {
+      "id": "1779530961490",
+      "word1": "constrain",
+      "word2": "restrain",
+      "meaning1": "To limit, restrict or force behavior by imposing boundaries, rules, or circumstances",
+      "meaning2": "To stop or prevent an action",
+      "example1": "The growth of many peolple from rural places is constrain by lack of exposure",
+      "example2": "Leaders who cannot retrains their anger  blur the line between service and power"
+    }
+  ]
+}

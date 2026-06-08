@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import SynonymFamilyComponent from "./components/FamilyComponent";
 import { SynonymFamily } from "../../lib/types/vocabTypes";
 import { useFamilies } from "../hooks/useFamilies";
+import { Input } from "@/components/ui/input";
 
 export const initialSynonymFamilies: SynonymFamily[] = [
   {
@@ -345,6 +346,7 @@ export const initialSynonymFamilies: SynonymFamily[] = [
   },
 ];
 
+
 export default function GroupedWordCombine() {
   const { families } = useFamilies();
 
@@ -461,6 +463,33 @@ export default function GroupedWordCombine() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      {/* Search Input */}
+      <div className="sticky top-0 z-10 bg-gray-50 dark:bg-gray-900 py-2">
+        <Input
+          type="text"
+          placeholder="Search words, descriptions, or word family..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="
+            w-full
+           
+            border-gray-300
+            dark:border-gray-700
+            bg-white
+            dark:bg-gray-800
+            px-4
+            py-3
+            text-sm
+            text-gray-900
+            dark:text-white
+            placeholder:text-gray-400
+            outline-none
+            focus:ring-2
+            focus:ring-blue-500
+            shadow-sm
+          "
+        />
+      </div>
       <>
         {filteredFamilies.length === 0 ? (
           <div className="text-center py-12">

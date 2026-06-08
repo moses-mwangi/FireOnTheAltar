@@ -26,14 +26,18 @@ import {
 } from "@/components/ui/select";
 import { Minus, Plus } from "lucide-react";
 import { Label } from "@/components/ui/label";
+import { Word } from "@/lib/types/vocabTypes";
 
-type Word = {
-  id: number;
-  word: string;
-  meaning: string;
-  example: string;
-  level: "advanced" | "common" | string;
-};
+// type Word = {
+//   id: number;
+//   word: string;
+//   meaning: string;
+//   example: string;
+//   level: "advanced" | "common" | string;
+//   synonyms: [];
+//   antonyms: [];
+//   wordFamily: [];
+// };
 
 interface Props {
   title: string;
@@ -73,6 +77,7 @@ export default function SharedVocabComponent({
   ]);
   const [synonyms, setSynonyms] = useState([""]);
   const [antonyms, setAntonyms] = useState([""]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const addWordFamilyMember = () => {
     setWordFamily([
@@ -129,10 +134,20 @@ export default function SharedVocabComponent({
     const validAntonyms = antonyms.filter((s) => s.trim());
   };
 
-  const selectedWord = words?.find(
+  const filteredWords = words.filter((word) => {
+    const term = searchTerm.toLowerCase();
+    return (
+      word?.word?.toLowerCase().includes(term) ||
+      word?.synonyms?.some((syn) => syn.toLowerCase().includes(term)) ||
+      word?.antonyms?.some((ant) => ant.toLowerCase().includes(term)) ||
+      word?.wordFamily?.some((wf) => wf?.word?.toLowerCase()?.includes(term))
+    );
+  });
+
+  const selectedWord = filteredWords?.find(
     (word) => String(word.id) === selectedWordId,
   );
-  const remainingWords = words?.filter(
+  const remainingWords = filteredWords?.filter(
     (word) => String(word.id) !== selectedWordId,
   );
 
@@ -140,13 +155,26 @@ export default function SharedVocabComponent({
     <div className="space-y-5 min-h-[420px] dark:bg-zinc-900 shadow-sm">
       <div className="flex items-center justify-between gap-4">
         <div className="flex justify-between items-center w-full px-4 pt-4">
-          <h1 className="text-xl font-bold">{title}</h1>
-          <Button
-            onClick={() => setOpenAddModal(true)}
-            className="px-3 cursor-pointer h-[31px] text-sm bg-blue-500 text-white hover:bg-blue-600 transition-all"
-          >
-            + Add Word
-          </Button>
+          <h1 className="text-xl font-bold flex items-center justify-center gap-2">
+            {title}{" "}
+            <span className="text-sm text-purple-600">({words.length})</span>
+          </h1>
+          {/* Search Input */}
+          <div className="flex gap-2 items-center">
+            <Input
+              type="text"
+              placeholder="Search words...."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-3 py-2 text-sm w-52 focus:w-64 focus:ring-0 focus:outline-0 focus:border-0 focus:shadow-none transition-all"
+            />
+            <Button
+              onClick={() => setOpenAddModal(true)}
+              className="px-3 cursor-pointer h-[31px] text-sm bg-blue-500 text-white hover:bg-blue-600 transition-all"
+            >
+              + Add Word
+            </Button>
+          </div>
         </div>
       </div>
       <Separator />
