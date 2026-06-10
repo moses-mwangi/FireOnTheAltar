@@ -50,6 +50,7 @@ import GroupedWordCombine from "../english/GroupedWordCombine";
 import DefaultInput from "./DefaulDispalyInput";
 import ConfusingWordsComponent from "./components/vocab/ConfusingWords";
 import Journal from "./components/journal/Journal";
+import Affix from "./components/vocab/affixes/Pre_Su_ffix";
 
 const Bible = () => (
   <svg
@@ -546,6 +547,13 @@ export default function WritingPage() {
     return folderEntries;
   };
 
+  const getSubCategoryEntries = (folderId: string) => {
+    return (
+      subCategories?.filter((sub) => sub.parentFolderId === folderId).length ||
+      0
+    );
+  };
+
   const showNotification = (message: string, type: "success" | "error") => {
     setNotification({ message, type });
     setTimeout(() => setNotification(null), 3000);
@@ -923,6 +931,13 @@ export default function WritingPage() {
       case "Foreign Words":
         return <p>FOREIGN</p>;
 
+      case "affixes":
+        return (
+          <div>
+            <Affix />
+          </div>
+        );
+
       case "Journal":
         return <p>FOREIGN</p>;
 
@@ -944,6 +959,8 @@ export default function WritingPage() {
         return renderEnglish();
       case "Journal":
         return <Journal />;
+      case "Grammar":
+        return <div> GRAMMAR PART OKAY</div>;
       default:
         return (
           <DefaultInput
@@ -1231,8 +1248,20 @@ export default function WritingPage() {
                             <span className="text-sm font-medium truncate text-gray-700">
                               {folder.name}
                             </span>
+
                             <span className="text-xs text-gray-400">
-                              ({getEntries(folder.id).length})
+                              (
+                              {(() => {
+                                const subCount =
+                                  allData.subCategories?.filter(
+                                    (SUB) => SUB.parentFolderId === folder.id,
+                                  ).length || 0;
+                                const entriesCount = getEntries(
+                                  folder.id,
+                                ).length;
+                                return subCount + entriesCount;
+                              })()}
+                              )
                             </span>
                           </div>
                           <button
@@ -1289,7 +1318,10 @@ export default function WritingPage() {
                                     <span className="text-[13px] font-medium truncate text-gray-700">
                                       {sub.name}
                                     </span>
-                                    <span className="text-xs text-gray-400">
+
+                                    <span
+                                      className={`${sub.isFolder === true ? "" : "hidden"} text-xs text-gray-400`}
+                                    >
                                       ({subEntries.length})
                                     </span>
                                   </div>

@@ -10,6 +10,7 @@
       "description": "Master word collection with organized subcategories",
       "hasSubCategories": true
     },
+
     {
       "id": "folder-poems-1734567891001",
       "name": "Poems",
@@ -79,6 +80,15 @@
       "createdAt": "2026-05-19T08:00:00.000Z",
       "description": "Unfinished works and brainstorming",
       "hasSubCategories": false
+    },
+    {
+      "id": "folder-1780909102952",
+      "name": "Grammar",
+      "icon": "Folder",
+      "parentId": null,
+      "category": "english",
+      "hasSubCategories": false,
+      "createdAt": "2026-06-08T08:58:22.952Z"
     }
   ],
   "subCategories": [
@@ -270,6 +280,15 @@
       "createdAt": "2026-05-21T06:57:28.239Z",
       "isFolder": true,
       "updatedAt": "2026-05-21T06:57:59.086Z"
+    },
+    {
+      "id": "sub-1780908089404",
+      "name": "affixes",
+      "icon": "SubCategory",
+      "parentFolderId": "folder-vocab-1734567891000",
+      "createdAt": "2026-06-08T08:41:29.404Z",
+      "isFolder": false,
+      "updatedAt": "2026-06-08T08:41:29.404Z"
     }
   ],
   "entries": [
@@ -282,31 +301,12 @@
       "category": "english",
       "date": "2026-05-19T08:00:00.000Z",
       "wordCount": 22,
-      "tags": [
-        "welcome",
-        "getting-started"
-      ],
+      "tags": ["welcome", "getting-started"],
       "isFavorite": true,
       "createdAt": "2026-05-19T08:00:00.000Z",
       "updatedAt": "2026-05-19T08:00:00.000Z"
     },
-    {
-      "id": "entry-sample-vocab-1734567893001",
-      "title": "How to Use Vocabulary Folders",
-      "content": "Add new words with definitions, example sentences, and etymology. Group related words together for better retention.",
-      "folderId": "folder-vocab-1734567891000",
-      "subCategoryId": "sub-vocab-basics-1734567892000",
-      "category": "english",
-      "date": "2026-05-19T08:00:00.000Z",
-      "wordCount": 18,
-      "tags": [
-        "guide",
-        "vocabulary-tips"
-      ],
-      "isFavorite": false,
-      "createdAt": "2026-05-19T08:00:00.000Z",
-      "updatedAt": "2026-05-19T08:00:00.000Z"
-    },
+
     {
       "id": "entry-sample-poem-1734567893002",
       "title": "The Writer's Dawn",
@@ -316,10 +316,7 @@
       "category": "english",
       "date": "2026-05-19T08:00:00.000Z",
       "wordCount": 12,
-      "tags": [
-        "haiku",
-        "inspiration"
-      ],
+      "tags": ["haiku", "inspiration"],
       "isFavorite": true,
       "createdAt": "2026-05-19T08:00:00.000Z",
       "updatedAt": "2026-05-19T08:00:00.000Z"
@@ -333,11 +330,7 @@
       "category": "english",
       "date": "2026-05-19T08:00:00.000Z",
       "wordCount": 35,
-      "tags": [
-        "fiction",
-        "mystery",
-        "flash-fiction"
-      ],
+      "tags": ["fiction", "mystery", "flash-fiction"],
       "isFavorite": false,
       "createdAt": "2026-05-19T08:00:00.000Z",
       "updatedAt": "2026-05-19T08:00:00.000Z"

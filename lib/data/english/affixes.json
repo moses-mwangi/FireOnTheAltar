@@ -1,0 +1,46 @@
+{
+  "prefixes": [
+    {
+      "id": "prefix-1",
+      "affix": "un-",
+      "meaning": "not",
+      "example": "unhappy, unlock, unfair"
+    },
+    {
+      "id": "prefix-2",
+      "affix": "re-",
+      "meaning": "again",
+      "example": "redo, rewrite, replay"
+    },
+    {
+      "id": "prefix-3",
+      "affix": "pre-",
+      "meaning": "before",
+      "example": "preview, prehistoric, preheat"
+    }
+  ],
+  "suffixes": [
+    {
+      "id": "suffix-1",
+      "affix": "-ful",
+      "meaning": "full of",
+      "example": "joyful, hopeful, careful"
+    },
+    {
+      "id": "suffix-2",
+      "affix": "-less",
+      "meaning": "without",
+      "example": "hopeless, fearless, careless"
+    },
+    {
+      "id": "suffix-3",
+      "affix": "-ness",
+      "meaning": "state of being",
+      "example": "happiness, sadness, kindness"
+    }
+  ]
+}
+
+
+{word:[pacify,appease,induce,entice,corroborate,PRUDENT, peculiar,stipulate,meticulous,commend,plaudit,credulity,plausible,seclude,mend,amend,aton,FACET,equanimity,FANATICAL,extrapolate,INFER,CONFER,IMPLY,enmity ,DELIGATE,impart, impact,induce,integral,avert,poignant,congenial,masquerade,consent,assent,concord,accord,incite,instigate,fallible,woven,diametrical,faction,shackle,premise, conflate,consecration,santification,exegesis,insurbodinate,surbodinate,ENTOURAGE,juncture,juggernaut, AERODITE,historisity,abrogate,analogous, comport, insert,ascribe,imbued,INDELLLIBLE,GRUMBLE,JUBILANT,caveat,predicated,unison,pivot,repugnant, faction,mutilated,mutiny,bluntly,blurted,shambolic,feeble,theatrics,filibuster,defeasible,insinuate,semantics,despicable, iota, receptive,convicted,emancipation,revert ,temporal, spatial,predicament]}
+{word:[pacify,appease,induce,entice,corroborate,PRUDENT, peculiar,stipulate,meticulous,commend,plaudit,credulity,plausible,seclude,mend,amend,aton,FACET,equanimity,FANATICAL,extrapolate,INFER,CONFER,IMPLY,enmity ,DELIGATE,impart, impact,induce,integral,avert,poignant,congenial,masquerade,consent,assent,concord,accord,incite,instigate,fallible,woven,diametrical,faction,shackle,premise, conflate,consecration,santification,exegesis,insurbodinate,surbodinate,ENTOURAGE,juncture,juggernaut, AERODITE,historisity,abrogate,analogous, comport, insert,ascribe,imbued,INDELLLIBLE,GRUMBLE,JUBILANT,caveat,predicated,unison,pivot,repugnant, faction,mutilated,mutiny,bluntly,blurted,shambolic,feeble,theatrics,filibuster,defeasible,insinuate,semantics,despicable, iota, receptive,convicted,emancipation,revert ,temporal, spatial,predicament]}

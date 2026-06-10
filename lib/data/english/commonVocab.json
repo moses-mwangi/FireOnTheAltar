@@ -476,7 +476,14 @@
         "reckless",
         "venturesome"
       ],
-      "antonyms": ["timid", "fearful", "cautious", "hesitant", "shy", "meek"]
+      "antonyms": [
+        "timid",
+        "fearful",
+        "cautious",
+        "hesitant",
+        "shy",
+        "meek"
+      ]
     },
     {
       "id": "word-1779200010022",
@@ -2226,7 +2233,11 @@
       "example": "The printed books will soon be supplanted by e-books",
       "level": "common",
       "anatomy": "",
-      "synonyms": ["replace", "supersede", "displace"],
+      "synonyms": [
+        "replace",
+        "supersede",
+        "displace"
+      ],
       "wordFamily": [
         {
           "id": "0d9ba803-ee54-4c72-8687-c6a869ac2692-1779213682150",
@@ -2236,7 +2247,12 @@
         }
       ],
       "id": 1779213660988,
-      "antonyms": ["maintain", "uphold", "sustain", "preserve"],
+      "antonyms": [
+        "maintain",
+        "uphold",
+        "sustain",
+        "preserve"
+      ],
       "updatedAt": "2026-05-19T18:13:21.969Z"
     },
     {
@@ -3032,7 +3048,9 @@
       "example": "The god of christianity is a formation of 3 entities that share the same essence or being",
       "level": "common",
       "antonyms": [],
-      "synonyms": ["Entitie"],
+      "synonyms": [
+        "Entitie"
+      ],
       "wordFamily": [],
       "id": 1779342145951
     },
@@ -3176,8 +3194,12 @@
       "meaning": "The lingustic relationship between words that have an opposite meaning",
       "example": "I cant see the antonymity between the two word",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779354688271
     },
@@ -3186,8 +3208,12 @@
       "meaning": "The lingustic relationship between two or more words that share the same or identical meaning",
       "example": "The synonymity between the word impeccable and perfect is apparent",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779354866277
     },
@@ -3203,7 +3229,12 @@
         "improper",
         "inaprpriate"
       ],
-      "synonyms": ["propriety", "politeness", "correctitude", "decency"],
+      "synonyms": [
+        "propriety",
+        "politeness",
+        "correctitude",
+        "decency"
+      ],
       "wordFamily": [],
       "id": 1779355307246,
       "updatedAt": "2026-05-21T09:27:03.482Z"
@@ -3225,7 +3256,9 @@
         "practise",
         "schedule"
       ],
-      "synonyms": ["spontaneously create"],
+      "synonyms": [
+        "spontaneously create"
+      ],
       "wordFamily": [],
       "id": 1779356362497,
       "updatedAt": "2026-05-21T17:42:01.969Z"
@@ -3409,15 +3442,26 @@
         "bestow",
         "assign"
       ],
-      "antonyms": ["withhold", "refuse", "deny", "ignore", "reject", "dismiss"]
+      "antonyms": [
+        "withhold",
+        "refuse",
+        "deny",
+        "ignore",
+        "reject",
+        "dismiss"
+      ]
     },
     {
       "word": "disposition",
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779386583368
     },
@@ -3426,8 +3470,21 @@
       "meaning": "To argue or dispute angrily",
       "example": "They altercated over a trivial matter.",
       "level": "advanced",
-      "antonyms": ["agree", "reconcile", "settle", "harmonize", "resolve"],
-      "synonyms": ["argue", "quarrel", "dispute", "clash", "debate", "contend"],
+      "antonyms": [
+        "agree",
+        "reconcile",
+        "settle",
+        "harmonize",
+        "resolve"
+      ],
+      "synonyms": [
+        "argue",
+        "quarrel",
+        "dispute",
+        "clash",
+        "debate",
+        "contend"
+      ],
       "wordFamily": [
         {
           "id": "1",
@@ -3605,8 +3662,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779388060527
     },
@@ -3615,8 +3676,15 @@
       "meaning": "The act of placing two or more distinc things, object, concept or images close to each other to highlight their differencess",
       "example": "The movie use juxtaposition between poverty and wealth to make a point",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": ["contrast", "contiguity", "proximity", "nearness"],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        "contrast",
+        "contiguity",
+        "proximity",
+        "nearness"
+      ],
       "wordFamily": [],
       "id": 1779388119952,
       "updatedAt": "2026-05-22T14:48:33.141Z"
@@ -3626,8 +3694,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779388181862
     },
@@ -3636,8 +3708,12 @@
       "meaning": "The state of intense or overwheliming attraction torward someone or something",
       "example": "I got infatuated the moment i saw her",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": ["mesmeriz"],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        "mesmeriz"
+      ],
       "wordFamily": [
         {
           "word": "Infatuate",
@@ -3662,8 +3738,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779461323025
     },
@@ -3672,8 +3752,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": ["dissapear"],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        "dissapear"
+      ],
       "wordFamily": [],
       "id": 1779461459295
     },
@@ -3682,8 +3766,12 @@
       "meaning": "its a situation where people advance, succedes or rise to a higher position based on their perfomance rather than wealth, family, connection or social status",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779462030117
     },
@@ -3710,7 +3798,9 @@
         "reason",
         "derive",
         "interpret",
-        "assume"
+        "assume",
+        "SURMISE",
+        "extrapolate"
       ],
       "antonyms": [
         "guess blindly",
@@ -3719,7 +3809,8 @@
         "overlook",
         "misjudge"
       ],
-      "id": 1779463034015
+      "id": 1779463034015,
+      "updatedAt": "2026-06-10T07:40:41.451Z"
     },
     {
       "id": "word-2047",
@@ -5259,9 +5350,15 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
-      "wordFamily": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
+      "wordFamily": [
+        ""
+      ],
       "id": 1779517756383
     },
     {
@@ -5269,8 +5366,12 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779517764997
     },
@@ -5279,8 +5380,12 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779517775494
     },
@@ -5289,8 +5394,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779517858683
     },
@@ -5299,8 +5408,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779517921061
     },
@@ -5309,8 +5422,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779517991425
     },
@@ -5319,8 +5436,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779518101942
     },
@@ -5329,8 +5450,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779519186130
     },
@@ -5339,8 +5464,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779519337389
     },
@@ -5349,8 +5478,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779519410371
     },
@@ -5359,8 +5492,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779519834515
     },
@@ -5369,8 +5506,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779520270640
     },
@@ -5379,8 +5520,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779520335824
     },
@@ -5389,8 +5534,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779521473242
     },
@@ -5399,8 +5548,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779521548171
     },
@@ -5409,8 +5562,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779522422963
     },
@@ -5419,8 +5576,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779522463648
     },
@@ -5490,8 +5651,12 @@
       "meaning": "To claim or profess somthing often implying that the claim might be exaggerated or false",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779635092804
     },
@@ -5500,8 +5665,17 @@
       "meaning": "The act of being less severe, harsh or strict by allowing something that you were refusing",
       "example": "The parent become relentfull to their kids as their grow older",
       "level": "advanced",
-      "antonyms": ["harsh", "stric", "", "", ""],
-      "synonyms": ["soften", "yiel"],
+      "antonyms": [
+        "harsh",
+        "stric",
+        "",
+        "",
+        ""
+      ],
+      "synonyms": [
+        "soften",
+        "yiel"
+      ],
       "wordFamily": [],
       "id": 1779635505307
     },
@@ -5510,8 +5684,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779635889136
     },
@@ -5520,9 +5698,15 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
-      "wordFamily": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
+      "wordFamily": [
+        ""
+      ],
       "id": 1779640192906
     },
     {
@@ -5530,8 +5714,12 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779640205897
     },
@@ -5540,8 +5728,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779640233426
     },
@@ -5550,8 +5742,12 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779640275053
     },
@@ -5560,8 +5756,17 @@
       "meaning": "Having exactly what is necessary to meet a specific goal or satisfy a need",
       "example": "We had the sufficient fund to pay for their school fees",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": ["Enough", "adequate", "abundant", "plentifull", "ample", ""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        "Enough",
+        "adequate",
+        "abundant",
+        "plentifull",
+        "ample",
+        ""
+      ],
       "wordFamily": [],
       "id": 1779640811528,
       "updatedAt": "2026-05-24T16:43:55.118Z"
@@ -5571,8 +5776,12 @@
       "meaning": "Something that is highly accessible, easy to use, or well-suited to your schedule.",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779641275705
     },
@@ -5581,8 +5790,12 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779641338620
     },
@@ -5591,8 +5804,12 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779641400403
     },
@@ -5601,8 +5818,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779641746898
     },
@@ -5611,8 +5832,15 @@
       "meaning": "g",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": ["belittle", "defame", "vilify", "disparage"],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        "belittle",
+        "defame",
+        "vilify",
+        "disparage"
+      ],
       "wordFamily": [],
       "id": 1779641857011,
       "updatedAt": "2026-05-24T17:02:40.271Z"
@@ -5622,8 +5850,15 @@
       "meaning": "The extremely important or absolutly necessary, typically because the success or outcome of something else depends on it",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": ["vital", "essential", "decisive", "critica"],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        "vital",
+        "essential",
+        "decisive",
+        "critica"
+      ],
       "wordFamily": [],
       "id": 1779642625162
     },
@@ -5632,8 +5867,12 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779642648592
     },
@@ -5642,8 +5881,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779643462207
     },
@@ -5704,8 +5947,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779777698149
     },
@@ -5714,8 +5961,14 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": ["evade", "avoid", "escap"],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        "evade",
+        "avoid",
+        "escap"
+      ],
       "wordFamily": [
         {
           "word": "elude",
@@ -7391,8 +7644,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779780097874
     },
@@ -7401,8 +7658,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779780967425
     },
@@ -7411,8 +7672,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779782643033
     },
@@ -7421,9 +7686,15 @@
       "meaning": "",
       "example": "",
       "level": "common",
-      "antonyms": [""],
-      "synonyms": [""],
-      "wordFamily": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
+      "wordFamily": [
+        ""
+      ],
       "id": 1779785157231
     },
     {
@@ -7495,8 +7766,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779865340627
     },
@@ -7629,8 +7904,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779866978160
     },
@@ -7639,7 +7918,10 @@
       "meaning": "Deserving to blame or responsibility for wrong doing or failure",
       "example": "After a long process of investigation the suspect were culpable for the mess",
       "level": "advanced",
-      "antonyms": ["innocent", "naive"],
+      "antonyms": [
+        "innocent",
+        "naive"
+      ],
       "synonyms": [
         "guilty",
         "blameworthy",
@@ -7655,7 +7937,12 @@
       "meaning": "so obvious, intense, or noticeable that it feels as if it could be physically touched or felt",
       "example": "",
       "level": "advanced",
-      "antonyms": ["Impalpable", "imperceptible", "elusive", "subtle"],
+      "antonyms": [
+        "Impalpable",
+        "imperceptible",
+        "elusive",
+        "subtle"
+      ],
       "synonyms": [
         "obvious",
         "Tangible ",
@@ -7672,8 +7959,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779958210999
     },
@@ -7682,8 +7973,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779958383512
     },
@@ -7692,8 +7987,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779958434483
     },
@@ -7702,8 +8001,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779958576603
     },
@@ -7712,7 +8015,9 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
+      "antonyms": [
+        ""
+      ],
       "synonyms": [
         "relationship",
         "connection",
@@ -7727,8 +8032,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779959014247
     },
@@ -7737,8 +8046,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779959161648
     },
@@ -7747,8 +8060,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779959267113
     },
@@ -7757,8 +8074,14 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": ["cautious", "sensible", "dicreet"],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        "cautious",
+        "sensible",
+        "dicreet"
+      ],
       "wordFamily": [],
       "id": 1779959687209
     },
@@ -7767,8 +8090,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1779961997815
     },
@@ -7777,8 +8104,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1780057408916
     },
@@ -7787,8 +8118,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1780057528502
     },
@@ -7797,8 +8132,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1780057577014
     },
@@ -7807,8 +8146,12 @@
       "meaning": "",
       "example": "",
       "level": "advanced",
-      "antonyms": [""],
-      "synonyms": [""],
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
       "wordFamily": [],
       "id": 1780057844711
     },
@@ -8203,6 +8546,182 @@
           "word": "liability",
           "partOfSpeech": "noun"
         }
+      ]
+    },
+    {
+      "word": "presupposition",
+      "meaning": "",
+      "example": "",
+      "level": "advanced",
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
+      "wordFamily": [],
+      "id": 1781026161785
+    },
+    {
+      "word": "premise",
+      "meaning": "",
+      "example": "",
+      "level": "advanced",
+      "antonyms": [
+        ""
+      ],
+      "synonyms": [
+        ""
+      ],
+      "wordFamily": [],
+      "id": 1781026267093
+    },
+    {
+      "id": "word-4015",
+      "word": "mulish",
+      "meaning": "Extremely stubborn and unwilling to change one's opinion or course of action.",
+      "example": "His mulish refusal to listen frustrated everyone.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "mulish-0",
+          "word": "mule",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "mulish-1",
+          "word": "mulishly",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "mulish-2",
+          "word": "mulishness",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "synonyms": [
+        "stubborn",
+        "obstinate",
+        "headstrong",
+        "inflexible",
+        "unyielding",
+        "pigheaded",
+        "bullheaded",
+        "adamant",
+        "dogged"
+      ],
+      "antonyms": [
+        "compliant",
+        "amenable",
+        "yielding",
+        "flexible",
+        "tractable",
+        "cooperative"
+      ]
+    },
+    {
+      "id": "word-4016",
+      "word": "obstinate",
+      "meaning": "Stubbornly refusing to change one's opinion or actions despite persuasion or reason.",
+      "example": "She remained obstinate in the face of overwhelming evidence.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "obstinate-0",
+          "word": "obstinacy",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "obstinate-1",
+          "word": "obstinately",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "synonyms": [
+        "mulish",
+        "stubborn",
+        "adamant",
+        "unyielding",
+        "headstrong",
+        "dogged",
+        "intransigent",
+        "inflexible",
+        "recalcitrant"
+      ],
+      "antonyms": [
+        "compliant",
+        "docile",
+        "yielding",
+        "amenable",
+        "obedient",
+        "flexible"
+      ]
+    },
+    {
+      "id": "word-4017",
+      "word": "perverse",
+      "meaning": "Deliberately behaving in an unreasonable or contrary manner.",
+      "example": "He took a perverse pleasure in contradicting everyone.",
+      "level": "advanced",
+      "wordFamily": [
+        {
+          "id": "perverse-0",
+          "word": "perversity",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "perverse-1",
+          "word": "perversely",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "perverse-2",
+          "word": "pervert",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "perverse-3",
+          "word": "pervert",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "perverse-4",
+          "word": "perverted",
+          "partOfSpeech": "adjective"
+        },
+        {
+          "id": "perverse-5",
+          "word": "perversion",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "perverse-6",
+          "word": "perverting",
+          "partOfSpeech": "verb"
+        },
+        {
+          "id": "perverse-7",
+          "word": "pervertible",
+          "partOfSpeech": "adjective"
+        }
+      ],
+      "synonyms": [
+        "contrary",
+        "wayward",
+        "obstinate",
+        "wilful",
+        "recalcitrant",
+        "defiant",
+        "deviant",
+        "unreasonable"
+      ],
+      "antonyms": [
+        "reasonable",
+        "compliant",
+        "obedient",
+        "cooperative",
+        "agreeable",
+        "docile"
       ]
     }
   ]
