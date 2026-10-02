@@ -6,7 +6,6 @@ import WordCard from "./WordCard";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { on } from "events";
 
 interface Props {
   families: SynonymFamily[];
@@ -97,14 +96,18 @@ export default function SynonymFamilyComponent({
                   className="cursor-pointer"
                 >
                   <WordCard
+                    word={word}
+                    onToggleDetails={() => setSelectedWordId(null)}
+                    showDetails={showDetails}
                     fetchFamilies={fetchFamilies}
                     familyId={family?.id}
-                    word={word}
-                    showDetails={showDetails}
-                    onToggleDetails={() => setSelectedWordId(null)}
-                    onDelete={() =>
-                      onDeleteWord(String(family?.id), String(word?.id))
-                    }
+                    // onDelete={() =>
+                    //   onDeleteWord(String(family?.id), String(word?.id))
+                    // }
+
+                    isFamilyWord={false}
+                    // fetchWords={}
+                    // setOpenDeleteModal={true}
                   />
                 </div>
               ))}

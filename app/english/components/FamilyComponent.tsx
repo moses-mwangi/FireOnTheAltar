@@ -2,10 +2,11 @@
 
 import { Dispatch, SetStateAction, useState } from "react";
 import { SynonymFamily } from "../../../lib/types/vocabTypes";
-import WordCard from "./WordCard";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+// import WordCard from "@/app/writing/components/vocab/WordTest";
+import WordCard from "./WordCard";
 
 interface Props {
   family: SynonymFamily;
@@ -37,16 +38,6 @@ export default function FamilyComponent({
         <div className="flex justify-between items-center w-full px-4 pt-4">
           <h1 className="text-xl font-bold">{family.name}</h1>
           <div className="flex items-center gap-2">
-            {/* <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-              <Input
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                type="text"
-                className="w-full text-[13px] pl-8 pr-4 py-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="Search words or word families..."
-              />
-            </div> */}
             <Button
               onClick={() => {
                 onAddWord(String(family.id));

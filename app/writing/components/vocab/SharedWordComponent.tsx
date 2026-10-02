@@ -3,11 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
-import {
-  speakWordWithDefinitionUtterance,
-  wordUtterance,
-} from "../../../../lib/types/speaker";
-import WordCard from "./WordTest";
+import WordCard from "./WordCard";
 import {
   Dialog,
   DialogContent,
@@ -28,20 +24,9 @@ import { Minus, Plus } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { Word } from "@/lib/types/vocabTypes";
 
-// type Word = {
-//   id: number;
-//   word: string;
-//   meaning: string;
-//   example: string;
-//   level: "advanced" | "common" | string;
-//   synonyms: [];
-//   antonyms: [];
-//   wordFamily: [];
-// };
-
 interface Props {
   title: string;
-  words: Word[];
+  words: Word[] | any | Partial<Word>[];
   newWord: any;
   setNewWord: (newWord: any) => void;
   openAddModal: boolean;
@@ -182,10 +167,10 @@ export default function SharedVocabComponent({
         {selectedWord && (
           <div className="w-full">
             <WordCard
-              isFamilyWord={false}
               word={selectedWord}
-              showDetails={true}
               onToggleDetails={() => setSelectedWordId(null)}
+              showDetails={true}
+              isFamilyWord={false}
               fetchWords={fetchWords}
               setOpenDeleteModal={setOpenDeleteModal}
             />

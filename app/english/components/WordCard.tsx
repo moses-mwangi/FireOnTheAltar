@@ -80,6 +80,7 @@ export default function WordCard({
                 className={`${showDetails ? "text-white text-[13px]" : "text-[11px] text-muted-foreground"} mt-1 line-clamp-1`}
               >
                 {word.example}
+                {/* {(word as any).meaning} */}
               </p>
             </div>
           </div>

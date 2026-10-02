@@ -5,6 +5,7 @@ import SynonymFamilyComponent from "./components/FamilyComponent";
 import { SynonymFamily } from "../../lib/types/vocabTypes";
 import { useFamilies } from "../hooks/useFamilies";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export const initialSynonymFamilies: SynonymFamily[] = [
   {
@@ -345,7 +346,6 @@ export const initialSynonymFamilies: SynonymFamily[] = [
     ],
   },
 ];
-
 
 export default function GroupedWordCombine() {
   const { families } = useFamilies();

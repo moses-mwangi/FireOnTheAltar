@@ -9,22 +9,27 @@ import {
   wordUtterance,
 } from "@/lib/types/speaker";
 import EditWordModal from "./EditWordModal";
+
 interface Props {
-  word: Partial<Word>;
-  onDelete: () => void;
+  word: Word | Partial<Word>;
   showDetails: boolean;
   onToggleDetails?: () => void;
-  familyId: string;
-  fetchFamilies: () => Promise<void>;
+  familyId?: string;
+  fetchFamilies?: () => Promise<void>;
+  fetchWords?: () => Promise<void>;
+  isFamilyWord?: boolean;
+  setOpenDeleteModal: (open: boolean) => void;
 }
 
 export default function WordCard({
-  fetchFamilies,
-  familyId,
   word,
-  onDelete,
-  showDetails,
   onToggleDetails,
+  showDetails,
+  isFamilyWord = true,
+  familyId,
+  fetchFamilies,
+  fetchWords,
+  setOpenDeleteModal,
 }: Props) {
   const [showWordFamily, setShowWordFamily] = useState(false);
   const [showWordUpdateModal, setShowWordUpdateModal] = useState(false);
@@ -45,41 +50,69 @@ export default function WordCard({
   };
 
   const handleUpdateWord = async (updatedWord: Partial<Word>) => {
-    if (!familyId) return;
+    if (isFamilyWord === true) if (!familyId) return;
 
     try {
-      const updatedPayload = {
-        id: word.id,
-        word: updatedWord.word,
-        description: updatedWord.description,
-        example: updatedWord.example,
-        wordFamily: updatedWord.wordFamily,
-        synonyms: updatedWord.synonyms,
-        antonyms: updatedWord.antonyms || [],
-        updatedAt: new Date().toISOString(),
-      };
+      if (isFamilyWord) {
+        const updatedPayload = {
+          id: word.id,
+          word: updatedWord.word,
+          description: updatedWord.description,
+          example: updatedWord.example,
+          wordFamily: updatedWord.wordFamily,
+          synonyms: updatedWord.synonyms,
+          antonyms: updatedWord.antonyms || [],
+          updatedAt: new Date().toISOString(),
+        };
 
-      await fetch("/api/group", {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          familyId: familyId,
-          word: updatedPayload,
-        }),
-      });
+        await fetch("/api/group", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            familyId: familyId,
+            word: updatedPayload,
+          }),
+        });
 
-      onClose();
-      await fetchFamilies();
-      onClose();
+        onClose();
+        if (fetchFamilies) await fetchFamilies();
+        onClose();
+      } else {
+        const updatedPayload = {
+          id: word.id,
+          word: updatedWord.word,
+          meaning: (updatedWord as any).meaning,
+          example: updatedWord.example,
+          wordFamily: updatedWord.wordFamily,
+          synonyms: updatedWord.synonyms,
+          antonyms: updatedWord.antonyms || [],
+          updatedAt: new Date().toISOString(),
+        };
+        await fetch("/api/common", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: word.id,
+            updatedWord: updatedPayload,
+          }),
+        });
+        onClose();
+
+        if (fetchWords) await fetchWords();
+        onClose();
+        console.log("TRYING UPDATING : WORD", updatedPayload);
+      }
     } catch (err) {
       console.error(err);
     }
   };
 
   return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden shadow hover:shadow-md transition-shadow">
+    <div className="cursor-pointer group overflow-hidden  min-w-[180px] flex-1 border rounded-2xl bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all">
       <div
         className={`${showDetails ? "bg-linear-to-r from-purple-600 to-pink-600 text-white" : "bg"} px-3 py-2 `}
       >
@@ -123,7 +156,7 @@ export default function WordCard({
               <p
                 className={`${showDetails ? "text-white text-[13px]" : "text-[11px] text-muted-foreground"} mt-1 line-clamp-1`}
               >
-                {word.description}
+                {(word as any).meaning || (word as any).description}
               </p>
             </div>
           </div>
@@ -131,7 +164,7 @@ export default function WordCard({
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                onDelete();
+                setOpenDeleteModal(true);
               }}
               className={`${showDetails ? "bg-gray-50" : "bg-gray-100 hidden"} p-[7px] rounded-full text-gray-600 hover:bg-gray-200 hover:text-gray-800 transition`}
             >
@@ -155,6 +188,7 @@ export default function WordCard({
       </div>
       {showWordUpdateModal === true && (
         <EditWordModal
+          isFamilyWord={isFamilyWord}
           isOpen={isOpen}
           onClose={onClose}
           word={word}
@@ -299,187 +333,3 @@ export default function WordCard({
     </div>
   );
 }
-
-// "use client";
-
-// import { Word } from "../../../../lib/types/vocabTypes";
-// import { Card } from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
-// import { Badge } from "@/components/ui/badge";
-// import { BookOpen, Edit, Trash2, ChevronDown, ChevronUp } from "lucide-react";
-// import { useState } from "react";
-
-// interface WordCardProps {
-//   word: Word;
-//   showDetails: boolean;
-//   onToggleDetails: () => void;
-//   onEdit: () => void;
-//   onDelete: () => void;
-// }
-
-// export default function WordCard({
-//   word,
-//   showDetails,
-//   onToggleDetails,
-//   onEdit,
-//   onDelete,
-// }: WordCardProps) {
-//   const [isExpanded, setIsExpanded] = useState(false);
-
-//   if (!word) return null;
-
-//   return (
-//     <Card
-//       className={`p-4 hover:shadow-md transition-all duration-200 cursor-pointer border border-gray-200 dark:border-gray-700 ${
-//         showDetails
-//           ? "bg-purple-50 dark:bg-purple-950/20"
-//           : "bg-white dark:bg-gray-800"
-//       }`}
-//       onClick={onToggleDetails}
-//     >
-//       <div className="flex items-start justify-between">
-//         <div className="flex-1">
-//           <div className="flex items-center gap-2 mb-2">
-//             <BookOpen className="h-4 w-4 text-purple-500" />
-//             <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-//               {word.word}
-//             </h3>
-//             {word.wordFamily && word.wordFamily.length > 0 && (
-//               <Badge variant="secondary" className="text-xs">
-//                 {word.wordFamily.length} forms
-//               </Badge>
-//             )}
-//           </div>
-
-//           <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-//             {word.description}
-//           </p>
-
-//           {!showDetails && (
-//             <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-500">
-//               <span>💡 {word?.example?.substring(0, 60)}...</span>
-//             </div>
-//           )}
-//         </div>
-
-//         <div className="flex items-center gap-1 ml-2">
-//           <Button
-//             variant="ghost"
-//             size="sm"
-//             onClick={(e) => {
-//               e.stopPropagation();
-//               onEdit();
-//             }}
-//             className="h-8 w-8 p-0 hover:bg-blue-100 dark:hover:bg-blue-900"
-//           >
-//             <Edit className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
-//           </Button>
-
-//           <Button
-//             variant="ghost"
-//             size="sm"
-//             onClick={(e) => {
-//               e.stopPropagation();
-//               if (confirm(`Delete "${word.word}"?`)) {
-//                 onDelete();
-//               }
-//             }}
-//             className="h-8 w-8 p-0 hover:bg-red-100 dark:hover:bg-red-900"
-//           >
-//             <Trash2 className="h-3.5 w-3.5 text-red-600 dark:text-red-400" />
-//           </Button>
-
-//           <Button
-//             variant="ghost"
-//             size="sm"
-//             onClick={(e) => {
-//               e.stopPropagation();
-//               setIsExpanded(!isExpanded);
-//             }}
-//             className="h-8 w-8 p-0"
-//           >
-//             {isExpanded ? (
-//               <ChevronUp className="h-4 w-4" />
-//             ) : (
-//               <ChevronDown className="h-4 w-4" />
-//             )}
-//           </Button>
-//         </div>
-//       </div>
-
-//       {/* Expanded Details */}
-//       {isExpanded && (
-//         <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
-//           <div className="space-y-3">
-//             <div>
-//               <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-//                 Example:
-//               </h4>
-//               <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-//                 &quot;{word.example}&quot;
-//               </p>
-//             </div>
-
-//             {word.wordFamily && word.wordFamily.length > 0 && (
-//               <div>
-//                 <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-//                   Word Family:
-//                 </h4>
-//                 <div className="grid grid-cols-1 gap-2">
-//                   {word.wordFamily.map((wf) => (
-//                     <div
-//                       key={wf.id}
-//                       className="bg-gray-50 dark:bg-gray-700/50 rounded p-2"
-//                     >
-//                       <div className="flex items-center gap-2">
-//                         <span className="font-medium text-purple-600 dark:text-purple-400">
-//                           {wf.word}
-//                         </span>
-//                         <Badge variant="outline" className="text-xs">
-//                           {wf.partOfSpeech}
-//                         </Badge>
-//                       </div>
-//                       <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-//                         {wf.example}
-//                       </p>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </div>
-//             )}
-
-//             {word.synonyms && word.synonyms.length > 0 && (
-//               <div>
-//                 <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-//                   Synonyms:
-//                 </h4>
-//                 <div className="flex flex-wrap gap-1">
-//                   {word.synonyms.map((synonym, idx) => (
-//                     <Badge key={idx} variant="secondary" className="text-xs">
-//                       {synonym}
-//                     </Badge>
-//                   ))}
-//                 </div>
-//               </div>
-//             )}
-
-//             {word.antonyms && word.antonyms.length > 0 && (
-//               <div>
-//                 <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-//                   Antonyms:
-//                 </h4>
-//                 <div className="flex flex-wrap gap-1">
-//                   {word.antonyms.map((antonym, idx) => (
-//                     <Badge key={idx} variant="outline" className="text-xs">
-//                       {antonym}
-//                     </Badge>
-//                   ))}
-//                 </div>
-//               </div>
-//             )}
-//           </div>
-//         </div>
-//       )}
-//     </Card>
-//   );
-// }

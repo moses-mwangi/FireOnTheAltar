@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import SharedVocabComponent from "./SharedWordComponent";
+import { Button } from "@/components/ui/button";
 
 type Word = {
   id: number;
@@ -126,6 +127,14 @@ export default function AdvanceWordsUI() {
 
   return (
     <div className="space-y-5 bg-white dark:bg-zinc-900 shadow-sm">
+      <Button
+        onClick={() => {
+          console.log(words.filter((w) => w.level === "advanced"));
+          // console.log(synonymFamilies);
+        }}
+      >
+        CLICK
+      </Button>
       <SharedVocabComponent
         title={"Advanced Words"}
         words={words.filter((w) => w.level === "advanced")}
