@@ -277,8 +277,9 @@ const wordList = [
   "feasible,preliminary,vested,delineating,rejuvenate,borne,dispensation,conjure,wallowing,rookie,proverbial,prevalent,shackled,transcribe,fruition,frenemies,manosphere,litigious",
   "tangent,profound vs insight, amass,austerity, tackle",
 ];
+
 export { confusedWord, confusedWordd, wordList };
-// M-o-s-e-s Mwangi
+// M-o-s-e-s M-w-a-n-g-i
 // Moses Mwangi
 // Moses Mwangi
 // carolina from episode = Rolin.nau
