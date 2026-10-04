@@ -276,6 +276,9 @@ const wordList = [
   "imbuing vs bestowed,requisite,insinuate,epitome,perils,salutation,parading,meek,elongated vs segregated,siphoning,proponent,stringent,flogged vs scourged vs whiped,retort,concatenate,jeopardize,unmerited,atonement,jollity,amble,resuscitate,derogative,transpired,bizarre,shambolic,synoptic,duat,saddled",
   "feasible,preliminary,vested,delineating,rejuvenate,borne,dispensation,conjure,wallowing,rookie,proverbial,prevalent,shackled,transcribe,fruition,frenemies,manosphere,litigious",
   "tangent,profound vs insight, amass,austerity, tackle",
+  "affiliation,extenuating,avow,insolent,affront,dismal and dismay,sojourners,supremacy,formidable,conundrum,brevity,insurmountable,hypostasis",
+  "chores,indentured,veer,edify,disecting,abrogated,deterrent,aggravated,disparity,ground,predicate,integral,pounding,glandeur,exponents,glean,consequence vs subsequence,litany,oblivion,hastened,emancipate,mollify,clamour,repute vs impute,ensnared,revert,durable,dispense,pretext,ideally,clemency,shun,transient",
+  "postulate,insinuate,ascetic,occasioned,parlance,intrepidity,elicit,punctual,yapping vs smack,viable,indictment,felicitations,promulgation,numeracy vs literacy,theatrical,exude,accentuate,patinent,inception,hurdle,emblems,coronated",
 ];
 
 export { confusedWord, confusedWordd, wordList };
