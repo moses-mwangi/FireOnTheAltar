@@ -1,1 +1,0 @@
-pwd: Displays your current exact folder location.ls: Lists files and folders in your current directory.cd: Changes your current folder to a new path.mkdir: Creates a brand-new folder.touch: Creates a blank new file.cp: Copies files or entire folders to a new location.mv: Moves or renames files and folders.rm: Permanently deletes files (rm -r deletes folders).
