@@ -282,10 +282,13 @@ const wordList = [
 ];
 
 export { confusedWord, confusedWordd, wordList };
-// M-o-s-e-s M-w-a-n-g-i
-// Moses Mwangi
-// Moses Mwangi
+// feasible,auditing,ambiguity,elicitate,partial vs spatial, scuffle,concoction,obesity,presides,reminisce,nuggets,tantrums,decorum,belated,adjourned
+// prefix en,a
+// glamorize,sapiosexual,ingenuity,suffise,ensnared,instigation,censure,providence,succour 
 // carolina from episode = Rolin.nau
 // Auliahdytn
 
 // prefix en,a
+
+// npm.cmd run dev
+
